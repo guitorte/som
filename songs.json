@@ -5,7 +5,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/pro-tigrinho-o-pai-tem-dinheiro.mp3",
-    "image": "https://via.placeholder.com/300x300/ff6347/ffffff?text=Tigrinho"
+    "image": "images/miss.jpg"
   },
   {
     "id": "feat-2",
@@ -13,7 +13,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/manequim.mp3",
-    "image": "https://via.placeholder.com/300x300/4682b4/ffffff?text=Manequim"
+    "image": "images/miss.jpg"
   },
   {
     "id": "feat-3",
@@ -21,7 +21,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/eu-sou-incendio.mp3",
-    "image": "https://via.placeholder.com/300x300/dc143c/ffffff?text=Incendio"
+    "image": "images/miss.jpg"
   },
   {
     "id": "feat-4",
@@ -29,7 +29,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/tilanga.mp3",
-    "image": "https://via.placeholder.com/300x300/3cb371/ffffff?text=Tilanga"
+    "image": "images/miss.jpg"
   },
   {
     "id": "table-5",
@@ -37,7 +37,7 @@
     "artist": "Unknown Artist",
     "duration": "3:45",
     "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-    "image": "https://via.placeholder.com/300x300/0ea5e9/ffffff?text=Song+1"
+    "image": "images/miss.jpg"
   },
   {
     "id": "table-6",
@@ -45,7 +45,7 @@
     "artist": "Groovy Tunes",
     "duration": "4:12",
     "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-    "image": "https://via.placeholder.com/300x300/10b981/ffffff?text=Song+2"
+    "image": "images/miss.jpg"
   },
   {
     "id": "table-7",
@@ -53,7 +53,7 @@
     "artist": "City Sounds",
     "duration": "3:28",
     "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-    "image": "https://via.placeholder.com/300x300/f59e0b/ffffff?text=Song+3"
+    "image": "images/miss.jpg"
   },
   {
     "id": "table-8",
@@ -61,7 +61,7 @@
     "artist": "Coastal Beats",
     "duration": "4:35",
     "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-    "image": "https://via.placeholder.com/300x300/8b5cf6/ffffff?text=Song+4"
+    "image": "images/miss.jpg"
   },
   {
     "id": "table-9",
@@ -69,7 +69,7 @@
     "artist": "Nature Calls",
     "duration": "2:58",
     "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
-    "image": "https://via.placeholder.com/300x300/ef4444/ffffff?text=Song+5"
+    "image": "images/miss.jpg"
   },
   {
     "id": "table-10",
@@ -77,7 +77,7 @@
     "artist": "Cosmic Vibes",
     "duration": "5:01",
     "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
-    "image": "https://via.placeholder.com/300x300/a855f7/ffffff?text=Song+6"
+    "image": "images/miss.jpg"
   },
   {
     "id": "table-11",
@@ -85,6 +85,6 @@
     "artist": "Nomad Sounds",
     "duration": "3:19",
     "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
-    "image": "https://via.placeholder.com/300x300/22c55e/ffffff?text=Song+7"
+    "image": "images/miss.jpg"
   }
 ]
