@@ -1,6 +1,6 @@
 [
   {
-        "id": "table-1",
+        "id": "feat-1",
         "title": "Pro Tigrinho, O Pai Tem Dinheiro",
         "artist": "Unknown Artist",
         "duration": "N/A",
@@ -8,7 +8,7 @@
         "image": "https://via.placeholder.com/300x300/ff6347/ffffff?text=Tigrinho"
     },
      {
-        "id": "table-2",
+        "id": "feat-2",
         "title": "Manequim",
         "artist": "Unknown Artist",
         "duration": "N/A",
@@ -16,7 +16,7 @@
         "image": "https://via.placeholder.com/300x300/4682b4/ffffff?text=Manequim"
     },
      {
-        "id": "table-3",
+        "id": "feat-3",
         "title": "Eu Sou Incêndio",
         "artist": "Unknown Artist",
         "duration": "N/A",
@@ -24,7 +24,7 @@
         "image": "https://via.placeholder.com/300x300/dc143c/ffffff?text=Incendio"
     },
      {
-        "id": "table-11",
+        "id": "feat-4",
         "title": "Tilanga",
         "artist": "Unknown Artist",
         "duration": "N/A",
@@ -32,7 +32,7 @@
         "image": "https://via.placeholder.com/300x300/3cb371/ffffff?text=Tilanga"
     },
     {
-        "id": "feat-1",
+        "id": "table-5",
         "title": "Summer Vibes",
         "artist": "Unknown Artist",
         "duration": "3:45",
@@ -40,7 +40,7 @@
         "image": "https://via.placeholder.com/300x300/0ea5e9/ffffff?text=Song+1"
     },
     {
-        "id": "feat-2",
+        "id": "table-6",
         "title": "Midnight Dreams",
         "artist": "Groovy Tunes",
         "duration": "4:12",
@@ -48,7 +48,7 @@
         "image": "https://via.placeholder.com/300x300/10b981/ffffff?text=Song+2"
     },
     {
-        "id": "feat-3",
+        "id": "table-7",
         "title": "Urban Echo",
         "artist": "City Sounds",
         "duration": "3:28",
@@ -56,7 +56,7 @@
         "image": "https://via.placeholder.com/300x300/f59e0b/ffffff?text=Song+3"
     },
     {
-        "id": "feat-4",
+        "id": "table-8",
         "title": "Ocean Breeze",
         "artist": "Coastal Beats",
         "duration": "4:35",
@@ -64,7 +64,7 @@
         "image": "https://via.placeholder.com/300x300/8b5cf6/ffffff?text=Song+4"
     },
     {
-        "id": "table-5",
+        "id": "table-9",
         "title": "Forest Hymn",
         "artist": "Nature Calls",
         "duration": "2:58",
@@ -72,7 +72,7 @@
         "image": "https://via.placeholder.com/300x300/ef4444/ffffff?text=Song+5"
     },
      {
-        "id": "table-6",
+        "id": "table-10",
         "title": "Starry Night",
         "artist": "Cosmic Vibes",
         "duration": "5:01",
@@ -80,43 +80,12 @@
          "image": "https://via.placeholder.com/300x300/a855f7/ffffff?text=Song+6"
     },
      {
-        "id": "table-7",
+        "id": "table-11",
         "title": "Desert Wind",
         "artist": "Nomad Sounds",
         "duration": "3:19",
         "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
          "image": "https://via.placeholder.com/300x300/22c55e/ffffff?text=Song+7"
-    },
-    {
-        "id": "table-8",
-        "title": "Pro Tigrinho, O Pai Tem Dinheiro",
-        "artist": "Unknown Artist",
-        "duration": "N/A",
-        "src": "songs/pro-tigrinho-o-pai-tem-dinheiro.mp3", // <-- Changed from l/songs/
-        "image": "https://via.placeholder.com/300x300/ff6347/ffffff?text=Tigrinho"
-    },
-     {
-        "id": "table-9",
-        "title": "Manequim",
-        "artist": "Unknown Artist",
-        "duration": "N/A",
-        "src": "songs/manequim.mp3", // <-- Changed from l/songs/
-        "image": "https://via.placeholder.com/300x300/4682b4/ffffff?text=Manequim"
-    },
-     {
-        "id": "table-10",
-        "title": "Eu Sou Incêndio",
-        "artist": "Unknown Artist",
-        "duration": "N/A",
-        "src": "songs/eu-sou-incendio.mp3", // <-- Changed from l/songs/
-        "image": "https://via.placeholder.com/300x300/dc143c/ffffff?text=Incendio"
-    },
-     {
-        "id": "table-11",
-        "title": "Tilanga",
-        "artist": "Unknown Artist",
-        "duration": "N/A",
-        "src": "songs/tilanga.mp3", // <-- Changed from l/songs/
-        "image": "https://via.placeholder.com/300x300/3cb371/ffffff?text=Tilanga"
     }
+}
 ]
