@@ -1,0 +1,40 @@
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+
+/* Dark mode scrollbar styles */
+.dark ::-webkit-scrollbar-track { background: #1e293b; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }
+
+/* Firefox scrollbar styles */
+body { scrollbar-color: #888 #f1f1f1; }
+/* Firefox dark mode scrollbar styles */
+.dark body { scrollbar-color: #475569 #1e293b; }
+
+
+/* Audio player custom styling (adjust as needed for browser compatibility) */
+/* Using variables defined in the HTML/JS logic */
+audio::-webkit-media-controls-panel {
+    background-color: var(--audio-bg, #f8fafc);
+}
+audio {
+    --audio-bg: #f8fafc; /* Default light mode background */
+}
+.dark audio {
+    --audio-bg: #1e293b; /* Dark mode background */
+}
+
+/* Waveform animation (not currently used on visible elements, kept from original) */
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); height: 10px; }
+    50% { transform: scaleY(2); height: 20px; }
+}
+.wave-bar {
+    animation: wave 1.5s ease-in-out infinite;
+}
+.wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.wave-bar:nth-child(5) { animation-delay: 0.4s; }
+ /* Optional: Add more delay rules if you have more bars */
