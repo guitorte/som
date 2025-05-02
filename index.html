@@ -16,13 +16,13 @@
                         primary: {
                             50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
                             400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
-                            800: '#075985', 900: '#0c4a6e', 950: '#012e4a', // Added 950
+                            800: '#075985', 900: '#0c4a6e', 950: '#012e4a',
                         },
                         // Your extended slate palette
                         slate: {
                             50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
                             400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
-                            800: '#1e293b', 900: '#0f172a', 950: '#020617', // Added 950
+                            800: '#1e293b', 900: '#0f172a', 950: '#020617',
                         }
                     }
                 }
@@ -68,27 +68,50 @@
   <main class="container mx-auto px-4 py-8">
 
     <!-- Featured Section -->
-  <!-- Featured Section -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-6 flex items-center">
         <i class="fas fa-star mr-2 text-primary-600 dark:text-primary-400"></i>
         Featured Tracks
       </h2>
-      <!-- REMOVE grid classes from this outer div -->
+      <!-- This outer div is fine now -->
       <div>
-
-        <!-- Featured Item Template -->
+        <!-- Featured Item Template - NOW COMPLETE -->
         <template id="featured-template">
           <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <!-- ... rest of template ... -->
+            <div class="relative">
+              <!-- Added data-role and placeholder src/alt -->
+              <img src="" alt="" class="w-full h-48 object-cover" data-role="featured-image">
+              <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                 <!-- Added play button content -->
+                <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="">
+                  <i class="fas fa-play text-lg"></i>
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <!-- Added data-role -->
+              <h3 class="font-semibold text-lg mb-1" data-role="featured-title"></h3>
+              <!-- Added data-role -->
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-3" data-role="featured-duration"></p>
+              <div class="flex justify-between items-center">
+                 <!-- Added download button content -->
+                <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="">
+                  <i class="fas fa-download mr-1"></i> Download
+                </button>
+                 <!-- Added share button content -->
+                 <!-- NOTE: The JS doesn't handle share yet, but including for completeness -->
+                 <button class="share-btn text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500" data-song-id="">
+                   <i class="fas fa-share-alt"></i>
+                 </button>
+              </div>
+            </div>
           </div>
         </template>
 
-        <!-- ADD the grid classes to the container that JS populates -->
+        <!-- Container with grid classes - Correctly placed -->
         <div id="featured-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <!-- Dynamically added cards will go here and be arranged by the grid -->
+          <!-- Dynamically added cards will go here -->
         </div>
-
       </div>
     </section>
 
@@ -97,17 +120,20 @@
       <h2 class="text-2xl font-bold mb-4">All Songs</h2>
       <div class="overflow-x-auto">
         <table class="min-w-full divide-y divide-gray-200 dark:divide-slate-700">
-          <thead class="bg-gray-50 dark:bg-slate-800">
+          <thead class="bg-gray-50 dark:bg-slate-800"> <!-- Changed bg-slate-800 from bg-gray-50 for consistency -->
             <tr>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase">#</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase">Title</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase">Artist</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase">Duration</th>
-              <th class="px-6 py-3 text-right text-xs font-medium uppercase">Actions</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">#</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Title</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Artist</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Duration</th>
+              <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Actions</th> <!-- Adjusted text alignment/content -->
             </tr>
           </thead>
+           <!-- Corrected tbody attributes and added initial loading state -->
           <tbody id="songs-table-body" class="bg-white dark:bg-slate-800 divide-y divide-gray-200 dark:divide-slate-700">
-            <!-- Populated by JS -->
+             <tr>
+                 <td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">Loading songs...</td>
+             </tr>
           </tbody>
         </table>
       </div>
@@ -116,95 +142,295 @@
   </main>
 
   <footer class="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400 text-sm">
-    &copy; 2025 My Music Collection. All rights reserved.
+    © 2025 My Music Collection. All rights reserved. <!-- Year updated -->
   </footer>
 
   <!-- Audio Player -->
   <audio id="audioPlayer" class="fixed bottom-0 left-0 right-0 w-full bg-gray-100 dark:bg-slate-800 shadow-lg p-2" controls></audio>
 
   <script>
-    // Theme toggle
+    // --- Global variable to store song data ---
+    let allSongsData = [];
+    // Keep track of the currently playing song's ID and the audio element
+    let currentPlayingSongId = null;
+    const audioPlayer = document.getElementById('audioPlayer');
+
+
+    // --- Theme toggle ---
     document.getElementById('theme-toggle').addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
+      // Optional: Save preference to localStorage
+      if (document.documentElement.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+      } else {
+          localStorage.setItem('theme', 'light');
+      }
     });
 
-    // Search toggle
-    document.getElementById('search-toggle').addEventListener('click', () => {
+    // --- Search toggle ---
+    document.getElementById('search-toggle').addEventListener('click', (event) => {
       const box = document.getElementById('search-box');
       box.classList.toggle('hidden');
-      if (!box.classList.contains('hidden')) document.getElementById('search-input').focus();
+      if (!box.classList.contains('hidden')) {
+          document.getElementById('search-input').focus();
+      }
+       event.stopPropagation(); // Prevent click from closing immediately
+    });
+     // Close search box if clicking outside
+     document.addEventListener('click', (event) => {
+        const searchBox = document.getElementById('search-box');
+        const searchToggle = document.getElementById('search-toggle');
+        if (!searchBox.classList.contains('hidden') && !searchBox.contains(event.target) && !searchToggle.contains(event.target)) {
+            searchBox.classList.add('hidden');
+        }
+     });
+    // --- Search Input Handler (Add this if you want search functionality) ---
+    document.getElementById('search-input').addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredSongs = allSongsData.filter(song =>
+            song.title.toLowerCase().includes(searchTerm) ||
+            (song.artist && song.artist.toLowerCase().includes(searchTerm))
+        );
+        // Re-render only the table with filtered results
+        populateTable(filteredSongs);
+        // Note: This simple filter doesn't filter the featured cards.
+        // You could add logic to filter/hide featured cards too if desired.
     });
 
-    // Render songs
-    function renderSongsTable() {
-      fetch('songs.json')
-        .then(res => { if (!res.ok) throw new Error('Failed to load songs'); return res.json(); })
-        .then(data => {
-          // Featured
-          const featuredContainer = document.getElementById('featured-container');
-          const template = document.getElementById('featured-template');
-          data.slice(0,4).forEach(song => {
-            const clone = template.content.cloneNode(true);
-            clone.querySelector('[data-role="featured-image"]').src = song.image;
-            clone.querySelector('[data-role="featured-title"]').textContent = song.title;
-            clone.querySelector('[data-role="featured-duration"]').textContent = song.duration;
-            const playBtn = clone.querySelector('.play-btn');
-            playBtn.dataset.songId = song.id;
-            const dlBtn = clone.querySelector('.download-btn');
-            dlBtn.dataset.songId = song.id;
-            featuredContainer.appendChild(clone);
-          });
 
-          // All songs table
-          const tbody = document.getElementById('songs-table-body');
-          data.forEach((song,i) => {
-            const tr = document.createElement('tr');
-            tr.className = 'hover:bg-gray-100 dark:hover:bg-slate-700';
-            tr.innerHTML = `
-              <td class="px-6 py-4 whitespace-nowrap">${i+1}</td>
-              <td class="px-6 py-4 whitespace-nowrap flex items-center space-x-2">
-                <img src="${song.image}" alt="${song.title}" class="w-10 h-10 object-cover rounded-md">
-                <span>${song.title}</span>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">${song.artist}</td>
-              <td class="px-6 py-4 whitespace-nowrap">${song.duration}</td>
-              <td class="px-6 py-4 whitespace-nowrap text-right space-x-2">
-                <button class="play-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 focus:outline-none" data-song-id="${song.id}">
-                  <i class="fas fa-play"></i>
-                </button>
-                <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 focus:outline-none" data-song-id="${song.id}">
-                  <i class="fas fa-download"></i>
-                </button>
-              </td>`;
-            tbody.appendChild(tr);
-          });
-        })
-        .catch(err => console.error(err));
+    // --- Render songs ---
+    function renderAllSongs(songs) {
+        populateFeatured(songs.slice(0, 4)); // Populate first 4 as featured
+        populateTable(songs); // Populate table with all songs
+        attachActionListeners(); // Attach listeners after elements are created
     }
 
-    document.addEventListener('DOMContentLoaded', renderSongsTable);
+    // Populate Featured Section
+    function populateFeatured(featuredSongs) {
+        const featuredContainer = document.getElementById('featured-container');
+        const template = document.getElementById('featured-template');
+        featuredContainer.innerHTML = ''; // Clear previous content
 
-    // Play & Download handlers
-    document.body.addEventListener('click', e => {
-      const play = e.target.closest('.play-btn');
-      const dl = e.target.closest('.download-btn');
-      if (play || dl) {
-        fetch('songs.json').then(r=>r.json()).then(data => {
-          const id = (play||dl).dataset.songId;
-          const song = data.find(s=>s.id===id);
-          if (!song) return;
-          if (play) {
-            const player = document.getElementById('audioPlayer');
-            player.src = song.src;
-            player.play();
-          } else {
-            const a = document.createElement('a');
-            a.href = song.src;
-            a.download = '';
-            a.click();
-          }
+        if (!template) {
+            console.error("Featured template not found!");
+            return;
+        }
+
+        featuredSongs.forEach(song => {
+            const clone = template.content.cloneNode(true);
+
+            // Safely query elements within the cloned template fragment
+            const img = clone.querySelector('[data-role="featured-image"]');
+            const title = clone.querySelector('[data-role="featured-title"]');
+            const duration = clone.querySelector('[data-role="featured-duration"]');
+            const playBtn = clone.querySelector('.play-btn');
+            const dlBtn = clone.querySelector('.download-btn');
+            const shareBtn = clone.querySelector('.share-btn'); // Assuming you might add share later
+
+            if (img) {
+                img.src = song.image || 'https://via.placeholder.com/300x300/cccccc/ffffff?text=No+Image'; // Provide fallback
+                img.alt = song.title || 'Song artwork';
+            }
+            if (title) title.textContent = song.title || 'Untitled Song';
+            if (duration) duration.textContent = song.duration || 'N/A';
+
+            // Assign song ID to buttons
+            if (playBtn) playBtn.dataset.songId = song.id;
+            if (dlBtn) dlBtn.dataset.songId = song.id;
+            if (shareBtn) shareBtn.dataset.songId = song.id; // Assign even if not handled yet
+
+            featuredContainer.appendChild(clone);
         });
+    }
+
+    // Populate All Songs Table
+    function populateTable(songsToDisplay) {
+      const tbody = document.getElementById('songs-table-body');
+      tbody.innerHTML = ''; // Clear previous content or loading message
+
+      if (songsToDisplay.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">No songs found.</td></tr>`;
+          return;
       }
+
+      songsToDisplay.forEach((song, i) => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors duration-150'; // Added transition
+        tr.innerHTML = `
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">${i + 1}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-slate-100">
+            <div class="flex items-center space-x-3">
+              <img src="${song.image || 'https://via.placeholder.com/40x40/cccccc/ffffff?text=?'}" alt="${song.title || 'Song artwork'}" class="w-10 h-10 object-cover rounded-md flex-shrink-0">
+              <span>${song.title || 'Untitled Song'}</span>
+            </div>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">${song.artist || 'Unknown Artist'}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">${song.duration || 'N/A'}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-right text-sm space-x-2 font-medium">
+            <button class="play-btn text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 p-1 rounded focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1 dark:focus:ring-offset-slate-800" data-song-id="${song.id}" title="Play/Pause">
+              <i class="fas fa-play fa-fw"></i>
+            </button>
+            <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 p-1 rounded focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1 dark:focus:ring-offset-slate-800" data-song-id="${song.id}" title="Download">
+              <i class="fas fa-download fa-fw"></i>
+            </button>
+            <!-- Optional: Share button in table -->
+            <!--
+            <button class="share-btn text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 p-1 rounded focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-1 dark:focus:ring-offset-slate-800" data-song-id="${song.id}" title="Share">
+              <i class="fas fa-share-alt fa-fw"></i>
+            </button>
+            -->
+          </td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // --- Function to find song data by ID ---
+    function getSongById(id) {
+        return allSongsData.find(song => song.id === id);
+    }
+
+    // --- Update Play/Pause Icons ---
+    function updateButtonIcons() {
+        document.querySelectorAll('.play-btn').forEach(button => {
+            const icon = button.querySelector('i');
+            if (!icon) return;
+            const songId = button.dataset.songId;
+
+            if (songId === currentPlayingSongId && !audioPlayer.paused) {
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+                button.setAttribute('title', 'Pause');
+            } else {
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+                button.setAttribute('title', 'Play');
+            }
+        });
+    }
+
+
+    // --- Play/Download/Share Handlers ---
+    function handlePlayClick(event) {
+        const button = event.currentTarget;
+        const songId = button.dataset.songId;
+        const song = getSongById(songId);
+
+        if (!song || !song.src) {
+            console.error(`Song data or source not found for ID: ${songId}`);
+            alert("Cannot play this song: data or source missing.");
+            return;
+        }
+
+        // If it's the current song and playing, pause it
+        if (currentPlayingSongId === songId && !audioPlayer.paused) {
+            audioPlayer.pause();
+        }
+        // If it's the current song and paused, play it
+        else if (currentPlayingSongId === songId && audioPlayer.paused) {
+             audioPlayer.play().catch(e => console.error("Error resuming playback:", e));
+        }
+        // Otherwise, play the new song
+        else {
+            audioPlayer.src = song.src;
+            audioPlayer.load(); // Good practice to call load()
+            audioPlayer.play()
+                .then(() => {
+                    currentPlayingSongId = songId;
+                    console.log(`Playing: ${song.title}`);
+                    updateButtonIcons(); // Update icons after playback starts
+                })
+                .catch(error => {
+                    console.error("Error playing audio:", error);
+                    alert(`Could not play "${song.title}". Check console for details.`);
+                    currentPlayingSongId = null; // Reset if playback failed
+                    updateButtonIcons(); // Ensure icons reset on error
+                });
+        }
+        // Note: updateButtonIcons() will be called by 'play' and 'pause' events too
+    }
+
+    function handleDownloadClick(event) {
+        const button = event.currentTarget;
+        const songId = button.dataset.songId;
+        const song = getSongById(songId);
+
+        if (!song || !song.src) {
+            console.error(`Download source not found for song ID: ${songId}`);
+            alert("Download not available for this song.");
+            return;
+        }
+
+        console.log(`Attempting to download: ${song.title} from ${song.src}`);
+        const link = document.createElement('a');
+        link.href = song.src;
+        // Create a safer filename
+        const filename = (song.title || 'song').replace(/[^a-z0-9_\-\s]/gi, '_') + (song.src.includes('.') ? song.src.substring(song.src.lastIndexOf('.')) : '.mp3');
+        link.download = filename; // Use the song title for the download filename
+        document.body.appendChild(link); // Required for Firefox
+        link.click();
+        document.body.removeChild(link); // Clean up
+    }
+
+     // --- Attach listeners (using event delegation) ---
+     function attachActionListeners() {
+        const mainContainer = document.querySelector('main'); // Delegate from main content area
+
+        mainContainer.addEventListener('click', (e) => {
+            const playButton = e.target.closest('.play-btn');
+            const downloadButton = e.target.closest('.download-btn');
+            // const shareButton = e.target.closest('.share-btn'); // If you add share handler
+
+            if (playButton) {
+                handlePlayClick(e); // Pass the event object
+            } else if (downloadButton) {
+                handleDownloadClick(e); // Pass the event object
+            }
+            // else if (shareButton) { handleShareClick(e); }
+        });
+     }
+
+    // --- Audio Player Event Listeners ---
+    audioPlayer.addEventListener('play', updateButtonIcons);
+    audioPlayer.addEventListener('pause', updateButtonIcons);
+    audioPlayer.addEventListener('ended', () => {
+        console.log(`Finished playing: ${currentPlayingSongId}`);
+        currentPlayingSongId = null; // Reset current song
+        updateButtonIcons(); // Set all icons back to 'play'
+        // Add logic here for auto-play next if desired
+    });
+
+
+    // --- Initial Load ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // Apply saved theme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Fetch songs and render
+        fetch('songs.json')
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                return res.json();
+             })
+            .then(data => {
+                allSongsData = data; // Store data globally
+                renderAllSongs(allSongsData); // Initial render
+            })
+            .catch(err => {
+                console.error("Failed to load or render songs:", err);
+                // Display error message in the UI
+                const tbody = document.getElementById('songs-table-body');
+                if(tbody) tbody.innerHTML = `<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-red-600 dark:text-red-400">Error loading songs. Please check the console and ensure 'songs.json' exists and is valid.</td></tr>`;
+                const featuredContainer = document.getElementById('featured-container');
+                if(featuredContainer) featuredContainer.innerHTML = `<p class="text-center text-red-600 dark:text-red-400 col-span-full">Error loading featured songs.</p>`;
+             });
     });
   </script>
 
