@@ -60,7 +60,7 @@
         "title": "Pro Tigrinho, O Pai Tem Dinheiro",
         "artist": "Unknown Artist",
         "duration": "N/A",
-        "src": "pro-tigrinho-o-pai-tem-dinheiro.mp3",
+        "src": "l/songs/pro-tigrinho-o-pai-tem-dinheiro.mp3",
         "image": "https://via.placeholder.com/300x300/ff6347/ffffff?text=Tigrinho"
     },
      {
@@ -68,15 +68,15 @@
         "title": "Manequim",
         "artist": "Unknown Artist",
         "duration": "N/A",
-        "src": "manequim.mp3",
+        "src": "l/songs/manequim.mp3",
         "image": "https://via.placeholder.com/300x300/4682b4/ffffff?text=Manequim"
     },
      {
         "id": "table-10",
-        "title": "Eu Sou Incêndio",
+        "title": "Eu Sou IncÃªndio",
         "artist": "Unknown Artist",
         "duration": "N/A",
-        "src": "eu-sou-incendio.mp3",
+        "src": "l/songs/eu-sou-incendio.mp3",
         "image": "https://via.placeholder.com/300x300/dc143c/ffffff?text=Incendio"
     },
      {
@@ -84,7 +84,7 @@
         "title": "Tilanga",
         "artist": "Unknown Artist",
         "duration": "N/A",
-        "src": "tilanga.mp3",
+        "src": "l/songs/tilanga.mp3",
         "image": "https://via.placeholder.com/300x300/3cb371/ffffff?text=Tilanga"
     }
 ]
