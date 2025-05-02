@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Music Collection</title>
+  <!-- Tailwind CSS -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -54,7 +55,6 @@
         <i class="fas fa-star mr-2 text-primary-600 dark:text-primary-400"></i>
         Featured Tracks
       </h2>
-      <!-- Template for featured items -->
       <template id="featured-template">
         <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div class="relative">
@@ -79,7 +79,6 @@
           </div>
         </div>
       </template>
-      <!-- Actual grid container for featured -->
       <div id="featured-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
     </section>
 
@@ -112,44 +111,85 @@
   <audio id="audioPlayer" class="fixed bottom-0 left-0 right-0 w-full bg-gray-100 dark:bg-slate-800 shadow-lg p-2" controls></audio>
 
   <script>
-    // Theme toggle
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+      });
+      // Search toggle
+      document.getElementById('search-toggle').addEventListener('click', () => {
+        const box = document.getElementById('search-box');
+        box.classList.toggle('hidden');
+        if (!box.classList.contains('hidden')) document.getElementById('search-input').focus();
+      });
+      // Render songs
+      renderSongsTable();
+      // Click handlers
+      document.body.addEventListener('click', handlePlayDownload);
     });
 
-    // Search toggle
-    document.getElementById('search-toggle').addEventListener('click', () => {
-      const box = document.getElementById('search-box');
-      box.classList.toggle('hidden');
-      if (!box.classList.contains('hidden')) document.getElementById('search-input').focus();
-    });
-
-    // Render songs
     function renderSongsTable() {
-      fetch('songs.json')
+      fetch('./songs.json')
         .then(res => { if (!res.ok) throw new Error('Failed to load songs'); return res.json(); })
         .then(data => {
-          // Featured
           const featuredContainer = document.getElementById('featured-container');
           const template = document.getElementById('featured-template');
+          featuredContainer.innerHTML = '';
           data.slice(0,4).forEach(song => {
             const clone = template.content.cloneNode(true);
             clone.querySelector('[data-role="featured-image"]').src = song.image;
+            clone.querySelector('[data-role="featured-image"]').alt = song.title;
             clone.querySelector('[data-role="featured-title"]').textContent = song.title;
             clone.querySelector('[data-role="featured-duration"]').textContent = song.duration;
-            const playBtn = clone.querySelector('.play-btn');
-            playBtn.dataset.songId = song.id;
-            const dlBtn = clone.querySelector('.download-btn');
-            dlBtn.dataset.songId = song.id;
+            clone.querySelector('.play-btn').dataset.songId = song.id;
+            clone.querySelector('.download-btn').dataset.songId = song.id;
             featuredContainer.appendChild(clone);
           });
-
-          // All songs table
           const tbody = document.getElementById('songs-table-body');
+          tbody.innerHTML = '';
           data.forEach((song,i) => {
             const tr = document.createElement('tr');
             tr.className = 'hover:bg-gray-100 dark:hover:bg-slate-700';
             tr.innerHTML = `
               <td class="px-6 py-4 whitespace-nowrap">${i+1}</td>
               <td class="px-6 py-4 whitespace-nowrap flex items-center space-x-2">
-                <img src="${song
+                <img src="${song.image}" alt="${song.title}" class="w-10 h-10 object-cover rounded-md">
+                <span>${song.title}</span>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">${song.artist}</td>
+              <td class="px-6 py-4 whitespace-nowrap">${song.duration}</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right space-x-2">
+                <button class="play-btn text-primary-600 hover:text-primary-800 focus:outline-none" data-song-id="${song.id}"><i class="fas fa-play"></i></button>
+                <button class="download-btn text-primary-600 hover:text-primary-800 focus:outline-none" data-song-id="${song.id}"><i class="fas fa-download"></i></button>
+              </td>`;
+            tbody.appendChild(tr);
+          });
+        })
+        .catch(err => console.error(err));
+    }
+
+    function handlePlayDownload(e) {
+      const playBtn = e.target.closest('.play-btn');
+      const dlBtn   = e.target.closest('.download-btn');
+      if (!playBtn && !dlBtn) return;
+      fetch('./songs.json')
+        .then(r=>r.json())
+        .then(data => {
+          const id = (playBtn||dlBtn).dataset.songId;
+          const song = data.find(s => s.id === id);
+          if (!song) return;
+          if (playBtn) {
+            const player = document.getElementById('audioPlayer');
+            player.src = song.src;
+            player.play();
+          } else {
+            const a = document.createElement('a');
+            a.href = song.src;
+            a.download = '';
+            a.click();
+          }
+        });
+    }
+  </script>
+</body>
+</html>
