@@ -1,4 +1,36 @@
 [
+  {
+        "id": "table-1",
+        "title": "Pro Tigrinho, O Pai Tem Dinheiro",
+        "artist": "Unknown Artist",
+        "duration": "N/A",
+        "src": "songs/pro-tigrinho-o-pai-tem-dinheiro.mp3", // <-- Changed from l/songs/
+        "image": "https://via.placeholder.com/300x300/ff6347/ffffff?text=Tigrinho"
+    },
+     {
+        "id": "table-2",
+        "title": "Manequim",
+        "artist": "Unknown Artist",
+        "duration": "N/A",
+        "src": "songs/manequim.mp3", // <-- Changed from l/songs/
+        "image": "https://via.placeholder.com/300x300/4682b4/ffffff?text=Manequim"
+    },
+     {
+        "id": "table-3",
+        "title": "Eu Sou Incêndio",
+        "artist": "Unknown Artist",
+        "duration": "N/A",
+        "src": "songs/eu-sou-incendio.mp3", // <-- Changed from l/songs/
+        "image": "https://via.placeholder.com/300x300/dc143c/ffffff?text=Incendio"
+    },
+     {
+        "id": "table-11",
+        "title": "Tilanga",
+        "artist": "Unknown Artist",
+        "duration": "N/A",
+        "src": "songs/tilanga.mp3", // <-- Changed from l/songs/
+        "image": "https://via.placeholder.com/300x300/3cb371/ffffff?text=Tilanga"
+    },
     {
         "id": "feat-1",
         "title": "Summer Vibes",
