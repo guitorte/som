@@ -12,7 +12,7 @@
         "title": "Manequim",
         "artist": "Unknown Artist",
         "duration": "N/A",
-        "src": "songs/manequim.mp3", // <-- Changed from l/songs/
+        "src": "/songs/manequim.mp3", // <-- Changed from l/songs/
         "image": "https://via.placeholder.com/300x300/4682b4/ffffff?text=Manequim"
     },
      {
@@ -20,7 +20,7 @@
         "title": "Eu Sou Incêndio",
         "artist": "Unknown Artist",
         "duration": "N/A",
-        "src": "songs/eu-sou-incendio.mp3", // <-- Changed from l/songs/
+        "src": "/songs/eu-sou-incendio.mp3", // <-- Changed from l/songs/
         "image": "https://via.placeholder.com/300x300/dc143c/ffffff?text=Incendio"
     },
      {
