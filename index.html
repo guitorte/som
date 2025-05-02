@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music Collection</title>
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome via CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // Tailwind CSS Configuration (for dark mode and custom colors)
-        tailwind.config = {
-            darkMode: 'class', // Enable dark mode based on the presence of the 'dark' class
-            theme: {
-                extend: {
-                    colors: {
-                        // Define a custom primary color palette
-                        primary: {
-                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
-                            400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
-                            800: '#075985', 900: '#0c4a6e', 950: '#012e4a', // Added 950 for dark mode contrast
-                        },
-                        // Extend default gray/slate palettes for dark mode consistency
-                        slate: {
-                             50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
-                             400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
-                             800: '#1e293b', 900: '#0f172a', 950: '#020617',
-                        }
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music Collection</title>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e'
+            },
+            slate: {
+              50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
+              400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
+              800: '#1e293b', 900: '#0f172a'
             }
+          }
         }
-    </script>
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-200">
-  <header class="bg-white dark:bg-slate-800 shadow-md sticky top-0 z-10">
+
+  <header class="bg-white dark:bg-slate-800 shadow sticky top-0 z-10">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <i class="fas fa-music text-2xl text-primary-600 dark:text-primary-400"></i>
@@ -60,6 +54,7 @@
   </header>
 
   <main class="container mx-auto px-4 py-8">
+
     <!-- Featured Section -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-6 flex items-center">
@@ -67,514 +62,154 @@
         Featured Tracks
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Featured Song 1 -->
-        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div class="relative">
-            <img src="https://via.placeholder.com/300x300/0ea5e9/ffffff?text=Song+1" alt="Song 1" class="w-full h-48 object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-1">
-                <i class="fas fa-play text-lg"></i>
-              </button>
-            </div>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-1">Summer Vibes</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">3:45</p>
-            <div class="flex justify-between items-center">
-              <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-1">
-                <i class="fas fa-download mr-1"></i> Download
-              </button>
-              <button class="share-btn text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500" data-song-id="feat-1">
-                <i class="fas fa-share-alt"></i>
-              </button>
-            </div>
-          </div>
-        </div>
 
-        <!-- Featured Song 2 -->
-        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div class="relative">
-            <img src="https://via.placeholder.com/300x300/10b981/ffffff?text=Song+2" alt="Song 2" class="w-full h-48 object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-2">
-                <i class="fas fa-play text-lg"></i>
-              </button>
+        <!-- Featured Item Template -->
+        <template id="featured-template">
+          <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+              <img src="" alt="" class="w-full h-48 object-cover" data-role="featured-image">
+              <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="">
+                  <i class="fas fa-play text-lg"></i>
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-1" data-role="featured-title"></h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-3" data-role="featured-duration"></p>
+              <div class="flex justify-between items-center">
+                <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="">
+                  <i class="fas fa-download mr-1"></i> Download
+                </button>
+                <button class="share-btn text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500" data-song-id="">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-1">Midnight Dreams</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">4:12</p>
-            <div class="flex justify-between items-center">
-              <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-2">
-                <i class="fas fa-download mr-1"></i> Download
-              </button>
-              <button class="share-btn text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500" data-song-id="feat-2">
-                <i class="fas fa-share-alt"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+        </template>
 
-        <!-- Featured Song 3 -->
-        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div class="relative">
-            <img src="https://via.placeholder.com/300x300/f59e0b/ffffff?text=Song+3" alt="Song 3" class="w-full h-48 object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-3">
-                <i class="fas fa-play text-lg"></i>
-              </button>
-            </div>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-1">Urban Echo</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">3:28</p>
-            <div class="flex justify-between items-center">
-              <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-3">
-                <i class="fas fa-download mr-1"></i> Download
-              </button>
-              <button class="share-btn text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500" data-song-id="feat-3">
-                <i class="fas fa-share-alt"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Featured Song 4 -->
-        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div class="relative">
-            <img src="https://via.placeholder.com/300x300/8b5cf6/ffffff?text=Song+4" alt="Song 4" class="w-full h-48 object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-4">
-                <i class="fas fa-play text-lg"></i>
-              </button>
-            </div>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-1">Ocean Breeze</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">4:35</p>
-            <div class="flex justify-between items-center">
-              <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="feat-4">
-                <i class="fas fa-download mr-1"></i> Download
-              </button>
-              <button class="share-btn text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500" data-song-id="feat-4">
-                <i class="fas fa-share-alt"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+        <!-- Featured placeholders: will be populated via JS -->
+        <div id="featured-container"></div>
 
       </div>
     </section>
-    </main>
 
-    <!-- Simple Footer -->
-    <footer class="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400 text-sm">
-        &copy; 2023 My Music Collection. All rights reserved.
-    </footer>
+    <!-- All Songs Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">All Songs</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-slate-700">
+          <thead class="bg-gray-50 dark:bg-slate-800">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase">#</th>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase">Title</th>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase">Artist</th>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase">Duration</th>
+              <th class="px-6 py-3 text-right text-xs font-medium uppercase">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="songs-table-body" class="bg-white dark:bg-slate-800 divide-y divide-gray-200 dark:divide-slate-700">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400 text-sm">
-    &copy; 2023 My Music Collection. All rights reserved.
+    &copy; 2025 My Music Collection. All rights reserved.
   </footer>
 
+  <!-- Audio Player -->
   <audio id="audioPlayer" class="fixed bottom-0 left-0 right-0 w-full bg-gray-100 dark:bg-slate-800 shadow-lg p-2" controls></audio>
 
+  <script>
+    // Theme toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
 
-    <!-- JavaScript for interactivity -->
-    <script>
-        // Declare a variable to hold song data once loaded
-        let songs = [];
+    // Search toggle
+    document.getElementById('search-toggle').addEventListener('click', () => {
+      const box = document.getElementById('search-box');
+      box.classList.toggle('hidden');
+      if (!box.classList.contains('hidden')) document.getElementById('search-input').focus();
+    });
 
-        // --- DOM Element References ---
-        const htmlElement = document.documentElement;
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const searchToggleBtn = document.getElementById('search-toggle');
-        const searchBox = document.getElementById('search-box');
-        const searchInput = document.getElementById('search-input');
-        const audioPlayer = document.getElementById('audioPlayer');
-        const songsTableBody = document.getElementById('songs-table-body');
-		const container = document.getElementById('songsList');
-if (container) {
-  container.innerHTML = html;
-}
+    // Render songs
+    function renderSongsTable() {
+      fetch('songs.json')
+        .then(res => { if (!res.ok) throw new Error('Failed to load songs'); return res.json(); })
+        .then(data => {
+          // Featured
+          const featuredContainer = document.getElementById('featured-container');
+          const template = document.getElementById('featured-template');
+          data.slice(0,4).forEach(song => {
+            const clone = template.content.cloneNode(true);
+            clone.querySelector('[data-role="featured-image"]').src = song.image;
+            clone.querySelector('[data-role="featured-title"]').textContent = song.title;
+            clone.querySelector('[data-role="featured-duration"]').textContent = song.duration;
+            const playBtn = clone.querySelector('.play-btn');
+            playBtn.dataset.songId = song.id;
+            const dlBtn = clone.querySelector('.download-btn');
+            dlBtn.dataset.songId = song.id;
+            featuredContainer.appendChild(clone);
+          });
 
+          // All songs table
+          const tbody = document.getElementById('songs-table-body');
+          data.forEach((song,i) => {
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-gray-100 dark:hover:bg-slate-700';
+            tr.innerHTML = `
+              <td class="px-6 py-4 whitespace-nowrap">${i+1}</td>
+              <td class="px-6 py-4 whitespace-nowrap flex items-center space-x-2">
+                <img src="${song.image}" alt="${song.title}" class="w-10 h-10 object-cover rounded-md">
+                <span>${song.title}</span>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">${song.artist}</td>
+              <td class="px-6 py-4 whitespace-nowrap">${song.duration}</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right space-x-2">
+                <button class="play-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 focus:outline-none" data-song-id="${song.id}">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 focus:outline-none" data-song-id="${song.id}">
+                  <i class="fas fa-download"></i>
+                </button>
+              </td>`;
+            tbody.appendChild(tr);
+          });
+        })
+        .catch(err => console.error(err));
+    }
 
-        // --- State Variables ---
-        let currentPlayingSongId = null;
-        // We no longer track currentPlayingButton explicitly, relying on currentPlayingSongId
-        // let currentPlayingButton = null;
+    document.addEventListener('DOMContentLoaded', renderSongsTable);
 
-        // --- Helper Functions ---
-
-        // Find song data by ID from the loaded 'songs' array (Simplified)
-        function getSongById(id) {
-             if (!songs || songs.length === 0) {
-                 console.warn("Songs data not loaded yet.");
-                 return null;
-             }
-             const foundSong = songs.find(song => song.id === id);
-             if (!foundSong) {
-                 console.warn(`Song with ID "${id}" not found in loaded data.`);
-             }
-             return foundSong;
-        }
-
-
-        // Render the songs in the table
-        function renderSongsTable(songsToRender) {
-            songsTableBody.innerHTML = ''; // Clear existing rows
-
-            if (!songsToRender || songsToRender.length === 0) {
-                 songsTableBody.innerHTML = `
-                     <tr>
-                        <td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">No songs found.</td>
-                    </tr>
-                 `;
-                 return;
-            }
-
-            songsToRender.forEach((song, index) => {
-                 // Only render songs with 'table-' prefix in the main table
-                 // If you wanted ALL songs in the table, remove this if condition
-                 if (song.id.startsWith('table-')) {
-                      const row = `
-                          <tr>
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-slate-100">${index + 1}</td>
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-slate-100">${song.title}</td>
-                               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">${song.artist || 'Unknown'}</td>
-                              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">${song.duration}</td>
-                              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                  <button class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mr-3 play-btn focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="${song.id}">
-                                      <i class="fas fa-play"></i>
-                                  </button>
-                                  <button class="download-btn text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mr-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="${song.id}">
-                                      <i class="fas fa-download"></i>
-                                  </button>
-                                  <button class="share-btn text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-500" data-song-id="${song.id}">
-                                      <i class="fas fa-share-alt"></i>
-                                  </button>
-                              </td>
-                          </tr>
-                      `;
-                      songsTableBody.innerHTML += row; // Append the row HTML
-                 }
-            });
-
-            // Re-attach event listeners to the new buttons in the table
-            // Also update button icons if a song is currently playing
-            attachButtonListeners();
-            updatePlayingButtonIcon(); // Ensure correct icon for currently playing song
-        }
-
-        // Update the play/pause icon on a specific button
-        function updatePlayIcon(button, isPlaying) {
-            const icon = button.querySelector('i');
-            if (icon) { // Check if icon exists
-                if (isPlaying) {
-                    icon.classList.remove('fa-play');
-                    icon.classList.add('fa-pause');
-                } else {
-                    icon.classList.remove('fa-pause');
-                    icon.classList.add('fa-play');
-                }
-            }
-        }
-
-        // Find the button for the currently playing song and update its icon
-        function updatePlayingButtonIcon() {
-            // Reset all play buttons to 'play' icon first
-            document.querySelectorAll('.play-btn i').forEach(icon => {
-                icon.classList.remove('fa-pause');
-                icon.classList.add('fa-play');
-            });
-
-            // If a song is playing and we know its ID, find the corresponding button(s) and set to 'pause'
-            if (currentPlayingSongId && !audioPlayer.paused) {
-                const buttonsForCurrentSong = document.querySelectorAll(`.play-btn[data-song-id="${currentPlayingSongId}"]`);
-                buttonsForCurrentSong.forEach(btn => {
-                    updatePlayIcon(btn, true);
-                });
-            }
-        }
-
-
-        // --- Event Handlers ---
-
-        // Handle Theme Toggle Button Click
-        function handleThemeToggle() {
-            htmlElement.classList.toggle('dark');
-            // Save user preference to localStorage
-            if (htmlElement.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        }
-
-        // Handle Search Toggle Button Click
-        function handleSearchToggle(event) {
-            searchBox.classList.toggle('hidden');
-             // Optional: Prevent the click from closing the box immediately if clicking outside
-            event.stopPropagation();
-             // Focus the input when the box appears
-             if (!searchBox.classList.contains('hidden')) {
-                searchInput.focus();
-             }
-        }
-
-        // Handle Clicks Outside Search Box to Close
-        function handleDocumentClick(event) {
-            // Check if the click was outside the search box AND not on the search toggle button
-            if (!searchBox.contains(event.target) && event.target !== searchToggleBtn && !searchToggleBtn.contains(event.target)) {
-                searchBox.classList.add('hidden');
-            }
-        }
-
-        // Handle Search Input (Filtering)
-        function handleSearchInput() {
-            const searchText = searchInput.value.toLowerCase();
-             // Filter the *entire* loaded songs array (then render only 'table-' ones if needed)
-            const filteredSongs = songs.filter(song =>
-                song.title.toLowerCase().includes(searchText) ||
-                (song.artist && song.artist.toLowerCase().includes(searchText)) // Check if artist exists
-            );
-             // Decide whether to render *all* results or just 'table-' results
-             // If you want search to also find featured songs and show them in the table: renderSongsTable(filteredSongs);
-             // If you only want search to filter the main table list:
-             const filteredTableSongs = filteredSongs.filter(song => song.id.startsWith('table-'));
-            renderSongsTable(filteredTableSongs);
-        }
-
-        // Handle Play Button Click
-        function handlePlayButtonClick(event) {
-            const button = event.currentTarget; // The button that was clicked
-            const songId = button.dataset.songId;
-            const song = getSongById(songId);
-
-            if (!song || !song.src) {
-                console.error(`Song data or source not found for ID: ${songId}`);
-                alert("Song data or source not available.");
-                return;
-            }
-
-            // If this song is already playing, pause it
-            if (currentPlayingSongId === songId && !audioPlayer.paused) {
-                audioPlayer.pause();
-            } else {
-                 // If a different song was playing, reset its button icon
-                 if (currentPlayingSongId) {
-                     // Reset all buttons associated with the *previously* playing song
-                     document.querySelectorAll(`.play-btn[data-song-id="${currentPlayingSongId}"]`).forEach(btn => {
-                         updatePlayIcon(btn, false);
-                     });
-                 }
-
-                 // Play the new song or resume the same song if paused
-                 if (audioPlayer.paused && currentPlayingSongId === songId) {
-                      audioPlayer.play().catch(error => {
-                         console.error("Error resuming audio:", error);
-                         alert("Could not resume audio playback.");
-                      });
-                 } else {
-                     audioPlayer.src = song.src;
-                     audioPlayer.load(); // Load the new source
-                     audioPlayer.play()
-                         .then(() => {
-                             // Update all buttons for the newly playing song to pause
-                             document.querySelectorAll(`.play-btn[data-song-id="${songId}"]`).forEach(btn => {
-                                 updatePlayIcon(btn, true);
-                             });
-                             currentPlayingSongId = songId;
-                             console.log(`Now playing: "${song.title}"`);
-                         })
-                         .catch(error => {
-                             console.error("Error playing audio:", error);
-                             alert("Could not play the audio file. Ensure the file exists and path is correct.");
-                              // Reset icons for this song if playback failed
-                             document.querySelectorAll(`.play-btn[data-song-id="${songId}"]`).forEach(btn => {
-                                 updatePlayIcon(btn, false);
-                             });
-                             currentPlayingSongId = null;
-                         });
-                 }
-                 // Ensure the clicked button's icon is updated immediately if playback starts
-                 // This is handled by the promise chain above or the resume logic, but good to be explicit:
-                 if (audioPlayer.paused === false && audioPlayer.src === song.src) {
-                      updatePlayIcon(button, true);
-                 }
-
-            }
-        }
-
-        // Handle Audio Player Paused Event
-        function handleAudioPause() {
-             // Reset all play buttons to 'play' icon if the player is truly paused and not ended
-             if (!audioPlayer.ended) {
-                document.querySelectorAll('.play-btn').forEach(btn => {
-                     // Only update the icon if the song ID matches the currently playing song (handles multiple pause buttons if any)
-                     if (btn.dataset.songId === currentPlayingSongId) {
-                          updatePlayIcon(btn, false);
-                     }
-                });
-             }
-        }
-
-        // Handle Audio Player Ended Event
-        function handleAudioEnded() {
-             // Reset all play buttons to 'play' icon for the finished song
-             if (currentPlayingSongId) {
-                 document.querySelectorAll(`.play-btn[data-song-id="${currentPlayingSongId}"]`).forEach(btn => {
-                    updatePlayIcon(btn, false);
-                 });
-             }
-            currentPlayingSongId = null;
-            console.log("Playback ended.");
-        }
-
-        // --- Attach Event Listeners ---
-
-        // Function to attach listeners to all relevant buttons (featured and table)
-        function attachButtonListeners() {
-             // Cloning approach for dynamically added elements like the table rows
-             document.querySelectorAll('.play-btn').forEach(oldBtn => {
-                 // Check if listener is already attached (optional, but cloning avoids double-attaching)
-                 // If using removeEventListener, you'd add the removal here before adding
-                 const newBtn = oldBtn.cloneNode(true);
-                 oldBtn.parentNode.replaceChild(newBtn, oldBtn);
-                 newBtn.addEventListener('click', handlePlayButtonClick);
-             });
-
-              document.querySelectorAll('.download-btn').forEach(oldBtn => {
-                  const newBtn = oldBtn.cloneNode(true);
-                  oldBtn.parentNode.replaceChild(newBtn, oldBtn);
-                 newBtn.addEventListener('click', handleDownloadButtonClick);
-              });
-
-              document.querySelectorAll('.share-btn').forEach(oldBtn => {
-                  const newBtn = oldBtn.cloneNode(true);
-                  oldBtn.parentNode.replaceChild(newBtn, oldBtn);
-                 newBtn.addEventListener('click', handleShareButtonClick);
-              });
-
-             // After attaching, ensure icons reflect current player state
-             updatePlayingButtonIcon();
-        }
-
-
-        // Handle Download Button Click
-        function handleDownloadButtonClick(event) {
-            const songId = event.currentTarget.dataset.songId;
-            const song = getSongById(songId);
-
-            if (!song || !song.src) {
-                 console.error(`Download source not found for song: ${songId}`);
-                 alert("Download source not available.");
-                 return;
-            }
-
-            // Create a temporary link element to trigger download
-            const link = document.createElement('a');
-            link.href = song.src;
-            // Suggest a filename (can be improved, maybe parse from URL if no title?)
-            // Added basic sanitization for filename
-            const suggestedFilename = `${song.title ? song.title.replace(/[^a-z0-9_\-]/gi, '').toLowerCase() : 'song'}.${song.src.split('.').pop() || 'mp3'}`;
-            link.download = suggestedFilename;
-            document.body.appendChild(link); // Required for Firefox
-            link.click(); // Simulate click
-            document.body.removeChild(link); // Clean up
-        }
-
-        // Handle Share Button Click
-        function handleShareButtonClick(event) {
-            const songId = event.currentTarget.dataset.songId;
-            const song = getSongById(songId);
-
-            if (!song) {
-                 console.error(`Share details not found for song: ${songId}`);
-                 alert("Share details not available.");
-                 return;
-            }
-
-            // Use the Web Share API if available
-            if (navigator.share) {
-                navigator.share({
-                    title: song.title || 'A Song',
-                    text: `Check out "${song.title || 'this song'}" by ${song.artist || 'an unknown artist'}!`,
-                    url: window.location.href // Using current page URL as a placeholder
-                }).then(() => {
-                    console.log('Song shared successfully');
-                }).catch((error) => {
-                    console.error('Error sharing song:', error);
-                    // User cancelled or sharing failed
-                });
-            } else {
-                // Fallback for browsers that do not support Web Share API
-                const shareText = `Check out "${song.title || 'this song'}" by ${song.artist || 'an unknown artist'}! URL: ${window.location.href}`;
-                console.log(`Web Share API not supported. Share details: ${shareText}`);
-                alert(`Sharing is not supported in this browser. You can manually share:\n\n"${song.title || 'A Song'}" by ${song.artist || 'Unknown Artist'}\n${window.location.href}`);
-                // Could implement 'copy to clipboard' here as a better fallback
-            }
-        }
-
-        // --- Initial Setup on Page Load ---
-        document.addEventListener('DOMContentLoaded', async () => { // Made async to use await for fetch
-
-            // Apply saved theme preference or detect system preference
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                htmlElement.classList.add('dark');
-            } else {
-                 htmlElement.classList.remove('dark'); // Ensure light mode is set if preferred or saved
-            }
-
-            // --- Load Songs from JSON ---
-            try {
-                const response = await fetch('songs.json'); // Fetch the JSON file
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                songs = await response.json(); // Parse the JSON data
-
-                // Render the song list in the table *after* data is loaded
-                // Filter for only songs meant for the table view
-                const tableSongs = songs.filter(song => song.id.startsWith('table-'));
-                renderSongsTable(tableSongs);
-
-            } catch (error) {
-                console.error("Failed to load songs:", error);
-                 songsTableBody.innerHTML = `
-                     <tr>
-                        <td colspan="5" class="px-6 py-4 text-center text-sm text-red-600 dark:text-red-400">Error loading songs. Please try again later.</td>
-                    </tr>
-                 `;
-                 // Optionally disable buttons if data didn't load
-                 document.querySelectorAll('.play-btn, .download-btn, .share-btn').forEach(btn => btn.disabled = true);
-            }
-
-
-            // Attach main event listeners (independent of song data loading, except searchInput)
-            themeToggleBtn.addEventListener('click', handleThemeToggle);
-            searchToggleBtn.addEventListener('click', handleSearchToggle);
-            document.addEventListener('click', handleDocumentClick); // Close search box when clicking outside
-            // Search input listener depends on 'songs' being populated, so it's safe after the fetch block
-            searchInput.addEventListener('input', handleSearchInput); // Filter table on search input
-
-            // Audio player listeners don't depend on the song data array itself, only the player element
-            audioPlayer.addEventListener('pause', handleAudioPause); // Handle audio player pausing
-            audioPlayer.addEventListener('ended', handleAudioEnded); // Handle audio player finishing
-            // Added 'play' listener to handle external play events (e.g., native controls)
-            audioPlayer.addEventListener('play', updatePlayingButtonIcon); // Update icon if playback starts externally
-
-
-             // Initial attachment of listeners for featured section (buttons are static in HTML)
-             // We also re-attach after table render inside renderSongsTable for table buttons
-             attachButtonListeners();
-
-             // Keep audio player controls visible by default for now.
-             // audioPlayer.classList.remove('hidden'); // Use this if you initially hide it
+    // Play & Download handlers
+    document.body.addEventListener('click', e => {
+      const play = e.target.closest('.play-btn');
+      const dl = e.target.closest('.download-btn');
+      if (play || dl) {
+        fetch('songs.json').then(r=>r.json()).then(data => {
+          const id = (play||dl).dataset.songId;
+          const song = data.find(s=>s.id===id);
+          if (!song) return;
+          if (play) {
+            const player = document.getElementById('audioPlayer');
+            player.src = song.src;
+            player.play();
+          } else {
+            const a = document.createElement('a');
+            a.href = song.src;
+            a.download = '';
+            a.click();
+          }
         });
+      }
+    });
+  </script>
 
-    </script>
 </body>
 </html>
