@@ -5,7 +5,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/pro-tigrinho-o-pai-tem-dinheiro.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/pro-tigrinho-o-pai-tem-dinheiro.jpg"
   },
   {
     "id": "feat-2",
@@ -13,7 +13,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/manequim.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/manequim.jpg"
   },
   {
     "id": "feat-3",
@@ -21,7 +21,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/eu-sou-incendio.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/eu-sou-incendio.jpg"
   },
   {
     "id": "feat-4",
@@ -29,7 +29,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/tilanga.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/tilanga.jpg"
   },
   {
     "id": "table-12",
@@ -37,7 +37,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/a-prima.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/a-prima.jpg"
   },
   {
     "id": "table-13",
@@ -77,7 +77,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/o-morto-ta-de-lancha.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/o-morto-ta-de-lancha.jpg"
   },
   {
     "id": "table-18",
@@ -85,7 +85,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/oh-azar.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/oh-azar.jpg"
   },
   {
     "id": "table-19",
@@ -109,7 +109,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/so-to-aceitando-pix.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/so-to-aceitando-pix.jpg"
   },
   {
     "id": "table-22",
@@ -125,7 +125,7 @@
     "artist": "Unknown Artist",
     "duration": "N/A",
     "src": "songs/te-faltou-mae.mp3",
-    "image": "images/miss.jpg"
+    "image": "images/vai-chorar.jpg"
   },
   {
     "id": "table-24",
