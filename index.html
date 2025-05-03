@@ -4,19 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Music Collection</title>
-  <!-- Initialize default theme -->
   <script>
     (function() {
       const saved = localStorage.getItem('theme');
       if (saved === 'light') {
         document.documentElement.classList.remove('dark');
       } else {
-        // default to dark if no preference or saved === 'dark'
         document.documentElement.classList.add('dark');
       }
     })();
   </script>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -56,10 +53,10 @@
       </h2>
       <template id="featured-template">
         <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div class="relative">
+          <div class="relative" data-song-id="">
             <img src="" alt="" class="w-full h-48 object-cover" data-role="featured-image">
             <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500" data-song-id="">
+              <button class="play-btn bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-primary-500">
                 <i class="fas fa-play text-lg"></i>
               </button>
             </div>
@@ -111,16 +108,13 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Theme toggle with persistence
       const toggle = document.getElementById('theme-toggle');
       const moon = toggle.querySelector('.fa-moon');
       const sun = toggle.querySelector('.fa-sun');
       const updateIcons = () => {
-        if (document.documentElement.classList.contains('dark')) {
-          moon.classList.add('hidden'); sun.classList.remove('hidden');
-        } else {
-          moon.classList.remove('hidden'); sun.classList.add('hidden');
-        }
+        document.documentElement.classList.contains('dark') 
+          ? (moon.classList.add('hidden'), sun.classList.remove('hidden'))
+          : (moon.classList.remove('hidden'), sun.classList.add('hidden'));
       };
       updateIcons();
       toggle.addEventListener('click', () => {
@@ -129,41 +123,46 @@
         updateIcons();
       });
 
-      // Search toggle
       document.getElementById('search-toggle').addEventListener('click', () => {
         const box = document.getElementById('search-box');
         box.classList.toggle('hidden');
         if (!box.classList.contains('hidden')) document.getElementById('search-input').focus();
       });
 
-      // Render songs and handlers
       renderSongsTable();
       document.body.addEventListener('click', handlePlayDownload);
     });
 
     function renderSongsTable() {
       fetch('./songs.json')
-        .then(res => { if (!res.ok) throw new Error('Failed to load songs'); return res.json(); })
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to load songs');
+          return res.json();
+        })
         .then(data => {
-          // populate featured and table...
           const featuredContainer = document.getElementById('featured-container');
           const template = document.getElementById('featured-template');
           featuredContainer.innerHTML = '';
+          
           data.slice(0,4).forEach(song => {
             const clone = template.content.cloneNode(true);
+            const container = clone.querySelector('.relative');
+            container.dataset.songId = song.id;
             clone.querySelector('[data-role="featured-image"]').src = song.image;
             clone.querySelector('[data-role="featured-image"]').alt = song.title;
             clone.querySelector('[data-role="featured-title"]').textContent = song.title;
             clone.querySelector('[data-role="featured-duration"]').textContent = song.duration;
-            clone.querySelector('.play-btn').dataset.songId = song.id;
             clone.querySelector('.download-btn').dataset.songId = song.id;
+            clone.querySelector('.share-btn').dataset.songId = song.id;
             featuredContainer.appendChild(clone);
           });
+
           const tbody = document.getElementById('songs-table-body');
           tbody.innerHTML = '';
-          data.forEach((song,i) => {
+          data.forEach((song, i) => {
             const tr = document.createElement('tr');
             tr.className = 'hover:bg-gray-100 dark:hover:bg-slate-700';
+            tr.dataset.songId = song.id;
             tr.innerHTML = `
               <td class="px-6 py-4 whitespace-nowrap">${i+1}</td>
               <td class="px-6 py-4 whitespace-nowrap flex items-center space-x-2">
@@ -173,7 +172,6 @@
               <td class="px-6 py-4 whitespace-nowrap">${song.artist}</td>
               <td class="px-6 py-4 whitespace-nowrap">${song.duration}</td>
               <td class="px-6 py-4 whitespace-nowrap text-right space-x-2">
-                <button class="play-btn text-primary-600 hover:text-primary-800 focus:outline-none" data-song-id="${song.id}"><i class="fas fa-play"></i></button>
                 <button class="download-btn text-primary-600 hover:text-primary-800 focus:outline-none" data-song-id="${song.id}"><i class="fas fa-download"></i></button>
               </td>`;
             tbody.appendChild(tr);
@@ -183,26 +181,35 @@
     }
 
     function handlePlayDownload(e) {
-      const playBtn = e.target.closest('.play-btn');
-      const dlBtn   = e.target.closest('.download-btn');
-      if (!playBtn && !dlBtn) return;
-      fetch('./songs.json')
-        .then(r=>r.json())
-        .then(data => {
-          const id = (playBtn||dlBtn).dataset.songId;
-          const song = data.find(s => s.id === id);
-          if (!song) return;
-          if (playBtn) {
-            const player = document.getElementById('audioPlayer');
-            player.src = song.src;
-            player.play();
-          } else {
+      const dlBtn = e.target.closest('.download-btn');
+      const shareBtn = e.target.closest('.share-btn');
+      
+      // Handle download
+      if (dlBtn) {
+        fetch('./songs.json')
+          .then(r => r.json())
+          .then(data => {
+            const song = data.find(s => s.id === dlBtn.dataset.songId);
             const a = document.createElement('a');
             a.href = song.src;
             a.download = '';
             a.click();
-          }
-        });
+          });
+        return;
+      }
+
+      // Handle play on any song element
+      const songElement = e.target.closest('[data-song-id]');
+      if (songElement && !shareBtn) {
+        fetch('./songs.json')
+          .then(r => r.json())
+          .then(data => {
+            const song = data.find(s => s.id === songElement.dataset.songId);
+            const player = document.getElementById('audioPlayer');
+            player.src = song.src;
+            player.play();
+          });
+      }
     }
   </script>
 </body>
