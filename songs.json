@@ -32,59 +32,107 @@
     "image": "images/miss.jpg"
   },
   {
-    "id": "table-5",
-    "title": "Summer Vibes",
+    "id": "table-12",
+    "title": "A Prima",
     "artist": "Unknown Artist",
-    "duration": "3:45",
-    "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "duration": "N/A",
+    "src": "songs/a-prima.mp3",
     "image": "images/miss.jpg"
   },
   {
-    "id": "table-6",
-    "title": "Midnight Dreams",
-    "artist": "Groovy Tunes",
-    "duration": "4:12",
-    "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    "id": "table-13",
+    "title": "Aprendi Com Voce",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/aprendi-com-voce.mp3",
     "image": "images/miss.jpg"
   },
   {
-    "id": "table-7",
-    "title": "Urban Echo",
-    "artist": "City Sounds",
-    "duration": "3:28",
-    "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    "id": "table-14",
+    "title": "Mercadinho",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/mercadinho.mp3",
     "image": "images/miss.jpg"
   },
   {
-    "id": "table-8",
-    "title": "Ocean Breeze",
-    "artist": "Coastal Beats",
-    "duration": "4:35",
-    "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+    "id": "table-15",
+    "title": "Namorando Tres",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/namorando-tres.mp3",
     "image": "images/miss.jpg"
   },
   {
-    "id": "table-9",
-    "title": "Forest Hymn",
-    "artist": "Nature Calls",
-    "duration": "2:58",
-    "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+    "id": "table-16",
+    "title": "Nao Compra Nao",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/nao-compra-nao.mp3",
     "image": "images/miss.jpg"
   },
   {
-    "id": "table-10",
-    "title": "Starry Night",
-    "artist": "Cosmic Vibes",
-    "duration": "5:01",
-    "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
+    "id": "table-17",
+    "title": "O Morto Ta De Lancha",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/o-morto-ta-de-lancha.mp3",
     "image": "images/miss.jpg"
   },
   {
-    "id": "table-11",
-    "title": "Desert Wind",
-    "artist": "Nomad Sounds",
-    "duration": "3:19",
-    "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
+    "id": "table-18",
+    "title": "Oh Azar",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/oh-azar.mp3",
+    "image": "images/miss.jpg"
+  },
+  {
+    "id": "table-19",
+    "title": "Rap Carlos",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/rap-carlos.mp3",
+    "image": "images/miss.jpg"
+  },
+  {
+    "id": "table-20",
+    "title": "Saudades",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/saudades.mp3",
+    "image": "images/miss.jpg"
+  },
+  {
+    "id": "table-21",
+    "title": "So To Aceitando Pix",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/so-to-aceitando-pix.mp3",
+    "image": "images/miss.jpg"
+  },
+  {
+    "id": "table-22",
+    "title": "Sumi De Fininho",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/sumi-de-fininho.mp3",
+    "image": "images/miss.jpg"
+  },
+  {
+    "id": "table-23",
+    "title": "Te Faltou Mae",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/te-faltou-mae.mp3",
+    "image": "images/miss.jpg"
+  },
+  {
+    "id": "table-24",
+    "title": "Vai Chorar",
+    "artist": "Unknown Artist",
+    "duration": "N/A",
+    "src": "songs/vai-chorar.mp3",
     "image": "images/miss.jpg"
   }
 ]
