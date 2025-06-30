@@ -1,0 +1,3179 @@
+[
+  {
+    "id": "MPB_085",
+    "title": "Pavio do destino",
+    "artist": "Sérgio Sampaio",
+    "composers": ["Sérgio Sampaio"],
+    "album": null,
+    "year": null,
+    "genre": "MPB",
+    "subgenres": ["MPB Crítica Social", "Crônica"],
+    "moods": ["Crítico", "Melancólico", "Cético", "Trágico", "Reflexivo"],
+    "themes": ["Destino", "Violência social", "Desigualdade", "Infância roubada", "Injustiça"],
+    "keywords": ["bandido", "mocinho", "ninho", "trilhos", "morro dos aflitos", "Favela do Esqueleto", "filhos do primo pobre", "silêncio", "gritos", "revólver de brinquedo", "meninos", "pavio aceso", "autoridade", "flagrante", "educandários", "dor", "agride", "separa", "inocentes", "medo", "desatino", "pai de tudo", "surpresa", "ironia", "farda", "segurança", "amarga", "bando", "quadrilha", "safra", "ilha", "Valentinos"],
+    "linguistic_analysis": {
+      "style": "Narrativo, poético, com linguagem expressiva e forte crítica social.",
+      "rhyme_scheme": "Regular e presente (ninho/trilhos/aflitos/gritos/meninos).",
+      "main_rhetoric_device": "Metáfora (pavio do destino), antítese (bandido/mocinho, mocinho veste farda), ironia.",
+      "language_level": "Culto, poético, com vocabulário social e emocional intenso."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "O bandido e o mocinho, são os dois do mesmo ninho",
+          "Correm nos estreitos trilhos, lá no morro dos aflitos",
+          "Na Favela do Esqueleto, são filhos do primo pobre",
+          "A parcela do silêncio que encobre todos os gritos",
+          "E vão caminhando juntos, o mocinho e o bandido",
+          "De revólver de brinquedo, porque ainda são meninos"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Quem viu o pavio aceso?",
+          "Do destino",
+          "Quem viu o pavio aceso?",
+          "Do destino"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Com um pouco mais de idade e já não são como antes",
+          "Depois que uma autoridade inventou-lhes um flagrante",
+          "Quanto mais escapa o tempo dos falsos educandários",
+          "Mais a dor é o documento, que os agride e os separa",
+          "Não são mais dois inocentes, não se falam cara-a-cara",
+          "Quem pode escapar ileso do medo e do desatino?"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Quem viu o pavio aceso?",
+          "Do destino",
+          "Quem viu o pavio aceso?",
+          "Do destino"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "O tempo que é pai de tudo e surpresa não tem dia",
+          "Pode ser que haja no mundo outra maior ironia",
+          "O bandido veste a farda da suprema segurança",
+          "O mocinho agora amarga um bando, uma quadrilha",
+          "São os dois da mesma safra os dois são da mesma ilha",
+          "Dois meninos pelo avesso, dois perdidos Valentinos"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Quem viu o pavio aceso?",
+          "Do destino",
+          "Quem viu o pavio aceso?",
+          "Do destino"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "MPB_086",
+    "title": "Roda Morta (reflexões de um executivo)",
+    "artist": "Sérgio Sampaio",
+    "composers": ["Sérgio Sampaio"],
+    "album": null,
+    "year": null,
+    "genre": "MPB",
+    "subgenres": ["MPB Crítica Social", "Existencial"],
+    "moods": ["Amargurado", "Cético", "Desiludido", "Deprimido", "Irônico"],
+    "themes": ["Crítica social", "Corrupção", "Existência vazia", "Desencanto", "Pesadelos do cotidiano"],
+    "keywords": ["triste", "compromisso", "dentes cariados", "alegria", "desgosto", "agonia", "manada dos normais", "sordidez", "conteúdo", "dias maquinais", "máquinas", "poço fundo", "braçais", "mundo dos salões coloniais", "abutres colunáveis", "gaviões", "vomitando", "cristais", "cristas", "galos de brinquedo", "covardia", "medo", "sol lilás", "mofo verde", "fraque", "moscas mortas", "conhaque", "ancestrais", "hordas de demônios", "horror noturno", "sonhos infernais", "cara falsa", "infame", "tara", "gabinete", "sócio", "alcaguete", "paz"],
+    "linguistic_analysis": {
+      "style": "Lírico, com linguagem complexa, repleta de metáforas e forte crítica social, tom sombrio.",
+      "rhyme_scheme": "Regular (tudo/compromisso, alegria/manada; conteúdo/fundo/mundo).",
+      "main_rhetoric_device": "Metáfora (dentes cariados da alegria, galos de brinquedo), enumeração de elementos negativos.",
+      "language_level": "Culto, com vocabulário expressivo e denso."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "O triste nisso tudo é tudo isso",
+          "Quer dizer, tirando nada, só me resta o compromisso",
+          "Com os dentes cariados da alegria",
+          "Com o desgosto e a agonia da manada dos normais."
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "O triste em tudo isso é isso tudo",
+          "A sordidez do conteúdo desses dias maquinais",
+          "E as máquinas cavando um poço fundo entre os braçais,",
+          "eu mesmo e o mundo dos salões coloniais."
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Colônias de abutres colunáveis",
+          "Gaviões bem sociáveis vomitando entre os cristais",
+          "E as cristas desses galos de brinquedo",
+          "Cuja covardia e medo dão ao sol um tom lilás."
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu vejo um mofo verde no meu fraque",
+          "E as moscas mortas no conhaque que eu herdei dos ancestrais",
+          "E as hordas de demônios quando eu durmo",
+          "Infestando o horror noturno dos meu sonhos infernais."
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu sei que quando acordo eu visto a cara falsa e infame",
+          "como a tara do mais vil dentre os mortais",
+          "E morro quando adentro o gabinete",
+          "Onde o sócio o e o alcaguete não me deixam nunca em paz"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O triste em tudo isso é que eu sei disso",
+          "Eu vivo disso e além disso",
+          "Eu quero sempre mais e mais.",
+          "(2x)",
+          "mais e mais"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "MPB_087",
+    "title": "Uma quase mulher",
+    "artist": "Sérgio Sampaio",
+    "composers": ["Sérgio Sampaio"],
+    "album": null,
+    "year": null,
+    "genre": "MPB",
+    "subgenres": ["MPB Romântica", "Desabafo"],
+    "moods": ["Amargurado", "Decepcionado", "Frustrado", "Reflexivo", "Decidido"],
+    "themes": ["Fim de relacionamento", "Desilusão amorosa", "Autoafirmação", "Sofrimento", "Incompreensão do amor"],
+    "keywords": ["mulher", "ferida", "morde e sopra", "ilusão mal sucedida", "chuva miúda", "alagou", "coração", "amar de novo", "socorro", "fugiu", "desistiu", "mundo", "cama", "maçã", "sonho louco", "carro", "declive", "freio de mão", "esteio da vida", "receio", "canção", "procurar", "dar a mão"],
+    "linguistic_analysis": {
+      "style": "Lírico, confessional, com linguagem expressiva e imagética, tom de lamento e libertação.",
+      "rhyme_scheme": "Regular e presente (vida/ferida/não/coração).",
+      "main_rhetoric_device": "Metáfora (chuva miúda que alagou meu coração), pergunta retórica.",
+      "language_level": "Coloquial, poético, expressivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Mulher você entrou na minha vida",
+          "Como quem faz a ferida morde e sopra e diz que não",
+          "Eu foi a ilusão mal sucedida,",
+          "Você foi a chuva miúda que alagou meu coração",
+          "Eu tenho que poder amar de novo",
+          "Meu amor é meu socorro e isto vai acontecer",
+          "Você fugiu e desistiu de tudo",
+          "Se eu não era do seu mundo era só você dizer"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Como se pode amar uma pessoa",
+          "Uma mulher que não soa como tal, mas como fã",
+          "Uma quase mulher como se ama",
+          "Se ela nunca quis a cama, se ela não quis a maçã.",
+          "Meu deus que sonho louco que eu tive",
+          "Pus meu carro no declive sem sequer o freio de mão",
+          "E amei como se o amor fosse o esteio da vida",
+          "Sem mas receio, esse amor não quero não"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Procuro compreender se eu mereço",
+          "O que não teve nem começo nem história de perdão",
+          "Mulher esta canção é pra lembrar",
+          "Que eu não vou mais lhe procurar",
+          "Que agora eu vou me dar a mão."
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Como se pode amar uma pessoa",
+          "Uma mulher que não soa como tal, mas como fã",
+          "Uma quase mulher como se ama",
+          "Se ela nunca quis a cama, se ela não quis a maçã.",
+          "Meu deus que sonho louco que eu tive",
+          "Pus meu carro no declive sem sequer o freio de mão.",
+          "E amei como se o amor fosse o esteio da vida",
+          "Sem mas receio, esse amor não quero não"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "MPB_088",
+    "title": "Malandro É o Gato",
+    "artist": "Sérgio Sampaio",
+    "composers": ["Sérgio Sampaio"],
+    "album": null,
+    "year": null,
+    "genre": "MPB",
+    "subgenres": ["MPB Crônica", "Humor"],
+    "moods": ["Irônico", "Sarcástico", "Observador", "Inteligente"],
+    "themes": ["Malandragem", "Inteligência", "Sobrevivência", "Estratégia"],
+    "keywords": ["malandro", "gato", "sete pulos", "amigo da onça", "oitavo buraco", "último pulo", "motorista", "reta da pista", "curva", "perigo", "carro", "formiga", "comida", "inverno", "alimentação", "profissões", "sucesso", "aparecer", "silêncio", "come", "papa tudo", "janta tudo"],
+    "linguistic_analysis": {
+      "style": "Narrativo, coloquial, com uso de provérbios e tom de ensinamento irônico.",
+      "rhyme_scheme": "Regular e presente (gato/buraco; motorista/pista/perigo/trinta).",
+      "main_rhetoric_device": "Provérbio (sete pulos do gato, amigo da onça), repetição para ênfase.",
+      "language_level": "Coloquial, popular, com uso de gírias."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Malandro mesmo é aquele gato",
+          "Que ensinou os sete pulos do gato",
+          "Pro amigo da onça",
+          "E escapou pelo oitavo buraco",
+          "O último pulo do gato"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Malandro mesmo é aquele motorista",
+          "Que puxando 120 na reta da pista",
+          "Se a curva pinta como perigo",
+          "Reduz o seu carro pra 30"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Malandra mesmo é a formiga",
+          "Que armazena comida pra quando não tiver",
+          "E que no frio do inverno quando ele vier",
+          "Tem alimentação de sobra pra quando quiser"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Há profissões em que o sucesso consiste",
+          "Exatamente em aparecer",
+          "Na malandragem é diferente vou dizer por quê",
+          "É no silêncio que o malandro come e ninguém vê",
+          "E papa tudo e ninguém vê",
+          "E janta tudo e ninguém vê"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "MPB_089",
+    "title": "Na captura",
+    "artist": "Sérgio Sampaio",
+    "composers": ["Sérgio Sampaio"],
+    "album": null,
+    "year": null,
+    "genre": "MPB",
+    "subgenres": ["MPB Crônica", "Existencial", "Urbana"],
+    "moods": ["Melancólico", "Solitário", "Nostálgico", "Reflexivo"],
+    "themes": ["Busca por amor", "Solidão", "Cotidiano urbano", "Vazio existencial", "Memória"],
+    "keywords": ["antigamente", "não tinha nada", "captura", "encontrar você", "TV à cores", "som maneiro", "iê-iê-iê", "existir", "solidão", "Lapa", "Copacabana", "a pé", "pessoa", "vazio", "fruto", "apartamento", "carro vermelho", "sombra magra", "pontes", "coração"],
+    "linguistic_analysis": {
+      "style": "Narrativo, confessional, com linguagem simples e emotiva, tom de lamento.",
+      "rhyme_scheme": "Regular e presente (nada/fazer/mundo/você; acompanhava/Copacabana/a pé/solidão).",
+      "main_rhetoric_device": "Metáfora (pontes que vão dar no coração), repetição para ênfase.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Antigamente quando eu não tinha nada",
+          "Saía sempre na captura do que fazer",
+          "E procurava, como todo mundo",
+          "Encontrar você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Agora que eu comprei TV à cores",
+          "Que eu comprei um som maneiro",
+          "Pra escutar iê-iê-iê",
+          "Eu vejo, como todo mundo",
+          "Que no fundo mesmo só existo",
+          "Pra procurar você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "A solidão que me acompanhava",
+          "Quando eu ia da Lapa até Copacabana a pé",
+          "Na captura da pessoa que pudesse ser tão boa",
+          "Pra encher esse vazio, fruto dessa solidão"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "É a mesma desse meu apartamento",
+          "Ou do meu carro vermelho",
+          "Onde quer que se encontre",
+          "Esta minha sombra magra",
+          "Enchendo todas as pontes",
+          "Que vão dar no coração"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "A solidão que me acompanhava",
+          "Quando eu ia da Lapa até Copacabana a pé",
+          "É a mesma que a de todo mundo",
+          "Que no fundo mesmo só existe",
+          "Pra procurar você",
+          "Oh, meu bem",
+          "Que no fundo mesmo só existe",
+          "Pra procurar você",
+          "Meu amor",
+          "Que no fundo mesmo só existe",
+          "Pra procurar você"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_001",
+    "title": "Amar Não É Pecado",
+    "artist": "Luan Santana",
+    "composers": ["Álvaro Soccol", "Cláudio Matta"],
+    "album": null,
+    "year": 2010,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Decidido", "Corajoso", "Otimista"],
+    "themes": ["Declaração de amor", "Superar julgamento alheio", "Paixão avassaladora"],
+    "keywords": ["força", "leva pra você", "faz bem", "duvidei", "medo", "segredo", "sentimento", "sufoquei", "agora é a hora", "gritar", "apaixonado", "contando tudo", "não tô nem ligando", "vão dizer", "amar não é pecado", "errado", "dane o mundo", "só quero você"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e repetitiva, focado na emoção do amor.",
+      "rhyme_scheme": "Regular e presente (vem/bem/duvidei/segredo/sufoquei; tudo/mundo/dizer/pecado/errado/você).",
+      "main_rhetoric_device": "Repetição do refrão, hipérbole (\"dane o mundo\").",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Eu não sei de onde vem",
+          "Essa força que me leva pra você",
+          "Eu só sei que faz bem",
+          "Mas confesso que no fundo eu duvidei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tive medo e em segredo",
+          "Guardei o sentimento e me sufoquei",
+          "Mas agora é a hora",
+          "Vou gritar pra todo mundo de uma vez"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu não sei de onde vem",
+          "Essa força que me leva pra você",
+          "Eu só sei que faz bem",
+          "Mas confesso que no fundo eu duvidei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tive medo e em segredo",
+          "Guardei o sentimento e me sufoquei",
+          "Mas agora é a hora",
+          "Vou gritar pra todo mundo de uma vez"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Oh, oh"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Oh, oh"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_002",
+    "title": "Eu Quero Só Você",
+    "artist": "Jorge & Mateus",
+    "composers": ["Neto Schaefer"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Decidido", "Perseverante", "Confrontador (com terceiros)"],
+    "themes": ["Amor proibido/julgado", "Fidelidade", "Luta pelo relacionamento", "Superar fofocas"],
+    "keywords": ["separar", "quero", "amando", "não tô nem aí", "outros", "nada a ver", "falando", "não sirvo", "não presto", "confusão", "afastar", "tirar de mim", "amor", "fim"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e repetitiva para ênfase.",
+      "rhyme_scheme": "Regular e presente (dois/depois/você/dizer; mim/fim).",
+      "main_rhetoric_device": "Repetição do refrão, apelo emocional.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "O que todos querem é só separar nós dois",
+          "Você é o que eu quero e vou continuar te amando",
+          "Eu não tô nem aí pro que os outros vão dizer",
+          "O que a gente sente ninguém tem nada a ver"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Sei que andam falando que eu não sirvo pra você",
+          "Dizem que eu não presto, só me meto em confusão",
+          "Querem nos afastar e acabar com nosso amor",
+          "Tirar você de mim"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O nosso amor",
+          "Todos querem por um fim",
+          "Querem nos afastar",
+          "Tirar você de mim",
+          "O nosso amor",
+          "Todos querem por um fim",
+          "Querem nos afastar",
+          "Tirar você de mim"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu amo você",
+          "E não me importa o que vão dizer",
+          "Eu quero só você",
+          "Eu quero só você",
+          "Eu quero só você",
+          "E não me importa o que vão dizer",
+          "Eu quero só você",
+          "Eu quero só você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O nosso amor",
+          "Todos querem por um fim",
+          "Querem nos afastar",
+          "Tirar você de mim",
+          "O nosso amor",
+          "Todos querem por um fim",
+          "Querem nos afastar",
+          "Tirar você de mim"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu amo você",
+          "E não me importa o que vão dizer",
+          "Eu quero só você",
+          "Eu quero só você",
+          "Eu quero só você",
+          "E não me importa o que vão dizer",
+          "Eu quero só você",
+          "Eu quero só você"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Eu quero só você",
+          "E não me importa o que vão dizer",
+          "Eu quero só você",
+          "Eu quero só você",
+          "E não me importa o que vão dizer",
+          "Eu quero só você",
+          "Eu quero só você"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_003",
+    "title": "60 Segundos",
+    "artist": "Gusttavo Lima",
+    "composers": ["Gabriel Valim"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Ansioso", "Intenso", "Lírico"],
+    "themes": ["Amor e tempo", "Intensidade da paixão", "Desejo", "Declaração de amor"],
+    "keywords": ["minuto", "falar", "preciso", "você", "amor", "segundos", "paixão", "peito", "vontade", "desejo", "domina", "fascina", "menina", "linda", "enlouquece", "coração", "suas mãos", "tempo passa depressa", "horas", "minutos", "viver ao seu lado", "feliz", "toda a vida"],
+    "linguistic_analysis": {
+      "style": "Lírico, confessional, com linguagem simples e expressiva, focado na emoção do amor.",
+      "rhyme_scheme": "Regular e presente (falar/amor/resta/peito; passa/vontade/paixão/domina/fascina/linda/coração/mãos).",
+      "main_rhetoric_device": "Metáfora (paixão no peito), hipérbole (enlouquece o coração), repetição para ênfase.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Me dê um minuto pra falar",
+          "Que eu preciso de você, meu amor",
+          "59 segundos é o que resta",
+          "Pra entender essa paixão no meu peito"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Cada segundo que se passa",
+          "Mais aumenta essa vontade",
+          "Esse desejo, essa paixão",
+          "Que me domina, me fascina",
+          "Com seu jeito de menina tão linda"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Você enlouquece o meu coração",
+          "Você sabe que eu tô em suas mãos"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O tempo passa depressa quando estou com você",
+          "As horas viram minutos, não consigo entender",
+          "E o que eu mais quero é viver ao seu lado",
+          "Cada segundo, amor"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O tempo passa depressa quando estou com você",
+          "As horas viram minutos, não consigo entender",
+          "E o que eu mais quero é viver ao seu lado",
+          "Cada segundo, amor"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Te fazer feliz por toda a vida"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Cada segundo que se passa",
+          "Mais aumenta essa vontade",
+          "Esse desejo, essa paixão",
+          "Que me ilumina, me fascina",
+          "Com seu jeito de menina tão linda"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Você enlouquece o meu coração",
+          "Você sabe que eu tô em suas mãos"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O tempo passa depressa quando estou com você",
+          "As horas viram minutos, não consigo entender",
+          "E o que eu mais quero é viver ao seu lado",
+          "Cada segundo, amor"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O tempo passa depressa quando estou com você",
+          "As horas viram minutos, não consigo entender",
+          "E o que eu mais quero é viver ao seu lado",
+          "Cada segundo, amor"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Te fazer feliz por toda a vida"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_004",
+    "title": "Logo Eu",
+    "artist": "Jorge & Mateus",
+    "composers": ["Samuel Deolli", "Filipe Escandurras"],
+    "album": null,
+    "year": 2013,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Surpreso", "Agradecido", "Feliz"],
+    "themes": ["Amor inesperado", "Felicidade no relacionamento", "Destino", "Realização de um sonho"],
+    "keywords": ["vi", "quis", "feliz", "amor", "sonho", "surpreendente", "provar", "ouvi falar", "mostrar", "nem pensava", "não imaginava", "merecer", "dono desse amor", "preciso viver", "resto dessa vida"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva.",
+      "rhyme_scheme": "Regular e presente (quis/feliz/sonho/provar/falar/mostrar).",
+      "main_rhetoric_device": "Repetição do refrão, exclamações de surpresa.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Eu te vi e já te quis",
+          "Me vi tão feliz",
+          "Um amor que pra mim era sonho",
+          "Surpreendente provar",
+          "Do que eu só ouvi falar",
+          "E você resolveu me mostrar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Logo eu que nem pensava",
+          "Eu não imaginava te merecer",
+          "E agora sou o dono desse amor",
+          "Eu nem quero saber por que",
+          "Eu só preciso viver",
+          "O resto dessa vida com você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Te vi e já te quis",
+          "Me vi tão feliz",
+          "Um amor que pra mim era sonho",
+          "Surpreendente provar",
+          "Do que eu só ouvi falar",
+          "E você resolveu me mostrar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Logo eu que nem pensava",
+          "Eu não imaginava te merecer",
+          "E agora sou o dono desse amor",
+          "Eu nem quero saber por que",
+          "Eu só preciso viver",
+          "O resto dessa vida com você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu que nem pensava",
+          "Eu não imaginava te merecer",
+          "E agora sou o dono desse amor",
+          "Eu nem quero saber por que",
+          "Eu só preciso viver",
+          "O resto dessa vida com você"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "O resto dessa vida com você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Logo eu que nem pensava",
+          "Eu não imaginava te merecer",
+          "E agora sou o dono desse amor",
+          "Eu nem quero saber por que",
+          "Eu só preciso viver",
+          "O resto dessa vida com você"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_005",
+    "title": "Efeitos (part. Cristiano Araújo)",
+    "artist": "Jorge & Mateus",
+    "composers": ["Rafael Oliveira"],
+    "album": null,
+    "year": 2012,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico", "Sofrência"],
+    "moods": ["Sofrido", "Saudoso", "Melancólico", "Desesperado", "Apaixonado"],
+    "themes": ["Fim de relacionamento", "Saudade", "Incapacidade de esquecer", "Amor como vício/doença"],
+    "keywords": ["efeitos", "dominam", "lembranças", "distanciam do fim", "batalha travada", "esquecer", "sonhos", "devolvendo o céu", "boca", "gosto do mel", "beijava", "romance", "vive em mim", "remédio", "cure", "saudade", "diminua a dor", "peito", "invade", "antídoto", "salve esse amor", "sintomas", "causam dor", "não sei mais o que vou fazer"],
+    "linguistic_analysis": {
+      "style": "Lírico, confessional, com linguagem simples e expressiva, forte apelo emocional.",
+      "rhyme_scheme": "Regular e presente (mim/fim/esquecer/você; saudade/invade/esquecer/amor/dor/fazer/você).",
+      "main_rhetoric_device": "Metáfora (amor como doença/efeitos, remédio), repetição do refrão.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Seus efeitos ainda dominam em mim",
+          "As lembranças só me distanciam do fim",
+          "Da batalha travada em tentar te esquecer",
+          "Te vejo nos meus sonhos me devolvendo o céu",
+          "Então sinto na boca o gosto do mel",
+          "Que eu sentia sempre que beijava você"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Só sei que esse romance ainda vive em mim",
+          "O efeito do seu beijo me deixou assim",
+          "Assim"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Preciso de um remédio que cure essa saudade",
+          "Que diminua a dor que no meu peito invade",
+          "Que me cure ou me ajude a esquecer",
+          "Preciso de um antídoto que salve esse amor",
+          "Que tire os sintomas que me causam dor",
+          "Eu não sei mais o que vou fazer",
+          "Se, pra curar, o meu remédio é você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Seus efeitos ainda dominam em mim",
+          "As lembranças só me distanciam do fim",
+          "Da batalha cravada em tentar te esquecer",
+          "Te vejo nos meus sonhos me devolvendo o céu",
+          "Então sinto na boca o gosto do mel",
+          "Que eu sentia sempre que beijava você"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Só sei que esse romance ainda vive em mim",
+          "O efeito do seu beijo me deixou assim",
+          "Assim"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Preciso de um remédio que cure essa saudade",
+          "Que diminua a dor que no meu peito invade",
+          "Que me cure ou me ajude a esquecer",
+          "Preciso de um antídoto que salve esse amor",
+          "Que tire os sintomas que me causam dor",
+          "Eu não sei mais o que vou fazer",
+          "Se, pra curar, o meu remédio é você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Preciso de um remédio que cure essa saudade",
+          "Que diminua a dor que no meu peito invade",
+          "Que me cure ou me ajude a esquecer",
+          "Preciso de um antídoto que salve esse amor",
+          "Que tire os sintomas que me causam dor",
+          "Eu não sei mais o que vou fazer",
+          "Se, pra curar, o meu remédio é você"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Seus efeitos (seus efeitos)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_006",
+    "title": "Duas Metades",
+    "artist": "Jorge & Mateus",
+    "composers": ["Jorge", "Dudu Borges"],
+    "album": null,
+    "year": 2012,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Completo", "Lírico", "Entusiasmado"],
+    "themes": ["Amor completo", "Alma gêmea", "Felicidade no relacionamento", "Entrega"],
+    "keywords": ["amor de verdade", "melhor metade", "tudo de bom", "desenho", "amo você", "quero você", "outra metade", "defeito", "anjo", "animal", "suave", "fatal", "fogo", "domine o pensamento", "sentido novo", "paixão", "desejo", "abraço", "beijo", "sensação", "vida vazia", "agonia", "paz pro coração", "dona do meu coração"],
+    "linguistic_analysis": {
+      "style": "Lírico, confessional, com linguagem simples e expressiva, focado na emoção do amor.",
+      "rhyme_scheme": "Regular e presente (verdade/metade/tenho/desenho/você; defeito/jeito/fatal; espera/fogo/novo/desejo/beijo/sensação).",
+      "main_rhetoric_device": "Metáfora (duas metades, fogo), enumeração de qualidades do amor.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Pra falar do amor de verdade",
+          "Vou começar pela melhor metade",
+          "Te mostrar tudo de bom que tenho",
+          "E se for preciso eu desenho",
+          "Que eu amo você",
+          "Que eu quero você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "A outra metade é defeito",
+          "Você vai saber de qualquer jeito",
+          "Anjo ou animal, suave ou fatal"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O que de um grande amor se espera",
+          "É que tenha fogo",
+          "Que domine o pensamento",
+          "E traga sentido novo",
+          "Que tenha paixão, desejo",
+          "Que tenha abraço e beijo",
+          "E seja a melhor sensação"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Que preencha a vida vazia",
+          "Mande embora a agonia",
+          "E que traga paz pro coração",
+          "É você, é você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Que preencha a vida vazia",
+          "Mande embora a agonia",
+          "E que trouxe paz pro coração"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Que preencha a vida vazia",
+          "Mande embora a agonia",
+          "E que é dona do meu coração",
+          "É você, é você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "E pra falar do amor de verdade",
+          "Vou começar pela melhor metade",
+          "E te mostrar tudo de bom que tenho",
+          "E se for preciso eu desenho",
+          "Que eu amo você",
+          "Que eu quero você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "E a outra metade é defeito",
+          "Você vai saber de qualquer jeito",
+          "Anjo ou animal, suave ou fatal"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O que de um grande amor se espera",
+          "É que tenha fogo",
+          "Que domine o pensamento",
+          "E traga sentido novo",
+          "Que tenha paixão, desejo",
+          "Que tenha abraço e beijo",
+          "E seja a melhor sensação"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Que preenche a vida vazia",
+          "Manda embora a agonia",
+          "E que traga paz pro coração",
+          "É você, é você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Que preenche a vida vazia",
+          "Manda embora a agonia",
+          "E que trouxe paz pro coração"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Que preenche a vida",
+          "Manda embora a agonia",
+          "E que é dona do meu coração",
+          "É você, é você"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "E pra falar do amor de verdade",
+          "Vou começar pela melhor metade"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_007",
+    "title": "Balada",
+    "artist": "Gusttavo Lima",
+    "composers": ["Cássio Sampaio"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Pop", "Dança"],
+    "moods": ["Animado", "Festivo", "Convidativo", "Flertador"],
+    "themes": ["Festa", "Conquista amorosa", "Diversão", "Noitada"],
+    "keywords": ["carro", "som", "reggae é bom", "menina", "à vontade", "festa", "me liga", "madrugada", "dançar", "pular", "Sol raiar", "Tchê tchererê tchê tchê", "Gusttavo Lima", "olhar", "pegar", "namorar", "curtição"],
+    "linguistic_analysis": {
+      "style": "Direto, coloquial, com onomatopeias e ritmo de dança.",
+      "rhyme_scheme": "Regular e repetitivo (som/bom/madrugada/raiar).",
+      "main_rhetoric_device": "Onomatopeia (\"Tchê tchererê tchê tchê\"), repetição do refrão, imperativos.",
+      "language_level": "Coloquial, popular, voltado para a dança e festa."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Eu já lavei o meu carro, regulei o som",
+          "Já tá tudo preparado, vem que o reggae é bom",
+          "Menina, fica à vontade, entre e faça a festa",
+          "Me liga mais tarde, vou adorar, vamos nessa"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular até o Sol raiar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular que hoje vai rolar"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Tchê tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchereretchê",
+          "Tchê, tchê, tchê, tchê",
+          "Gusttavo Lima e você"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Tchê tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchereretchê",
+          "Tchê, tchê, tchê, tchê"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Se você me olhar, vou querer te pegar",
+          "E depois namorar, curtição",
+          "Que hoje vai rolar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular até o Sol raiar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular que hoje vai rolar"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Tchê tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchereretchê",
+          "Tchê, tchê, tchê, tchê",
+          "Gusttavo Lima e você"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Tchê tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchereretchê",
+          "Tchê, tchê, tchê, tchê"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular até o Sol raiar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular que hoje vai rolar"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Tem Gusttavo Lima até de madrugada"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Tchê tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchereretchê",
+          "Tchê, tchê, tchê, tchê",
+          "Gusttavo Lima e você"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Tchê tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchereretchê",
+          "Tchê, tchê, tchê, tchê"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Se você me olhar, vou querer te pegar",
+          "E depois namorar, curtição",
+          "Que hoje vai rolar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular até o Sol raiar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Gata, me liga, mais tarde tem balada",
+          "Quero curtir com você na madrugada",
+          "Dançar, pular que hoje vai rolar"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Tchê tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchererê tchê tchê",
+          "Tchereretchê",
+          "Tchê, tchê, tchê, tchê",
+          "Gusttavo Lima e você"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_008",
+    "title": "Fora do Comum",
+    "artist": "Gusttavo Lima",
+    "composers": ["Rafael Oliveira"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico", "Sofrência"],
+    "moods": ["Sofrido", "Saudoso", "Melancólico", "Desesperado", "Apaixonado"],
+    "themes": ["Fim de relacionamento", "Saudade", "Incapacidade de esquecer", "Amor não superado"],
+    "keywords": ["história é longa", "resumir", "perguntas", "respostas", "coração", "iludição", "superar", "outra pessoa", "tática perfeita", "reencontrar", "brincou com fogo", "caiu fora", "minha vida", "faço agora", "enlouquecer", "fora do comum", "não posso te esquecer"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção da perda.",
+      "rhyme_scheme": "Regular e presente (resumir/sim/coração/ilusão; superar/lugar/elaborar/reencontrar/amar).",
+      "main_rhetoric_device": "Metáfora (brincou com fogo), hipérbole (fora do comum).",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Nossa história é longa, mas vou resumir",
+          "Perguntas sem respostas, te respondo sim",
+          "Entrada sem saída do meu coração",
+          "Depois de enfeitiçado nessa ilusão"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu sei que pra você é fácil superar",
+          "Em outra pessoa, em qualquer lugar",
+          "A tática perfeita eu vou elaborar",
+          "Em outra ocasião a gente se reencontrar",
+          "Se amar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Você brincou com fogo e depois caiu fora",
+          "Saiu da minha vida, o que é que eu faço agora?",
+          "Menina, estou a ponto de enlouquecer",
+          "Fora do comum, não posso te esquecer"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "A nossa história é longa, mas vou resumir",
+          "Perguntas sem respostas, te respondo sim",
+          "Entrada sem saída do meu coração",
+          "Depois de enfeitiçado nessa ilusão"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu sei que pra você é fácil superar",
+          "Em outra pessoa, em qualquer lugar",
+          "A tática perfeita eu vou elaborar",
+          "Em outra ocasião a gente se reencontrar",
+          "Se amar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Você brincou com fogo e depois caiu fora",
+          "Saiu da minha vida, o que é que eu faço agora?",
+          "Menina, estou a ponto de enlouquecer",
+          "Fora do comum, não posso te esquecer"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Você brincou com fogo e depois caiu fora",
+          "Saiu da minha vida, o que é que eu faço agora?",
+          "Menina, estou a ponto de enlouquecer",
+          "Fora do comum, não posso te esquecer"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "É fora do comum, não posso te esquecer"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_009",
+    "title": "Amo Noite e Dia",
+    "artist": "Jorge & Mateus",
+    "composers": ["Humberto Júnior"],
+    "album": null,
+    "year": 2010,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Sofrido (pela ausência)", "Lírico", "Intenso"],
+    "themes": ["Amor eterno", "Saudade", "Conexão profunda", "Amor como necessidade"],
+    "keywords": ["pedaço do meu peito", "colado ao teu", "chave", "segredo", "prende ao seu", "jeito perigoso", "conquistar", "gostoso", "abraçar", "perde", "transforma", "ninguém te vê", "busco", "detalhes", "tempo", "pra trás", "perco na estrada", "não aguento mais", "iê, iê", "Passa o dia", "passa a noite", "apaixonado", "coração no peito", "sofre", "real", "fantasia", "amo noite e dia"],
+    "linguistic_analysis": {
+      "style": "Lírico, confessional, com linguagem simples e expressiva, focado na intensidade do amor e da saudade.",
+      "rhyme_scheme": "Regular e presente (teu/seu/conquistar/abraçar; vê/você/pra trás/mais).",
+      "main_rhetoric_device": "Hipérbole (não aguento mais, amo noite e dia), repetição do refrão.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Tem um pedaço do meu peito bem colado ao teu",
+          "Alguma chave, algum segredo, que me prende ao seu",
+          "Um jeito perigoso de me conquistar",
+          "Teu jeito tão gostoso de me abraçar"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tudo se perde, se transforma se ninguém te vê",
+          "Eu busco às vezes nos detalhes encontrar você",
+          "O tempo já não passa, só anda pra trás",
+          "Me perco nessa estrada, não aguento mais"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Iê, iê",
+          "Passa o dia, passa a noite, tô apaixonado",
+          "Coração no peito sofre sem você do lado",
+          "E dessa vez tudo é real, nada de fantasia",
+          "Saiba que eu te amo, amo noite e dia"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tem um pedaço do meu peito bem colado ao teu",
+          "Alguma chave, algum segredo, que me prende ao teu",
+          "Um jeito perigoso de me conquistar",
+          "Teu jeito tão gostoso de me abraçar"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tudo se perde, se transforma se ninguém te vê",
+          "Eu busco às vezes nos detalhes encontrar você",
+          "O tempo já não passa, só anda pra trás",
+          "Me perco nessa estrada, não aguento mais"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Iê, iê",
+          "Passa o dia, passa a noite, tô apaixonado",
+          "Coração no peito sofre sem você do lado",
+          "Dessa vez tudo é real, nada de fantasia",
+          "Saiba que eu te amo, amo noite e dia"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Passa o dia, passa a noite, tô apaixonado",
+          "Coração no peito sofre sem você do lado",
+          "Dessa vez tudo é real, nada de fantasia",
+          "Saiba que eu te amo, eu amo noite e dia",
+          "Amo noite e dia"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Iê, iê",
+          "Coração no peito sofre sem você do lado",
+          "Dessa vez tudo é real, nada de fantasia",
+          "Saiba que eu te amo, amo noite e dia",
+          "Amo noite e dia"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Iê, iê"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_010",
+    "title": "Tudo Que Você Quiser",
+    "artist": "Luan Santana",
+    "composers": ["Luan Santana", "Dudu Borges", "Felipe Oliver"],
+    "album": null,
+    "year": 2013,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Lírico", "Idealista", "Entusiasmado"],
+    "themes": ["Declaração de amor", "Entrega total", "Beleza da amada", "Sonho realizado"],
+    "keywords": ["acordo", "pensando em você", "mundo desabar", "vazio", "abandonar", "cheiro de rosa", "avelã", "perfume doce", "manhã", "tudo", "muito", "sonhei", "pureza", "anjo querubim", "trocaria tudo", "paz", "beijo", "destino", "cama", "estrelas", "Lua", "tudo que você quiser", "sobrenome"],
+    "linguistic_analysis": {
+      "style": "Lírico, confessional, com linguagem simples e expressiva, focado na emoção do amor.",
+      "rhyme_scheme": "Regular e presente (você/desabar/ver/abandonar; avelã/manhã/mim/querubim/aqui).",
+      "main_rhetoric_device": "Hipérbole (trocaria tudo, mil estrelas), metáfora (anjo querubim).",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "vocalise",
+        "lines": [
+          "Oh, oh",
+          "Oh, oh"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tem dias que eu acordo pensando em você",
+          "Em fração de segundo, vejo o mundo desabar",
+          "Aí que cai a ficha que eu não vou te ver",
+          "Será que esse vazio um dia vai me abandonar?"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tem gente que tem cheiro de rosa, de avelã",
+          "Tem o perfume doce de toda manhã",
+          "Você tem tudo",
+          "Você tem muito"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Muito mais que um dia eu sonhei pra mim",
+          "Tem a pureza de um anjo querubim",
+          "Eu trocaria tudo pra te ter aqui"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu troco minha paz por um beijo seu",
+          "Eu troco meu destino pra viver o seu",
+          "Eu troco minha cama pra dormir na sua",
+          "Eu troco mil estrelas pra te dar a Lua",
+          "E tudo que você quiser",
+          "E se você quiser, te dou meu sobrenome"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Oh, oh",
+          "Oh, oh"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tem gente que tem cheiro de rosa, de avelã",
+          "Tem o perfume doce de toda manhã",
+          "Você tem tudo",
+          "Você tem muito"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Muito mais que um dia eu sonhei pra mim",
+          "Tem a pureza de um anjo querubim",
+          "Eu trocaria tudo pra te ter aqui"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu troco minha paz por um beijo seu",
+          "Eu troco meu destino pra viver o seu",
+          "Eu troco minha cama pra dormir na sua",
+          "Eu troco mil estrelas pra te dar a Lua",
+          "E tudo que você quiser",
+          "E se você quiser, te dou meu sobrenome"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu troco minha paz por um beijo seu",
+          "Eu troco meu destino pra viver o seu",
+          "Eu troco minha cama pra dormir na sua",
+          "Eu troco mil estrelas pra te dar a Lua",
+          "E tudo que você quiser",
+          "E se você quiser, te dou meu sobrenome"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Oh, oh",
+          "Oh, oh"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_011",
+    "title": "Ai Se Eu Te Pego",
+    "artist": "Michel Teló",
+    "composers": ["Sharon Acioly", "Antônio Dyggs"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Pop", "Dança"],
+    "moods": ["Animado", "Festivo", "Divertido", "Flertador"],
+    "themes": ["Paixão à primeira vista", "Conquista amorosa", "Festa", "Dança"],
+    "keywords": ["nossa", "mata", "Ai se eu te pego", "delícia", "Sábado", "balada", "galera", "dançar", "menina mais linda", "coragem", "falar"],
+    "linguistic_analysis": {
+      "style": "Direto, coloquial, com exclamações e onomatopeias, focado na emoção do flerte.",
+      "rhyme_scheme": "Regular e repetitivo (nossa/mata/pego; balada/dançar/linda/falar).",
+      "main_rhetoric_device": "Repetição de bordões, interjeições.",
+      "language_level": "Coloquial, popular, voltado para a dança e festa."
+    },
+    "lyrics_structured": [
+      {
+        "type": "refrão",
+        "lines": [
+          "Nossa, nossa",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Delícia, delícia",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego, hein?"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Sábado na balada",
+          "A galera começou a dançar",
+          "E passou a menina mais linda",
+          "Tomei coragem e comecei a falar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Nossa, nossa",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Delícia, delícia",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Sábado na balada",
+          "A galera começou a dançar",
+          "E passou a menina mais linda",
+          "Tomei coragem e comecei a falar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Nossa, nossa",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Delícia, delícia",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego, hein?"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Nossa, nossa",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Delícia, delícia",
+          "Assim você me mata",
+          "Ai, se eu te pego",
+          "Ai, ai, se eu te pego, hein?"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Que delícia, hein?",
+          "Ai, se eu te pego!"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_012",
+    "title": "Aí Já Era",
+    "artist": "Jorge & Mateus",
+    "composers": ["Jorge", "Dudu Borges"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Decidido", "Entusiasmado", "Confiante"],
+    "themes": ["Paixão, amor inevitável", "Entrega ao sentimento", "Sinais de amor"],
+    "keywords": ["pra pensar", "me toquei", "te escolhi", "me escolheu", "escancarado", "negar", "coração", "sintomas de paixão", "olhos se caçam", "multidão", "esbarra", "direção", "indiscretamente", "perdendo o chão", "bobo", "aí já era", "entregar", "amor não espera", "tempo passar", "missão", "avisar", "dando sinal", "querendo te amar"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção da paixão.",
+      "rhyme_scheme": "Regular e presente (relação/paixão/chão; era/entregar/espera/passar/coração/avisar/sinal/amar).",
+      "main_rhetoric_device": "Repetição do refrão, metáfora (sintomas de paixão, coração dando sinal).",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Para pra pensar",
+          "Porque eu já me toquei",
+          "Eu te escolhi",
+          "Você me escolheu, eu sei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tá escancarado",
+          "Vai negar pro coração",
+          "Que você tá com sintomas de paixão"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Que é quando os olhos se caçam",
+          "Em meio à multidão",
+          "Quando a gente se esbarra",
+          "Andando em qualquer direção"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Quando indiscretamente",
+          "A gente vai perdendo o chão",
+          "Vai ficando bobo",
+          "Vai ficando bobo"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E aí já era",
+          "É hora de se entregar",
+          "O amor não espera",
+          "Só deixa o tempo passar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E fica pro coração",
+          "A missão de avisar",
+          "E o meu tá dando sinal",
+          "Que tá querendo te amar"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Para pra pensar",
+          "Porque eu já me toquei",
+          "Eu te escolhi",
+          "Você me escolheu, eu sei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tá escancarado",
+          "Vai negar pro coração",
+          "Que você tá com sintomas de paixão"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Que é quando os olhos se caçam",
+          "Em meio à multidão",
+          "Quando a gente se esbarra",
+          "Andando em qualquer direção"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Quando indiscretamente",
+          "A gente vai perdendo o chão",
+          "Vai ficando bobo",
+          "Vai ficando bobo"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E aí já era",
+          "É hora de se entregar",
+          "O amor não espera",
+          "Só deixa o tempo passar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E fica pro coração",
+          "A missão de avisar",
+          "E o meu tá dando sinal",
+          "Que tá querendo te amar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E aí já era",
+          "É hora de se entregar",
+          "O amor não espera",
+          "Só deixa o tempo passar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E fica pro coração",
+          "A missão de avisar",
+          "E o meu tá dando sinal",
+          "Que tá querendo te amar"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "E o meu tá dando sinal",
+          "Que tá querendo",
+          "Que tá querendo te amar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_013",
+    "title": "A Gente Nem Ficou",
+    "artist": "Jorge & Mateus",
+    "composers": ["Marcelo Lima", "Pedro Viana"],
+    "album": null,
+    "year": 2015,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Ansioso", "Enfeitiçado", "Desesperado (de amor)"],
+    "themes": ["Paixão à primeira vista (ou quase)", "Desejo", "Amor não correspondido (ainda)", "Oportunidade perdida"],
+    "keywords": ["nem ficou", "não tiro você da cabeça", "pouco que durou", "encontro", "duvidar", "esqueça", "romance", "delicada", "esquecer", "vivemos", "deixar rolar", "entregar", "fogo", "queimar de novo", "vem me ver", "esperando você", "nem dormi", "noite já passou", "não consigo me dominar", "enfeitiçou", "causou"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção do flerte e do desejo.",
+      "rhyme_scheme": "Regular e presente (ficou/cabeça/durou/esqueça; rolar/entregar/apagou/novo; ver/você/dormi/passou/dominar/enfeitiçou).",
+      "main_rhetoric_device": "Repetição do refrão, hipérbole (\"não tiro você da cabeça\").",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "A gente nem ficou",
+          "Mesmo assim eu não tiro você da cabeça",
+          "O pouco que durou",
+          "Nosso encontro me faz duvidar",
+          "Que um dia eu te esqueça"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Sei que pra nós dois um romance é",
+          "Coisa delicada demais",
+          "Não dá pra esquecer o que vivemos",
+          "Antes um do outro"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Bem melhor a gente deixar rolar",
+          "Se entregar",
+          "Ver o fogo que apagou",
+          "Queimar de novo"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E aí? Quando vem me ver?",
+          "Tô aqui esperando você",
+          "E nem dormi, a noite já passou",
+          "Não consigo mais me dominar",
+          "Você me enfeitiçou"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E a gente nem ficou",
+          "Uô, uô, uô, uô",
+          "E olha o que me causou",
+          "Uô, uô, uô, uô",
+          "E a gente nem ficou"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "E a gente nem ficou",
+          "Mesmo assim eu não tiro você da cabeça",
+          "E o pouco que durou",
+          "Nosso encontro me faz duvidar",
+          "Que um dia eu te esqueça"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Sei que pra nós dois um romance é",
+          "Coisa delicada demais",
+          "Não dá pra esquecer o que vivemos",
+          "Antes um do outro"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Bem melhor a gente deixar rolar",
+          "Se entregar",
+          "Ver o fogo que apagou",
+          "Queimar de novo"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E aí, quando vem me ver?",
+          "Tô aqui esperando você",
+          "E nem dormi, a noite já passou",
+          "Não consigo mais me dominar",
+          "Você me enfeitiçou"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E aí? Quando vem me ver?",
+          "Tô aqui esperando você",
+          "E nem dormi, a noite já passou",
+          "Não consigo mais me dominar",
+          "Você me enfeitiçou"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E aí? Quando vem me ver?",
+          "Tô aqui esperando você",
+          "E nem dormi, a noite já passou",
+          "Não consigo mais me dominar",
+          "Você me enfeitiçou"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E a gente nem ficou",
+          "Uô, uô, uô, uô",
+          "E olha o que me causou",
+          "Uô, uô, uô, uô",
+          "E a gente nem ficou",
+          "Uô, uô, uô, uô",
+          "E a gente nem ficou",
+          "Uô, uô, uô, uô",
+          "E a gente nem ficou"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_014",
+    "title": "Amar Não É Pecado",
+    "artist": "Luan Santana",
+    "composers": ["Álvaro Soccol", "Cláudio Matta"],
+    "album": null,
+    "year": 2010,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Decidido", "Corajoso", "Otimista"],
+    "themes": ["Declaração de amor", "Superar julgamento alheio", "Paixão avassaladora"],
+    "keywords": ["força", "leva pra você", "faz bem", "duvidei", "medo", "segredo", "sentimento", "sufoquei", "agora é a hora", "gritar", "apaixonado", "contando tudo", "não tô nem ligando", "vão dizer", "amar não é pecado", "errado", "dane o mundo", "só quero você"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e repetitiva, focado na emoção do amor.",
+      "rhyme_scheme": "Regular e presente (vem/bem/duvidei/segredo/sufoquei; tudo/mundo/dizer/pecado/errado/você).",
+      "main_rhetoric_device": "Repetição do refrão, hipérbole (\"dane o mundo\").",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Eu não sei de onde vem",
+          "Essa força que me leva pra você",
+          "Eu só sei que faz bem",
+          "Mas confesso que no fundo eu duvidei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tive medo e em segredo",
+          "Guardei o sentimento e me sufoquei",
+          "Mas agora é a hora",
+          "Vou gritar pra todo mundo de uma vez"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu não sei de onde vem",
+          "Essa força que me leva pra você",
+          "Eu só sei que faz bem",
+          "Mas confesso que no fundo eu duvidei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tive medo e em segredo",
+          "Guardei o sentimento e me sufoquei",
+          "Mas agora é a hora",
+          "Vou gritar pra todo mundo de uma vez"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Oh, oh"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu tô apaixonado, eu tô contando tudo",
+          "E não tô nem ligando pro que vão dizer",
+          "Amar não é pecado e se eu tiver errado",
+          "Que se dane o mundo, eu só quero você"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Oh, oh"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_015",
+    "title": "Nega",
+    "artist": "Luan Santana",
+    "composers": ["Luan Santana", "Dudu Borges"],
+    "album": null,
+    "year": 2012,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Arrependido", "Confiante (na volta)", "Afetivo"],
+    "themes": ["Arrependimento", "Saudade", "Reconciliação", "Novo começo"],
+    "keywords": ["sofreu demais", "não fui capaz", "sonho", "não era seu", "não deu certo", "planejou", "amor", "chance", "Volta", "vem viver", "romance", "Nega", "chega junto", "vem me amar", "vem cá", "arrumando minha vida", "doido pra cê bagunçar", "saudade não quer sossegar", "nego", "buscar", "pronto pra te amar"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção do amor e da reconciliação.",
+      "rhyme_scheme": "Regular e presente (demais/capaz/meu/seu/deu; planejou/chance/romance).",
+      "main_rhetoric_device": "Repetição do vocativo \"Nega\", apelo emocional.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Eu sei, você sofreu demais",
+          "E sabe que eu não fui capaz",
+          "Mas, mas, mas",
+          "Aquele sonho que era meu",
+          "Descobri não era seu",
+          "É, não deu"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Não deu certo quanto a gente planejou",
+          "Mas o amor nos deu mais uma chance",
+          "Volta e vem viver esse romance"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Nega, chega junto",
+          "Vem me amar",
+          "Vem cá",
+          "Já tava arrumando a minha vida",
+          "Mas tô doido procê bagunçar",
+          "Nega"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Nega, a saudade não quer sossegar",
+          "Só tá aumentando e o seu nego",
+          "Tá indo aí pra te buscar",
+          "Nega",
+          "Eu tô pronto pra te amar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_016",
+    "title": "Tá Combinado",
+    "artist": "João Neto e Frederico",
+    "composers": ["Alessandro Lima", "André Perde", "Raynner Souza"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Festa", "Atrevido"],
+    "moods": ["Descompromissado", "Festeiro", "Provocador", "Autoconfiante"],
+    "themes": ["Liberdade pessoal", "Vida de solteiro", "Festa", "Rompimento"],
+    "keywords": ["tá pra nascer", "prenda", "mudar", "acostumando", "jeito de amar", "viciado", "rabo de saia", "cara feia", "emburrar", "fala sério", "não sou de ninguém", "escutar", "burrice", "harém", "balada", "casa", "pirou", "não sabe nada", "sem moral", "tá combinado", "bicho vai pegar", "sair com meus amigos", "rolar o movimento", "problema meu", "saudade", "problema é seu"],
+    "linguistic_analysis": {
+      "style": "Direto, coloquial, com gírias e tom provocador.",
+      "rhyme_scheme": "Regular e presente (mudar/amar/saia/emburrar; casa/moral/pegar/amigos/movimento/meu/saudade/seu).",
+      "main_rhetoric_device": "Hipérbole (viciado num rabo de saia, harém), repetição do bordão.",
+      "language_level": "Coloquial, popular, voltado para o público jovem."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Tá pra nascer alguém que me prenda e me faça mudar",
+          "Vai se acostumando, é meu jeito de amar",
+          "É que sou viciado num rabo de saia"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Não adianta fazer cara feia, emburrar",
+          "Fala sério, não sou de ninguém",
+          "E não pense que eu vou te escutar",
+          "Pois seria burrice abrir mão de um harém"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Se você acha que eu não vou pra balada",
+          "E que o meu dilema é ficar dentro de casa",
+          "Pirou, você não sabe nada, sem moral"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Tá combinado, o bicho vai pegar",
+          "Tá combinado, já vou sair com meus amigos",
+          "Vai rolar o movimento, isso é problema meu",
+          "Se der saudade, o problema é seu"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_017",
+    "title": "Chora, Me Liga",
+    "artist": "João Bosco e Vinícius",
+    "composers": ["Álvaro Soccol", "Zé Henrique", "João Victor"],
+    "album": null,
+    "year": 2009,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Sofrência"],
+    "moods": ["Vingativo", "Cético (no amor)", "Arrogante (no jogo da conquista)", "Decidido"],
+    "themes": ["Fim de relacionamento", "Revanche amorosa", "Liberdade", "Superar um coração partido"],
+    "keywords": ["não era pra se apaixonar", "só pra gente ficar", "te avisei", "era assim", "paixão de uma noite", "logo tem fim", "não vai ser tão fácil", "nas mãos", "acostumada", "brincar", "coração", "não venha me perguntar", "melhor saída", "sofri muito por amor", "curtir a vida", "Chora", "me liga", "implora", "beijo de novo", "pede socorro", "quem sabe", "salvar", "pelo meu amor", "por favor", "volto a te procurar"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, tom de revanche e sofrência.",
+      "rhyme_scheme": "Regular e presente (apaixonar/ficar/avisei/assim/fim/falei; mãos/coração/perguntar/saída/amor/vida).",
+      "main_rhetoric_device": "Repetição do refrão, ironia (agora eu vou curtir a vida).",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Não era pra você se apaixonar",
+          "Era só pra gente ficar",
+          "Eu te avisei",
+          "Meu bem, eu te avisei",
+          "Você sabia que eu era assim",
+          "Paixão de uma noite que logo tem fim",
+          "Eu te falei, meu bem, eu te falei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Não vai ser tão fácil assim",
+          "Você me ter nas mãos",
+          "Logo você que era acostumada",
+          "A brincar com outro coração"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Não venha me perguntar",
+          "Qual a melhor saída",
+          "Eu sofri muito por amor",
+          "Agora eu vou curtir a vida"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Chora, me liga, implora",
+          "Meu beijo de novo",
+          "Me pede socorro",
+          "Quem sabe eu vou te salvar",
+          "Chora, me liga, implora",
+          "Pelo meu amor",
+          "Pede por favor",
+          "Quem sabe um dia eu volto a te procurar"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Não era pra você se apaixonar",
+          "Era só pra gente ficar",
+          "Eu te avisei",
+          "Meu bem, eu te avisei",
+          "Você sabia que eu era assim",
+          "Paixão de uma noite que logo tem fim",
+          "Eu te falei, meu bem, eu te falei"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Não vai ser tão fácil assim",
+          "Você me ter nas mãos",
+          "Logo você que era acostumada",
+          "A brincar com outro coração"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Não venha me perguntar",
+          "Qual a melhor saída",
+          "Eu sofri muito por amor",
+          "Agora eu vou curtir a vida"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Chora, me liga, implora",
+          "Meu beijo de novo",
+          "Me pede socorro",
+          "Quem sabe eu vou te salvar",
+          "Chora, me liga, implora",
+          "Pelo meu amor",
+          "Pede por favor",
+          "Quem sabe um dia eu volto a te procurar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_018",
+    "title": "Lê Lê Lê",
+    "artist": "João Neto e Frederico",
+    "composers": ["Raynner Souza", "Gabriel Gava"],
+    "album": null,
+    "year": 2012,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Dança", "Festa"],
+    "moods": ["Animado", "Paquerador", "Descontraído", "Confiante"],
+    "themes": ["Conquista na balada", "Dançar", "Popularidade", "Flertar"],
+    "keywords": ["sexta feira", "distrair", "balada", "linda", "camarote", "rodado no pedaço", "jeitinho", "invadir", "espaço", "não tenho grana", "fama", "carro", "carona", "cartão bloqueado", "limite estourado", "simples", "garanto", "Lê Lê Lê", "te pegar", "jamais", "esquecer", "Neymar", "dança sensual", "Goiânia", "Minas", "Tocantins", "Nordeste", "mina", "verão", "Brasil inteiro"],
+    "linguistic_analysis": {
+      "style": "Direto, coloquial, com onomatopeias e ritmo de dança.",
+      "rhyme_scheme": "Regular e repetitivo (distrair/vi/pedaço/espaço; grana/fama/carro/carona/cartão/estourado; Lê Lê Lê/ver/esquecer).",
+      "main_rhetoric_device": "Onomatopeia (\"Lê Lê Lê\"), repetição do bordão, autoironia (não tenho grana).",
+      "language_level": "Coloquial, popular, com gírias e referências à cultura pop jovem."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Em plena sexta feira",
+          "Fui tentar me distrair",
+          "Chegando na balada",
+          "Toda linda eu te vi"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Você no camarote",
+          "E eu rodado no pedaço",
+          "Caçando um jeitinho",
+          "De invadir o seu espaço"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Não tenho grana",
+          "Não tenho fama",
+          "Não tenho carro",
+          "Tô de carona"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "O meu cartão",
+          "Foi bloqueado",
+          "E o meu limite",
+          "Tá estourado"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Sou simples",
+          "Mas eu te garanto",
+          "Eu sei fazer um Lê Lê Lê"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Lê Lê Lê",
+          "Lê Lê Lê",
+          "Se eu te pegar você vai ver",
+          "Lê Lê Lê",
+          "Lê Lê Lê",
+          "Você jamais vai me esquecer"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Lê Lê Lê",
+          "Lê Lê Lê",
+          "Se eu te pegar você vai ver",
+          "Lê Lê Lê",
+          "Lê Lê Lê",
+          "Você jamais vai me esquecer"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Cheguei na balada, doidinho pra biritar",
+          "A galera tá no clima, todo mundo quer dançar",
+          "O Neymar me chamou, e disse: Faz um tchu tcha tcha",
+          "Perguntei o que é isso, ele disse: Vou te ensinar",
+          "É uma dança sensual, em Goiânia já pegou",
+          "Em Minas explodiu, em Tocantins já bombou",
+          "No nordeste as mina faz, no verão vai pegar",
+          "Então faz o tchu tcha tcha, o Brasil inteiro vai cantar"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Com João Lucas e Marcelo"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu quero tchu, eu quero tcha",
+          "Eu quero tchu tcha tcha tchu tchu tcha",
+          "Tchu tcha tcha tchu tchu tcha"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu quero tchu, eu quero tcha",
+          "Eu quero tchu tcha tcha tchu tchu tcha",
+          "Tchu tcha tcha tchu tchu tcha"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Cheguei na balada, doidinho pra biritar",
+          "A galera tá no clima, todo mundo quer dançar",
+          "Uma mina me chamou, e disse: Faz um tchu tcha tcha",
+          "Perguntei o que é isso, ela disse: Eu vou te ensinar",
+          "É uma dança sensual, em Goiânia já pegou",
+          "Em Minas explodiu, em Tocantins já bombou",
+          "No nordeste as mina faz, no verão vai pegar",
+          "Então faz o tchu tcha tcha, o Brasil inteiro vai cantar"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Com João Lucas e Marcelo"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu quero tchu, eu quero tcha",
+          "Eu quero tchu tcha tcha tchu tchu tcha",
+          "Tchu tcha tcha tchu tchu tcha"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu quero tchu, eu quero tcha",
+          "Eu quero tchu tcha tcha tchu tchu tcha",
+          "Tchu tcha tcha tchu tchu tcha"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu quero tchu, eu quero tcha",
+          "Eu quero tchu tcha tcha tchu tchu tcha",
+          "Tchu tcha tcha tchu tchu tcha"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu quero tchu, eu quero tcha",
+          "Eu quero tchu tcha tcha tchu tchu tcha",
+          "Tchu tcha tcha tchu tchu tcha"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_019",
+    "title": "Te Amo e Nada Mais",
+    "artist": "João Neto e Frederico",
+    "composers": ["Nilton Borges", "Roberto Santanna", "Thallys Pacheco"],
+    "album": null,
+    "year": 2013,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Lírico", "Entusiasmado", "Confiante"],
+    "themes": ["Declaração de amor", "Amor crescente", "Conexão profunda", "Aceitação"],
+    "keywords": ["olhos", "jeito", "voz", "sussurro", "ouvido", "dedos", "toque", "suspiro", "pensamento", "não resisto", "manhas", "manias", "disfarce", "sintonia", "inventar", "coração", "não te amo como ontem", "mil vezes mais", "segredos", "sinais", "defeito", "Te amo e nada mais"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção do amor.",
+      "rhyme_scheme": "Regular e presente (jeito/ouvido/toque/pensamento/resisto; manias/disfarce/sintonia/coração).",
+      "main_rhetoric_device": "Hipérbole (amo mil vezes mais), repetição do refrão.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Teus olhos, o teu jeito",
+          "A sua voz fala baixinho em meu ouvido",
+          "São teus dedos, o teu toque",
+          "O teu suspiro que não sai do pensamento",
+          "Eu sei que não resisto"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu já conheço suas manhas e manias",
+          "Já não vale o seu disfarce",
+          "A gente fica em sintonia",
+          "Eu já cansei de inventar você pro coração",
+          "Pro meu coração"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu não te amo como ontem",
+          "Amo mil vezes mais",
+          "Me conte os teus segredos",
+          "Mostre os teus sinais",
+          "Se me perguntar qual é o seu defeito",
+          "Ainda não sei",
+          "Te amo e nada mais"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu não te amo como ontem",
+          "Amo mil vezes mais",
+          "Me conte os teus segredos",
+          "Mostre os teus sinais",
+          "Se me perguntar qual é o seu defeito",
+          "Ainda não sei",
+          "Te amo e nada mais"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Eu já conheço suas manhas e manias",
+          "Já não vale o seu disfarce",
+          "A gente fica em sintonia",
+          "Eu já cansei de inventar você pro coração",
+          "Pro meu coração"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu não te amo como ontem",
+          "Eu amo mil vezes mais",
+          "Me conte os teus segredos",
+          "Mostre os teus sinais",
+          "E se me perguntar qual é o seu defeito",
+          "Ainda não sei"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu não te amo como ontem",
+          "Eu amo mil vezes mais",
+          "Me conte os teus segredos",
+          "Mostre os teus sinais",
+          "E se me perguntar qual é o seu defeito",
+          "Ainda não sei",
+          "Te amo e nada mais"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu não te amo como ontem",
+          "Eu amo mil vezes mais",
+          "Me conte os teus segredos",
+          "Mostre os teus sinais",
+          "E se me perguntar qual é o seu defeito",
+          "Ainda não sei"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu não te amo como ontem",
+          "Eu amo mil vezes mais",
+          "Me conte os teus segredos",
+          "Mostre os teus sinais",
+          "E se me perguntar qual é o seu defeito",
+          "Ainda não sei",
+          "Te amo e nada mais",
+          "Te amo e nada mais"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_020",
+    "title": "Um Beijo",
+    "artist": "Luan Santana",
+    "composers": ["Luan Santana", "Dudu Borges", "Felipe Oliver"],
+    "album": null,
+    "year": 2011,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Ansioso", "Nervoso (ao se declarar)", "Feliz"],
+    "themes": ["Conquista amorosa", "Declaração de amor", "Beijo como linguagem", "Amor inevitável"],
+    "keywords": ["cantando", "chuveiro", "feliz", "noite perfeita", "encontrar", "espelho", "ensaiando", "melhor forma", "te amando", "chance", "não posso errar", "falar", "travei", "gaguejar", "saída", "deixar acontecer", "coração se entregar", "Um beijo", "mil palavras", "toque", "poesia", "olhar", "alma", "fala", "melodia", "ninguém sabe explicar", "amor", "feliz", "amado", "coração de vez se entregou", "apaixonado"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção da declaração.",
+      "rhyme_scheme": "Regular e presente (chuveiro/inteiro/encontrar/ensaiando/amando/errar; você/gaguejar/acontecer/entregar).",
+      "main_rhetoric_device": "Metáfora (beijo fala mais que mil palavras), repetição do refrão.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Saio cantando do chuveiro",
+          "Eu sou o cara mais feliz do mundo inteiro",
+          "Noite perfeita, tá na hora, quero te encontrar",
+          "Em frente ao espelho, tô ensaiando",
+          "A melhor forma de dizer que tô te amando",
+          "Essa é a chance, é agora eu não posso errar"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Mas bem na hora de falar com você",
+          "Travei, comecei a gaguejar",
+          "E a saída é deixar acontecer",
+          "O coração se entregar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Um beijo fala mais que mil palavras",
+          "Um toque é bem mais que poesia",
+          "No seu olhar enxergo a sua alma",
+          "Sua fala é uma linda melodia",
+          "Ninguém sabe explicar o que é o amor",
+          "Ninguém vai ser feliz sem ser amado",
+          "Meu coração de vez se entregou",
+          "Confesso que eu estou apaixonado"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Mas bem na hora de falar com você",
+          "Travei, comecei a gaguejar",
+          "E a saída é deixar acontecer",
+          "O coração se entregar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Um beijo fala mais que mil palavras",
+          "Um toque é bem mais que poesia",
+          "No seu olhar enxergo a sua alma",
+          "Sua fala é uma linda melodia",
+          "Ninguém sabe explicar o que é o amor",
+          "Ninguém vai ser feliz sem ser amado",
+          "Meu coração de vez se entregou",
+          "Confesso que eu estou apaixonado"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Um beijo fala mais que mil palavras",
+          "Um toque é bem mais que poesia",
+          "No seu olhar enxergo a sua alma",
+          "Sua fala é uma linda melodia",
+          "Ninguém sabe explicar o que é o amor",
+          "Ninguém vai ser feliz sem ser amado",
+          "Meu coração de vez se entregou",
+          "Confesso que eu estou apaixonado"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_021",
+    "title": "Eu Vou Tentando Te Agarrar",
+    "artist": "Gusttavo Lima",
+    "composers": ["Gabriel Gava"],
+    "album": null,
+    "year": 2012,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Perseverante", "Desejoso", "Cativado"],
+    "themes": ["Conquista amorosa", "Desejo", "Paixão avassaladora", "Entrega"],
+    "keywords": ["tentando te agarrar", "chega pra cá", "desejo", "aumenta", "olhar", "desistindo", "sorrindo", "pedindo pra te amar", "de repente", "segundo", "invadiu meu mundo", "entreguei", "não aguento", "saudade", "abraçar", "beijar", "querer", "nas mãos", "apaixonado", "domina", "alucina", "meu bem querer"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção da paixão.",
+      "rhyme_scheme": "Regular e presente (agarrar/cá/olhar/desistindo/sorrindo/amar).",
+      "main_rhetoric_device": "Repetição do refrão, hipérbole (invadiu meu mundo).",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu vou tentando te agarrar, e você diz: Chega pra cá",
+          "E o desejo só aumenta olhando em teu olhar",
+          "Eu tava quase desistindo, e você chega sorrindo",
+          "Me pedindo pra te amar"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Foi de repente, num segundo",
+          "Você invadiu meu mundo, e eu me entreguei",
+          "Já não aguento essa saudade de te abraçar",
+          "De te beijar e te querer"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "E agora que você me tem",
+          "Eu já não sei o que fazer",
+          "Estou completamente apaixonado por você",
+          "Essa paixão que me domina",
+          "Essa paixão que me alucina",
+          "Oh, meu bem querer"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu vou tentando te agarrar, e você diz: Chega pra cá",
+          "E o desejo só aumenta olhando em teu olhar",
+          "Eu tava quase desistindo, e você chega sorrindo",
+          "Me pedindo pra te amar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu vou tentando te agarrar, e você diz: Chega pra cá",
+          "E o desejo só aumenta olhando em seu olhar",
+          "Eu tava quase desistindo, e você chega sorrindo",
+          "Me pedindo pra te amar"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Foi de repente, em um segundo",
+          "Você invadiu meu mundo, e eu me entreguei",
+          "Já não aguento essa saudade de te abraçar",
+          "De te beijar e te querer"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "E agora que você me tem",
+          "Eu já não sei o que fazer",
+          "Estou completamente apaixonado por você",
+          "Essa paixão que me domina",
+          "Essa paixão que me alucina"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu vou tentando te agarrar, e você diz: Chega pra cá",
+          "E o desejo só aumenta olhando em seu olhar",
+          "Eu tava quase desistindo, e você chega sorrindo",
+          "Me pedindo pra te amar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu vou tentando te agarrar, e você diz: Chega pra cá",
+          "E o desejo só aumenta olhando em seu olhar",
+          "Eu tava quase desistindo, e você chega sorrindo",
+          "Me pedindo pra te amar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu vou tentando te agarrar, e você diz: Chega pra cá",
+          "E o desejo só aumenta olhando em seu olhar",
+          "Eu tava quase desistindo, e você chega sorrindo",
+          "Me pedindo pra te amar"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu vou tentando te agarrar, e você diz: Chega pra cá",
+          "E o desejo só aumenta olhando em seu olhar",
+          "Eu tava quase desistindo, e você chega sorrindo",
+          "Me pedindo pra te amar"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Pra te agarrar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_022",
+    "title": "Camaro Amarelo",
+    "artist": "Munhoz e Mariano",
+    "composers": ["Marco Aurélio", "Paulinho Teixeira"],
+    "album": null,
+    "year": 2012,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Ostentação", "Festa"],
+    "moods": ["Confiante", "Vingativo (de forma leve)", "Festivo", "Exuberante"],
+    "themes": ["Ascensão social", "Revanche", "Conquista amorosa (materialista)", "Ostentação"],
+    "keywords": ["doce", "caramelo", "tirando onda", "Camaro amarelo", "vem cá que eu te quero", "CG", "nem me olhava", "herança", "véio", "problemas", "situação", "rico", "grife", "bonito", "patrão", "querer", "escolher", "sobrando mulher"],
+    "linguistic_analysis": {
+      "style": "Direto, coloquial, com gírias e tom de ostentação.",
+      "rhyme_scheme": "Regular e repetitivo (doce/doce; caramelo/amarelo/quero).",
+      "main_rhetoric_device": "Repetição do bordão, hipérbole (sobrando mulher).",
+      "language_level": "Coloquial, popular, com vocabulário de ostentação."
+    },
+    "lyrics_structured": [
+      {
+        "type": "intro",
+        "lines": [
+          "Agora eu fiquei doce, doce, doce, doce",
+          "Agora eu fiquei do-do-do-do-doce, doce"
+        ]
+      },
+      {
+        "type": "intro",
+        "lines": [
+          "Agora eu fiquei doce, doce, doce, doce",
+          "Agora eu fiquei do-do-do-do-doce, doce"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "E agora eu fiquei doce igual caramelo",
+          "Tô tirando onda de Camaro amarelo",
+          "E agora você diz: vem cá que eu te quero",
+          "Quando eu passo no Camaro amarelo"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Quando eu passava por você",
+          "Na minha CG, você nem me olhava",
+          "Fazia de tudo pra me ver, pra me perceber",
+          "Mas nem me olhava"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Aí veio a herança do meu véio",
+          "E resolveu os meus problemas, minha situação",
+          "E do dia pra noite fiquei rico",
+          "Tô na grife, tô bonito, tô andando igual patrão"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Agora eu fiquei doce igual caramelo",
+          "Tô tirando onda de Camaro amarelo",
+          "E agora você diz: vem cá que eu te quero",
+          "Quando eu passo no Camaro amarelo"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "E agora você vem, né?",
+          "Agora você quer?",
+          "Só que agora vou escolher",
+          "Tá sobrando mulher"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "E agora você vem, né?",
+          "Agora você quer?",
+          "Só que agora vou escolher",
+          "Tá sobrando mulher"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Quando eu passava por você",
+          "Na minha CG, você nem me olhava",
+          "Fazia de tudo pra me ver, pra me perceber",
+          "Mas nem me olhava"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Aí veio a herança do meu véio",
+          "E resolveu os meus problemas, minha situação",
+          "E do dia pra noite fiquei rico",
+          "Tô na grife, tô bonito, tô andando igual patrão"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Agora eu fiquei doce igual caramelo",
+          "Tô tirando onda de Camaro amarelo",
+          "Agora você diz: vem cá que eu te quero",
+          "Quando eu passo no Camaro amarelo"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "E agora você vem, né?",
+          "Agora você quer?",
+          "Só que agora vou escolher",
+          "Tá sobrando mulher"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "E agora você vem, né?",
+          "Agora você quer?",
+          "Só que agora vou escolher",
+          "Tá sobrando mulher"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Agora eu fiquei doce igual caramelo",
+          "Tô tirando onda de Camaro amarelo",
+          "E agora você diz: vem cá que eu te quero",
+          "Quando eu passo no Camaro amarelo"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Agora eu fiquei doce, doce, doce, doce",
+          "Agora eu fiquei do-do-do-do-doce, doce",
+          "Agora eu fiquei doce, doce, doce, doce",
+          "Agora eu fiquei do-do-do-do-doce, doce"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_023",
+    "title": "Fugidinha",
+    "artist": "Michel Teló",
+    "composers": ["Tiago Cavalieri", "Elcio di Carvalho"],
+    "album": null,
+    "year": 2010,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Pop", "Dança"],
+    "moods": ["Animado", "Paquerador", "Discreto", "Entusiasmado"],
+    "themes": ["Flerte", "Encontro secreto", "Diversão", "Conquista amorosa"],
+    "keywords": ["Vem comigo!", "parada", "balada", "esperto", "não posso botar tudo a perder", "pessoa especial", "potencial", "mexe comigo", "perigo", "legal", "morrendo de vontade", "te agarrar", "suportar", "ninguém pode saber", "pensei", "jeito", "fugidinha", "fugida", "vai acontecer", "foge comigo"],
+    "linguistic_analysis": {
+      "style": "Direto, coloquial, com onomatopeias e ritmo de dança.",
+      "rhyme_scheme": "Regular e repetitivo (entender/ver/esperto/perder; especial/potencial/perigo/legal).",
+      "main_rhetoric_device": "Repetição do refrão, imperativos, onomatopeia vocal (\"Ô, ô, ô\").",
+      "language_level": "Coloquial, popular, voltado para a dança e festa."
+    },
+    "lyrics_structured": [
+      {
+        "type": "intro",
+        "lines": [
+          "(Vem comigo!)"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Ô",
+          "Ô, ô, ô, ô, ô",
+          "Ô",
+          "Ô, ô, ô, ô, ô"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tô bem na parada, ninguém consegue entender",
+          "Chego na balada, todos param pra me ver",
+          "Tudo dando certo, mas eu tô esperto",
+          "Não posso botar tudo a perder"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Sempre tem aquela pessoa especial",
+          "Que fica na dela, sabe seu potencial",
+          "E mexe comigo, isso é um perigo",
+          "Logo agora que eu fiquei legal"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Tô morrendo de vontade de te agarrar",
+          "Não sei quanto tempo mais vou suportar",
+          "Mas pra gente se encontrar ninguém pode saber",
+          "Já pensei e sei o que devo fazer"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O jeito é dar uma fugidinha com você",
+          "O jeito é dar uma fugida com você",
+          "Se você quer saber o que vai acontecer",
+          "Primeiro a gente foge, depois a gente vê"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O jeito é dar uma fugidinha com você",
+          "O jeito é dar uma fugida com você",
+          "Se você quer saber o que vai acontecer",
+          "Primeiro a gente foge, depois a gente vê"
+        ]
+      },
+      {
+        "type": "vocalise",
+        "lines": [
+          "Ô",
+          "Ô, ô, ô, ô, ô",
+          "Ô",
+          "Ô, ô, ô, ô, ô"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Tô bem na parada, ninguém consegue entender",
+          "Chego na balada, todos param pra me ver",
+          "Tudo dando certo, mas eu tô esperto",
+          "Não posso botar tudo a perder"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Sempre tem aquela pessoa especial",
+          "Que fica na dela, sabe seu potencial",
+          "E mexe comigo, isso é um perigo",
+          "Logo agora que eu fiquei legal"
+        ]
+      },
+      {
+        "type": "ponte",
+        "lines": [
+          "Tô morrendo de vontade de te agarrar",
+          "Não sei quanto tempo mais vou suportar",
+          "Mas pra gente se encontrar ninguém pode saber",
+          "Já pensei e sei o que devo fazer"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O jeito é dar uma fugidinha com você",
+          "O jeito é dar uma fugida com você",
+          "Se você quer saber o que vai acontecer",
+          "Primeiro a gente foge (e o quê?)"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O jeito é dar uma fugidinha com você",
+          "O jeito é dar uma fugida com você",
+          "Se você quer saber o que vai acontecer",
+          "Primeiro a gente foge, depois a gente vê"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "O jeito é dar uma fugidinha com você",
+          "O jeito é dar uma fugida com você",
+          "Se você quer saber o que vai acontecer",
+          "Primeiro a gente foge, depois a gente vê",
+          "Vamo lá"
+        ]
+      },
+      {
+        "type": "outro",
+        "lines": [
+          "Ô",
+          "Ô, ô, ô, ô, ô",
+          "Ô",
+          "Ô, ô, ô, ô, ô",
+          "Ô (foge comigo?)",
+          "Ô, ô, ô, ô, ô",
+          "Ô",
+          "Ô, ô, ô, ô, ô, foge comigo"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SERTANEJO_024",
+    "title": "Cê Topa?",
+    "artist": "Luan Santana",
+    "composers": ["Dudu Borges", "Luan Santana", "Thiago Basso", "Thiago Gavião"],
+    "album": null,
+    "year": 2013,
+    "genre": "Sertanejo",
+    "subgenres": ["Sertanejo Universitário", "Romântico"],
+    "moods": ["Apaixonado", "Propositivo", "Otimista", "Confiante"],
+    "themes": ["Proposta de relacionamento sério", "Amizade que vira amor", "Futuro a dois", "Vida a dois ideal"],
+    "keywords": ["pensou", "ousado", "lance", "transformar", "amizade", "lindo romance", "presta atenção", "faz", "mais felizes", "casais", "desapega do medo", "acontecer", "proposta", "Eu, você, dois filhos e um cachorro", "edredom", "filme bom", "frio de agosto", "cê topa", "Diz aí"],
+    "linguistic_analysis": {
+      "style": "Direto, confessional, com linguagem simples e expressiva, focado na emoção da proposta.",
+      "rhyme_scheme": "Regular e presente (for/ousado/lance/transformar/amizade/romance; faz/casais/acontecer/fazer).",
+      "main_rhetoric_device": "Pergunta retórica, repetição do refrão.",
+      "language_level": "Coloquial, acessível, emotivo."
+    },
+    "lyrics_structured": [
+      {
+        "type": "verso",
+        "lines": [
+          "Já pensou se a gente for",
+          "Um pouco mais ousado nesse nosso lance",
+          "Já pensou, transformar",
+          "A nossa amizade num lindo romance"
+        ]
+      },
+      {
+        "type": "verso",
+        "lines": [
+          "Presta atenção em tudo o que a gente faz",
+          "Já somos mais felizes que muitos casais",
+          "Desapega do medo e deixa acontecer",
+          "Eu tenho uma proposta para te fazer"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu, você, dois filhos e um cachorro",
+          "Um edredom, um filme bom no frio de agosto",
+          "E aí, cê topa?"
+        ]
+      },
+      {
+        "type": "refrão",
+        "lines": [
+          "Eu, você, dois filhos e um cachorro",
+          "Um edredom, um filme bom no frio de agosto",
+          "Diz aí, cê topa?"
+        ]
+      }
+    ]
+  }
+]
