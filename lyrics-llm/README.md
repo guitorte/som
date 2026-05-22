@@ -14,6 +14,7 @@ and the AABB-heavy rhyme schemes the genre uses.
 **Phase 0 — Feasibility check.** Scope is locked; no training code yet.
 
 - Locked decisions: [`docs/00-scope.md`](./docs/00-scope.md).
+- Field notes (state of AI lyric/poetry generation, May 2026): [`docs/01-field-notes.md`](./docs/01-field-notes.md).
 - Phased plan: [`ROADMAP.md`](./ROADMAP.md).
 - Resource index: [`REFERENCES.md`](./REFERENCES.md).
 
@@ -48,6 +49,7 @@ lyrics-llm/
 │   └── prompts/sertanejo_prompts.json 20 sertanejo prompts (5 × 4 sub-genres)
 └── docs/
     ├── 00-scope.md                    locked v0 scope decisions
+    ├── 01-field-notes.md              field survey (issues + author approaches)
     └── 00-zero-shot-samples.md        template — filled in after Colab run
 ```
 
