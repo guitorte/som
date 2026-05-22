@@ -1,0 +1,16 @@
+# Phase 0 — zero-shot eval. Pin loosely; tighten when training starts.
+transformers>=4.40
+accelerate>=0.30
+sentencepiece>=0.2
+torch>=2.2
+huggingface_hub>=0.23
+
+# Later phases (commented out for now)
+# datasets>=2.18
+# peft>=0.11
+# trl>=0.8
+# bitsandbytes>=0.43
+# unsloth
+# pyphen>=0.14
+# evaluate>=0.4
+# bert_score>=0.3

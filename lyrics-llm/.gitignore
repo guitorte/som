@@ -1,4 +1,5 @@
-# Raw and processed data — never commit copyrighted lyrics
+# Raw and processed data — never commit copyrighted lyrics.
+# data/seed_artists.json (metadata only) IS tracked; raw/processed lyrics are not.
 data/raw/
 data/processed/
 data/interim/

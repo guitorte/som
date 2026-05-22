@@ -6,63 +6,73 @@ Companion docs: [`README.md`](./README.md), [`REFERENCES.md`](./REFERENCES.md).
 
 ---
 
-## Guiding decisions to make first
+## Locked scope (v0 — see `docs/00-scope.md`)
 
-Before any training code runs, four upstream choices set the rest of the plan:
+1. **Use-case** — personal only. No public demo, no commercial use, no
+   model weight publishing.
+2. **Genre** — **sertanejo** (raiz, universitário, sofrência, feminejo).
+3. **Compute** — free tier only (Colab T4, Kaggle 2×T4).
+4. **Frontend** — none. The sub-project is independent of `index.html`.
 
-1. **Use-case.** Personal/research toy vs. public demo vs. production. This
-   decides everything downstream — especially data licensing.
-2. **Genre scope.** Pan-pt-BR ("any lyric") vs. specific genre (sertanejo,
-   funk, MPB, trap, gospel, samba). Narrower = smaller dataset works.
-3. **Conditioning surface.** Pure free-form generation vs. conditional on
-   `{genre, mood, seed line, rhyme scheme, syllable count}`. Conditional needs
-   metadata-rich training data.
-4. **Compute budget.** Free Colab/Kaggle only vs. ~$50 on RunPod vs.
-   serious training. This decides base-model size.
+Implications baked into every phase below:
 
-**Default working assumption** (revisit after Phase 0): research/toy project,
-pan-genre with optional genre conditioning, free-form generation with simple
-controls, budget ≤ $50.
+- **Base model: `TucanoBR/Tucano-630m`** for v0, optional bump to
+  `TucanoBR/Tucano-1b1-Instruct` for v1. 7B is out of scope.
+- **Corpus target:** ~5k-15k sertanejo songs (genre-focused → smaller is fine).
+- **Tokenizer:** keep Tucano's, add structural special tokens, no vocab extension.
+- **No `index.html` integration**; demo surface is a local CLI / Ollama prompt.
 
 ---
 
-## Phase 0 — Scope & feasibility (1-2 days)
+## Phase 0 — Feasibility check (½-1 day) — scaffolded, awaiting run
 
-**Goal:** lock the four decisions above and confirm the project is buildable
-with available resources.
+Scope locked in [`docs/00-scope.md`](./docs/00-scope.md). Scaffolding for the
+feasibility run is in:
 
-- [ ] Pick the four upstream choices.
-- [ ] Decide license posture: research-only, no commercial use, no model
-      weights redistributing unmodified copyrighted lyrics.
-- [ ] Pick the base-model candidate set (default: `TucanoBR/Tucano-1b1-Instruct`,
-      `TucanoBR/Tucano-2b4-Instruct`, optional `maritaca-ai/sabia-7b`).
-- [ ] Sanity-load each candidate, generate ~20 free-form prompts, log
-      qualitative pt fluency and lyric-likeness.
-- [ ] Write a one-pager `docs/00-scope.md` capturing the decisions.
+- [`scripts/zero_shot.py`](./scripts/zero_shot.py) — model-agnostic runner.
+- [`evaluation/prompts/sertanejo_prompts.json`](./evaluation/prompts/sertanejo_prompts.json) — 20 prompts (5 × 4 sub-genres).
+- [`notebooks/00_zero_shot_sertanejo.ipynb`](./notebooks/00_zero_shot_sertanejo.ipynb) — Colab T4 runner.
+- [`docs/00-zero-shot-samples.md`](./docs/00-zero-shot-samples.md) — verdict template.
 
-**Exit criteria.** A decision document committed. A short
-"can-the-base-model-do-this-zero-shot?" report in `docs/`.
+Tasks:
+
+- [x] Lock scope decisions.
+- [x] Scaffold prompts + runner + Colab notebook + verdict template.
+- [ ] Open the notebook in Colab T4, run all cells. Generates ~60 samples
+      (20 prompts × 3 models) in ~10-15 min.
+- [ ] Commit the three result JSONs back to the branch.
+- [ ] Fill `docs/00-zero-shot-samples.md` with the verdict: confirm Tucano-630m
+      as v0, or escalate to 1b1 / step down to 160m.
+
+**Exit criteria.** `docs/00-zero-shot-samples.md` filled in with a chosen
+v0 base model.
 
 ---
 
-## Phase 1 — Data acquisition (3-5 days)
+## Phase 1 — Sertanejo data acquisition (3-5 days)
 
-**Goal:** assemble a clean, deduplicated pt-BR lyrics corpus of 10k-50k songs
-with at minimum `{title, artist, genre, lyrics}` per row.
+**Goal:** assemble a clean, deduplicated **sertanejo** corpus of 5k-15k songs
+with `{title, artist, sub-genre, lyrics, year?}` per row. Personal-use only,
+no redistribution.
 
-- [ ] Pick scraping sources: **Vagalume API** primary (lawful via API key);
-      4MuLA secondary (research only, redistribution unclear); letras.mus.br
-      only if other paths fail and only for personal use.
-- [ ] Apply for a Vagalume API key. Document rate limits and ToS in
-      `docs/01-data-sources.md`.
+- [ ] Build an artist seed list (~150-300 sertanejo artists across raiz,
+      universitário, sofrência, feminejo). Anchors: Chitãozinho & Xororó,
+      Leandro & Leonardo, Zezé Di Camargo & Luciano, Bruno & Marrone,
+      Almir Sater, Sérgio Reis, Jorge & Mateus, Henrique & Juliano,
+      Gusttavo Lima, Marília Mendonça, Maiara & Maraisa, Ana Castela,
+      Simone Mendes, etc. Persist as `data/seed_artists.json`.
+- [ ] **Primary source: Vagalume API.** Apply for a key. Document rate
+      limits / ToS in `docs/01-data-sources.md`. Vagalume's genre taxonomy
+      includes "sertanejo" — filter on it.
+- [ ] **Secondary: 4MuLA Tiny (Zenodo).** Pull and filter rows where
+      `genre == sertanejo`.
 - [ ] Write `scripts/scrape_vagalume.py` — paginated, polite (≥1s between
       requests), resumable, writes JSONL to `data/raw/` (gitignored).
-- [ ] Optional: pull 4MuLA Tiny from Zenodo as a head-start.
-- [ ] Collect genre/mood metadata where available; this is the conditioning
-      signal later.
+- [ ] Collect metadata: sub-genre tags, year, duo-vs-solo, region if
+      available. These become later conditioning signals.
 
-**Exit criteria.** `data/raw/lyrics.jsonl` with ≥ 10k rows;
-`docs/01-data-sources.md` documenting provenance and license posture per source.
+**Exit criteria.** `data/raw/sertanejo.jsonl` with ≥ 5k rows;
+`docs/01-data-sources.md` documenting provenance and personal-use posture.
 
 ---
 
@@ -88,37 +98,35 @@ data card in `docs/02-data-card.md`.
 
 ---
 
-## Phase 3 — Tokenizer / vocab decisions (1-2 days)
+## Phase 3 — Tokenizer & special tokens (½ day)
 
-**Goal:** make sure the tokenizer doesn't sabotage pt-BR generation.
+Locked-scope choice (Tucano base) collapses this phase to adding structural
+special tokens; no vocab extension required.
 
-- [ ] Measure tokens-per-byte on the corpus for each base-model tokenizer.
-      Tucano tokenizer is expected to win; Llama/Mistral will fragment.
-- [ ] Decision branch:
-    - If using **Tucano**: keep tokenizer as-is.
-    - If using **Llama/Mistral base**: either (a) accept fragmentation for v1
-      and revisit, or (b) train a 32k Unigram SentencePiece on the lyrics
-      corpus and merge with the base vocab (DeBERTinha-style).
-- [ ] Add special tokens: `<song>`, `<verso>`, `<refrão>`, `<ponte>`,
-      `<gênero=X>`, `<sílabas=N>` if conditioning will use them.
+- [ ] Sanity-check tokens-per-byte of Tucano's tokenizer on the cleaned
+      sertanejo corpus. Record in `docs/03-tokenizer.md`.
+- [ ] Add special tokens to the tokenizer and resize model embeddings:
+      `<song>`, `</song>`, `<verso>`, `<refrão>`, `<ponte>`,
+      `<sub-gênero=X>` (raiz / universitário / sofrência / feminejo).
+- [ ] Save the extended tokenizer locally; reuse it across all training runs.
 
-**Exit criteria.** A short `docs/03-tokenizer.md` with the chosen approach
-and the tokens-per-byte numbers.
+**Exit criteria.** `docs/03-tokenizer.md` with TPB numbers and the special
+token list.
 
 ---
 
-## Phase 4 — Baseline fine-tune (2-4 days)
+## Phase 4 — Baseline fine-tune on sertanejo (2-4 days)
 
-**Goal:** a small model that demonstrably writes lyric-shaped pt-BR text.
+**Goal:** a small model that demonstrably writes sertanejo-shaped pt-BR text.
 
-- [ ] Pick `TucanoBR/Tucano-1b1-Instruct` as default starting point.
-- [ ] Fine-tune via **QLoRA / Unsloth** on a single 24GB GPU (RunPod) or
-      Kaggle 2×T4. Use TRL's `SFTTrainer` with packing.
-- [ ] Training data format: instruction-style with the optional control
-      tokens, e.g.
+- [ ] **Base: `TucanoBR/Tucano-630m`** (v0). Optional bump to `Tucano-1b1-Instruct`
+      for v1 once v0 trains end-to-end on Kaggle 2×T4.
+- [ ] Fine-tune via **Unsloth QLoRA** on Kaggle 2×T4 (Colab T4 OK for 630m
+      experiments). Use TRL's `SFTTrainer` with packing.
+- [ ] Training data format: instruction-style with control tokens, e.g.
 
   ```text
-  <song><gênero=sertanejo>Escreva uma música sobre saudade da roça.</s>
+  <song><sub-gênero=sofrência>Escreva uma música sertaneja sobre traição num boteco.</s>
   <verso>...
   <refrão>...
   </song>
@@ -127,98 +135,87 @@ and the tokens-per-byte numbers.
 - [ ] Hyperparameters (starting point, expect to tune):
       `lr=2e-4`, `batch=4` × `grad_accum=8`, `epochs=2-3`, `lora_r=16`,
       `lora_alpha=32`, `lora_target_modules=q,k,v,o,gate,up,down`,
-      `bf16`, `max_seq_len=2048`.
-- [ ] Log to `wandb` or `tensorboard`.
-- [ ] Save adapter to `data/adapters/v1/` (gitignored); merge to BF16 for eval.
+      `bf16` (or `fp16` if T4 doesn't bf16), `max_seq_len=1024` to fit T4.
+- [ ] Log to tensorboard (wandb optional; keep keys out of free-tier
+      notebooks).
+- [ ] Save adapter to `data/adapters/v0/` (gitignored); merge to FP16 for eval.
 
-**Exit criteria.** A merged checkpoint that beats the zero-shot base on
-held-out perplexity by ≥10%, with qualitatively lyric-shaped samples.
+**Exit criteria.** A merged 630m checkpoint that beats the zero-shot base on
+held-out perplexity by ≥10%, with qualitatively sertanejo-shaped samples.
 
 ---
 
-## Phase 5 — Evaluation harness (parallel with Phase 4, 2-3 days)
+## Phase 5 — Evaluation harness (parallel with Phase 4, 1-2 days)
 
-**Goal:** quantitative and qualitative measurement that actually tracks
-song-craft, not just perplexity.
+**Goal:** quantitative and qualitative measurement that tracks sertanejo
+song-craft, not just perplexity. Scaled down for personal-use scope.
 
 - [ ] `evaluation/perplexity.py` — perplexity on `test.parquet`.
 - [ ] `evaluation/syllables.py` — per-line syllable count using
-      `syllable-pt` + `Pyphen` ensemble. Output: distribution + compliance
-      vs. target if conditioning was used.
+      `syllable-pt` + `Pyphen` ensemble. Sertanejo verses are usually
+      7-12 syllables (redondilha maior is common); flag drift.
 - [ ] `evaluation/rhyme.py` — extract last stressed-syllable phoneme; compute
-      end-rhyme accuracy across paired lines (AABB, ABAB schemes).
+      end-rhyme accuracy. Sertanejo skews heavily AABB / AABB-with-refrain,
+      so rhyme density is a strong genre-fit signal.
 - [ ] `evaluation/bertscore.py` — BERTScore vs. references, backbone =
-      `neuralmind/bert-large-portuguese-cased`.
-- [ ] `evaluation/human_eval.md` — protocol for ~50-song side-by-side
-      eval by Brazilian speakers on `{grammaticality, poeticness, genre fit,
-      coherence}` 1-5 Likert. Use a Google Form.
-- [ ] Roll up into a single `evaluation/run.py` that emits `eval_report.md`.
+      `neuralmind/bert-base-portuguese-cased` (base for free-tier RAM).
+- [ ] `evaluation/self_eval.md` — personal evaluation protocol: 20 generated
+      lyrics scored 1-5 on `{grammaticality, sertanejo fit, coherence,
+      tropes used}`. No external survey needed since this is personal-use.
+- [ ] Roll up into `evaluation/run.py` that emits `eval_report.md`.
 
-**Exit criteria.** `eval_report.md` for v1 checkpoint vs. base.
+**Exit criteria.** `eval_report.md` for v0 checkpoint vs. base.
 
 ---
 
 ## Phase 6 — Controllability & iteration (open-ended)
 
-Pick from these once v1 is shipped:
+Pick from these once v0 is shipped, in roughly increasing complexity:
 
-- **Genre conditioning.** Already implicit via `<gênero=X>`; sweep genres,
-  measure per-genre coherence.
-- **Rhyme-aware generation.** Implement Pasini et al. 2024's prepend-rhyme
-  trick (arXiv 2405.05176) or DeepRapper-style reverse-order generation.
+- **Sub-genre conditioning.** Already implicit via `<sub-gênero=X>`; sweep
+  sub-genres, measure per-sub-genre coherence.
+- **Rhyme-aware generation.** Pasini et al. 2024's prepend-rhyme trick
+  (arXiv 2405.05176) — strong fit because sertanejo is AABB-heavy.
 - **Syllable control.** Inject `<sílabas=N>` tokens at line start and
-  train on counts derived from the cleaning step. Decode with a syllable-budget
-  constrainer.
-- **Song structure control.** Plan-then-write: have the model first emit a
-  structure (`verso, verso, refrão, verso, refrão, ponte, refrão`) and then
-  fill it in.
-- **DPO / preference tuning.** Pair model outputs with human Likert scores;
-  train DPO to push fluency/poeticness.
-- **Scale up.** Repeat with Tucano-2b4-Instruct, then Sabiá-7B (research-only)
-  or Llama-3-8B (with tokenizer extension).
+  train on counts derived from the cleaning step. Decode with a
+  syllable-budget constrainer.
+- **Song structure control.** Plan-then-write: model first emits a structure
+  (`verso, verso, refrão, verso, refrão, ponte, refrão`) and then fills it in.
+- **v1 scale-up.** Repeat with `TucanoBR/Tucano-1b1-Instruct` if Kaggle
+  2×T4 holds. 7B remains out of scope.
+- **DPO from self-ratings.** Pair model outputs with personal Likert scores
+  and train a small DPO pass.
 
 ---
 
-## Phase 7 — Deployment & demo (1-2 days, once happy with v1)
+## Phase 7 — Local personal use (½ day, once happy with v0)
 
-- [ ] Merge adapter → BF16 → convert to GGUF Q4_K_M / Q5_K_M.
-- [ ] Publish quantized model to a private HF repo (do **not** publish a
-      model that reproduces copyrighted lyrics verbatim).
-- [ ] Local demo path: Ollama `Modelfile` with a default lyric-writing system
-      prompt. Optional vLLM endpoint if multi-user demos are needed.
-- [ ] Integrate with the existing static music-player frontend in this repo:
-      add a "compose new lyric" button that POSTs a prompt to a local Ollama
-      endpoint and renders the result alongside an existing song.
+Scope is personal-only, so this collapses to a local CLI workflow. No public
+endpoints, no model weight publishing.
 
-**Exit criteria.** A two-command local demo (`ollama pull` → `ollama run`)
-that generates a pt-BR lyric on prompt, served behind the existing
-`index.html`.
+- [ ] Merge adapter → FP16 → convert to GGUF Q4_K_M with
+      `llama.cpp/convert_hf_to_gguf.py`.
+- [ ] Wire up an Ollama `Modelfile` that bakes in a sertanejo-flavored system
+      prompt and the special tokens.
+- [ ] `scripts/compose.py` — one-shot CLI: `python scripts/compose.py --sub raiz --tema "saudade da fazenda"`
+      → prints a generated lyric.
+- [ ] Optional: keep the GGUF and adapter in a local private HF repo for
+      personal backup (private only — no public weights given training-data
+      origin).
+
+**Exit criteria.** `ollama run sertanejo-llm` produces a lyric on prompt
+from a local terminal.
 
 ---
 
-## Risk register
+## Risk register (post scope-lock)
 
 | Risk | Likelihood | Mitigation |
 |---|---|---|
-| Lyrics copyright blocks commercial use | High | Stay research-only; never redistribute training data; model card warns on commercial deployment. |
-| Vagalume API rate-limits or revokes key | Medium | Polite scraping, cache aggressively, fall back to 4MuLA. |
-| Tokenizer over-fragments pt | Medium | Default to Tucano family which avoids it. |
-| Memorization of full copyrighted lyrics | Medium | Dedup training data, test for verbatim regurgitation in eval, apply training-time noise (line shuffling within sections). |
-| Evaluation drift (no pt lyric benchmark) | High | Document our home-grown stack as v1, version it, share eval scripts so results are reproducible. |
-| Genre imbalance | High | Stratified eval, oversample under-represented genres in later iterations. |
-| Compute budget overrun | Low | Start at 1B params; scale only after eval gains justify it. |
-
----
-
-## Open questions (please weigh in)
-
-1. **Use-case** — toy/research only, or eventual public demo?
-2. **Genre** — pan-genre or pick a focus (e.g., sertanejo)?
-3. **Compute** — happy with free Colab/Kaggle for v1, or pre-approved to spend
-   ~$20-50 on RunPod for a faster loop?
-4. **Frontend integration** — should the existing music-player `index.html`
-   gain a "compose lyric" button as the project's demo surface, or do we
-   keep the LLM work standalone?
-5. **Songs in this repo** — the 18 `songs/*.mp3` already here suggest a
-   personal/local corpus. Are the corresponding lyrics available somewhere
-   we can pull in as seed data?
+| Vagalume API rate-limits or revokes key | Medium | Polite scraping, cache aggressively, fall back to 4MuLA Tiny. |
+| Free-tier session timeouts kill long runs | High | Checkpoint every N steps; resumable training; keep epochs short on 630m. |
+| Kaggle 2×T4 OOM on 1b1 QLoRA | Medium | Use `max_seq_len=1024`, gradient checkpointing, paged AdamW; if still OOM, stay on 630m. |
+| Memorization of training lyrics | Medium | Dedup, test for verbatim regurgitation in eval; personal-use scope contains downstream impact. |
+| Sertanejo sub-genre imbalance (e.g., feminejo under-represented) | Medium | Stratified eval; oversample weak sub-genres if v0 shows skew. |
+| Evaluation drift (no pt lyric benchmark) | High | Roll our own metric stack, version it; reuse across all checkpoints. |
+| Lyrics copyright (training data) | Low (personal scope) | Keep raw corpus out of git; do not publish model weights publicly. |
