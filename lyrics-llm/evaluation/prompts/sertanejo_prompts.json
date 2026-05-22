@@ -1,0 +1,102 @@
+[
+  {
+    "id": "raiz-01",
+    "sub_genre": "raiz",
+    "prompt": "Escreva uma música sertaneja de raiz sobre a saudade da fazenda da infância, com viola na varanda ao entardecer.\n\n"
+  },
+  {
+    "id": "raiz-02",
+    "sub_genre": "raiz",
+    "prompt": "Escreva uma moda de viola sobre a lida no curral antes do sol nascer, o boi velho e o cheiro do mato molhado.\n\n"
+  },
+  {
+    "id": "raiz-03",
+    "sub_genre": "raiz",
+    "prompt": "Escreva uma música sertaneja raiz sobre um caminho de chão batido que liga o sítio à cidade pequena.\n\n"
+  },
+  {
+    "id": "raiz-04",
+    "sub_genre": "raiz",
+    "prompt": "Escreva uma música de viola sobre a mãe ensinando reza ao pé do fogão a lenha numa noite fria.\n\n"
+  },
+  {
+    "id": "raiz-05",
+    "sub_genre": "raiz",
+    "prompt": "Escreva uma música sertaneja raiz sobre o violeiro que deixa a roça para tentar a vida na cidade grande.\n\n"
+  },
+  {
+    "id": "universitario-01",
+    "sub_genre": "universitario",
+    "prompt": "Escreva uma música sertaneja universitária sobre uma noite de festa numa boate com os amigos da faculdade.\n\n"
+  },
+  {
+    "id": "universitario-02",
+    "sub_genre": "universitario",
+    "prompt": "Escreva uma música sertaneja universitária sobre reencontrar uma paquera antiga num bar no fim de semana.\n\n"
+  },
+  {
+    "id": "universitario-03",
+    "sub_genre": "universitario",
+    "prompt": "Escreva uma música sertaneja universitária sobre um final de semana na praia com a galera, cerveja gelada e o som ligado no carro.\n\n"
+  },
+  {
+    "id": "universitario-04",
+    "sub_genre": "universitario",
+    "prompt": "Escreva uma música sertaneja universitária sobre tomar uma cachaça pra esquecer a prova que ele tirou nota baixa.\n\n"
+  },
+  {
+    "id": "universitario-05",
+    "sub_genre": "universitario",
+    "prompt": "Escreva uma música sertaneja universitária convidando a paquera pra ir pro pagode no fim de semana.\n\n"
+  },
+  {
+    "id": "sofrencia-01",
+    "sub_genre": "sofrencia",
+    "prompt": "Escreva uma música sertaneja sofrência sobre beber cachaça num boteco depois do término, com cigarro na mão.\n\n"
+  },
+  {
+    "id": "sofrencia-02",
+    "sub_genre": "sofrencia",
+    "prompt": "Escreva uma música sertaneja sofrência sobre mandar mensagem que ela não respondeu mais e ficar olhando o celular a noite toda.\n\n"
+  },
+  {
+    "id": "sofrencia-03",
+    "sub_genre": "sofrencia",
+    "prompt": "Escreva uma música sertaneja sofrência sobre a aliança que ele jogou no chão e o sentimento que sobrou.\n\n"
+  },
+  {
+    "id": "sofrencia-04",
+    "sub_genre": "sofrencia",
+    "prompt": "Escreva uma música sertaneja sofrência sobre olhar uma foto antiga no celular e não conseguir apagar.\n\n"
+  },
+  {
+    "id": "sofrencia-05",
+    "sub_genre": "sofrencia",
+    "prompt": "Escreva uma música sertaneja sofrência sobre voltar pra casa de madrugada e encontrar a cama vazia do lado dela.\n\n"
+  },
+  {
+    "id": "feminejo-01",
+    "sub_genre": "feminejo",
+    "prompt": "Escreva uma música feminejo no estilo Marília Mendonça, com uma mulher contando pra amiga que descobriu a traição.\n\n"
+  },
+  {
+    "id": "feminejo-02",
+    "sub_genre": "feminejo",
+    "prompt": "Escreva uma música feminejo sobre uma mulher saindo com as amigas pra mostrar pro ex que ela está muito bem sem ele.\n\n"
+  },
+  {
+    "id": "feminejo-03",
+    "sub_genre": "feminejo",
+    "prompt": "Escreva uma música feminejo sobre bloquear o ex em todas as redes sociais e seguir a vida.\n\n"
+  },
+  {
+    "id": "feminejo-04",
+    "sub_genre": "feminejo",
+    "prompt": "Escreva uma música feminejo sobre uma mulher se levantando depois de uma decepção amorosa e descobrindo o próprio valor.\n\n"
+  },
+  {
+    "id": "feminejo-05",
+    "sub_genre": "feminejo",
+    "prompt": "Escreva uma música feminejo no estilo Maiara & Maraisa, com a esposa mandando recado pra outra mulher do ex.\n\n"
+  }
+]

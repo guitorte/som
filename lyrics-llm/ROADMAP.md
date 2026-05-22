@@ -24,23 +24,28 @@ Implications baked into every phase below:
 
 ---
 
-## Phase 0 — Feasibility check (½-1 day) ✓ scope locked
+## Phase 0 — Feasibility check (½-1 day) — scaffolded, awaiting run
 
-Scope is locked in `docs/00-scope.md`. What's left in Phase 0 is just
-confirming the chosen base model handles sertanejo zero-shot at a level
-worth fine-tuning from.
+Scope locked in [`docs/00-scope.md`](./docs/00-scope.md). Scaffolding for the
+feasibility run is in:
+
+- [`scripts/zero_shot.py`](./scripts/zero_shot.py) — model-agnostic runner.
+- [`evaluation/prompts/sertanejo_prompts.json`](./evaluation/prompts/sertanejo_prompts.json) — 20 prompts (5 × 4 sub-genres).
+- [`notebooks/00_zero_shot_sertanejo.ipynb`](./notebooks/00_zero_shot_sertanejo.ipynb) — Colab T4 runner.
+- [`docs/00-zero-shot-samples.md`](./docs/00-zero-shot-samples.md) — verdict template.
+
+Tasks:
 
 - [x] Lock scope decisions.
-- [ ] On a Colab T4, load `TucanoBR/Tucano-630m` and `Tucano-1b1-Instruct`.
-- [ ] Run ~20 sertanejo-flavored prompts (e.g., "Escreva uma música
-      sertaneja sobre uma traição na fazenda…"). Capture outputs in
-      `docs/00-zero-shot-samples.md`.
-- [ ] For comparison, run the same prompts through
-      `rsmonteiro/gpt2-small-portuguese-lyrics`.
-- [ ] Verdict: confirm Tucano-630m is the right v0 starting point, or
-      escalate to 1b1 / step down to 160m if memory/quality dictates.
+- [x] Scaffold prompts + runner + Colab notebook + verdict template.
+- [ ] Open the notebook in Colab T4, run all cells. Generates ~60 samples
+      (20 prompts × 3 models) in ~10-15 min.
+- [ ] Commit the three result JSONs back to the branch.
+- [ ] Fill `docs/00-zero-shot-samples.md` with the verdict: confirm Tucano-630m
+      as v0, or escalate to 1b1 / step down to 160m.
 
-**Exit criteria.** A short qualitative report committed under `docs/`.
+**Exit criteria.** `docs/00-zero-shot-samples.md` filled in with a chosen
+v0 base model.
 
 ---
 
