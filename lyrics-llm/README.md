@@ -1,20 +1,32 @@
 # lyrics-llm
 
-A trainable LLM that writes Brazilian-Portuguese (pt-BR) song lyrics.
+A trainable LLM that writes Brazilian-Portuguese (pt-BR) **sertanejo** song
+lyrics. Personal-use, free-tier compute only. Independent from the static
+music-player frontend that also lives in this repo.
 
-This sub-project is the ML side of the `som` repo (which already hosts a static
-pt-BR music player). The goal is to fine-tune an open LLM so it can produce
-new, idiomatic pt-BR lyrics that respect basic song structure (verse / chorus /
-bridge), syllable counts, and rhyme — and optionally condition on genre,
-mood, or a seed line.
+The goal: fine-tune an open pt-native LLM so it can produce new, idiomatic
+sertanejo lyrics that respect basic song structure (verso / refrão / ponte),
+syllable counts typical of sertanejo (often redondilha maior, 7-12 syllables),
+and the AABB-heavy rhyme schemes the genre uses.
 
 ## Status
 
-**Phase 0 — Planning.** No code or model yet. See:
+**Phase 0 — Feasibility check.** Scope is locked; no training code yet.
 
-- [`ROADMAP.md`](./ROADMAP.md) — phased plan from data collection to deployment.
-- [`REFERENCES.md`](./REFERENCES.md) — curated index of base models, datasets,
-  papers, tooling, communities, and known legal/ethical risks.
+- Locked decisions: [`docs/00-scope.md`](./docs/00-scope.md).
+- Phased plan: [`ROADMAP.md`](./ROADMAP.md).
+- Resource index: [`REFERENCES.md`](./REFERENCES.md).
+
+**Locked v0 choices:**
+
+| Decision | Value |
+|---|---|
+| Use-case | Personal only — no public demo, no weight publishing |
+| Genre | Sertanejo (raiz, universitário, sofrência, feminejo) |
+| Compute | Free tier only (Colab T4, Kaggle 2×T4) |
+| Base model | `TucanoBR/Tucano-630m` (v0) → `Tucano-1b1-Instruct` (v1) |
+| Tokenizer | Tucano's, + structural special tokens |
+| Demo surface | Local CLI / Ollama only |
 
 ## Folder layout
 
@@ -36,10 +48,10 @@ lyrics-llm/
 
 ## Quick links
 
-- Brazilian Portuguese base LLMs: TucanoBR, Sabiá, Bode, GlórIA — see
-  [`REFERENCES.md#1-brazilian-portuguese-base--foundation-llms`](./REFERENCES.md#1-brazilian-portuguese-base--foundation-llms).
-- Closest prior art: `rsmonteiro/gpt2-small-portuguese-lyrics` (GPT-2 small, MIT).
-- Closest controllable-lyrics paper: Pasini et al. 2024 (arXiv 2405.05176).
+- v0 base model: [`TucanoBR/Tucano-630m`](https://huggingface.co/TucanoBR/Tucano-630m).
+- v1 stretch base: [`TucanoBR/Tucano-1b1-Instruct`](https://huggingface.co/TucanoBR/Tucano-1b1-Instruct).
+- Closest prior art: [`rsmonteiro/gpt2-small-portuguese-lyrics`](https://huggingface.co/rsmonteiro/gpt2-small-portuguese-lyrics) (used as a comparison baseline).
+- Closest controllable-lyrics paper: [Pasini et al. 2024 — arXiv 2405.05176](https://arxiv.org/abs/2405.05176).
 
 ## Working agreement
 
@@ -47,3 +59,5 @@ lyrics-llm/
   roadmap converges.
 - No raw lyrics committed. Cleaned/derived artifacts only, and only if the
   source license allows.
+- No model weights committed. Adapters and GGUF builds stay local or in
+  private HF repos.
