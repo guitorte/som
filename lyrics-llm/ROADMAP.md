@@ -22,7 +22,30 @@ Implications baked into every phase below:
 - **Tokenizer:** keep Tucano's, add structural special tokens, no vocab extension.
 - **No `index.html` integration**; demo surface is a local CLI / Ollama prompt.
 
+## Approach tracks
+
+There are three viable paths to the locked goal. See
+[`docs/02-frontier-llm-alt-path.md`](./docs/02-frontier-llm-alt-path.md) for
+the full comparison.
+
+- **Track A — Dedicated fine-tune.** Phases 0-7 below. Scrape sertanejo
+  lyrics → fine-tune Tucano → local inference. Slow, self-contained, the
+  "build it yourself" path.
+- **Track B — Agentic Claude orchestrator.** Phases B0-B3 further down.
+  No training; drive Claude Opus through plan → rhyme dictionary → write
+  → critique → revise → syllable-tool verify. Days, not weeks.
+- **Hybrid — Track B feeds Track A.** Phases H1-H4. Use Claude to generate
+  a 5k synthetic sertanejo corpus, then fine-tune Tucano on that. Clean
+  licensing, local at inference, but adds a one-time ~$150 Claude-API
+  budget.
+
+**Current status:** Track A is scaffolded through Phase 0 (see below).
+Tracks B and Hybrid are roadmap stubs — pick whether to pursue one before
+writing code under them.
+
 ---
+
+# Track A — Dedicated fine-tune
 
 ## Phase 0 — Feasibility check (½-1 day) — scaffolded, awaiting run
 
@@ -208,14 +231,102 @@ from a local terminal.
 
 ---
 
+# Track B — Agentic Claude orchestrator
+
+No training, no scraping. Drive Claude Opus 4.7 through structured
+prompting and tool use. See [`docs/02-frontier-llm-alt-path.md`](./docs/02-frontier-llm-alt-path.md)
+for the agentic patterns referenced below.
+
+## Phase B0 — Decide on the API surface (½ day)
+
+- [ ] Pick the LLM: Claude Opus 4.7 (default), Claude Sonnet 4.6 (cheaper
+      fallback), or a local Qwen2.5-72B-Instruct via Ollama (zero API cost
+      but slower).
+- [ ] Pick the auth path: direct Anthropic API key vs OpenRouter.
+- [ ] Commit a `.env.example` (not the key itself) under `configs/`.
+
+## Phase B1 — `compose.py` orchestrator (2-3 days)
+
+Build a single CLI that takes `--sub-gênero` and `--tema` and produces a
+sertanejo lyric via the agentic loop. Pattern (in increasing complexity,
+ship the simplest one that works):
+
+1. **Single-prompt structured CoT.** One call: plan + rhyme words + lyric.
+2. **Two-call retrieve-then-write.** First call generates a rhyme
+   dictionary and idiom list; second call writes against it.
+3. **Critique-revise loop.** Add a critic call that scores rhyme / meter /
+   sub-genre fit per line; reviser fixes anything below threshold; loop
+   up to N iterations.
+
+Acceptance: 20/20 of the Phase 0 sertanejo prompts produce a coherent
+sertanejo lyric on first run.
+
+## Phase B2 — Syllable / rhyme tool wiring (1-2 days)
+
+- [ ] Implement `count_syllables(line)` via `pyphen` + `syllable-pt`
+      ensemble (matches Phase 5 evaluation tooling — share the code).
+- [ ] Implement `rhymes_with(word_a, word_b)` via pt phonetic last-syllable
+      match.
+- [ ] Expose both as Claude tools; have `compose.py` register them.
+- [ ] Verify the model actually calls them and revises on failure.
+
+## Phase B3 — Quality eval on Track B (1 day)
+
+- [ ] Reuse the Phase 5 metric harness against Track B outputs across the
+      20 sertanejo prompts. Numbers go in `docs/B3-track-b-eval.md`.
+- [ ] If Track B already exceeds quality targets, the hybrid path is
+      unlocked (use these outputs as synthetic training data).
+
+---
+
+# Hybrid — Track B feeds Track A
+
+Use Track B as a synthetic-data generator for Track A. Sidesteps the
+Vagalume scrape entirely and gives clean licensing.
+
+## Phase H1 — Synthetic corpus generation (3-5 days + API spend)
+
+- [ ] Decide on corpus size and budget. Default: 5k lyrics × ~$0.03 each
+      ≈ $150 with Opus 4.7. Could be 2k × Sonnet 4.6 if cheaper.
+- [ ] Extend `compose.py` into `scripts/synth_corpus.py` that loops over
+      `(sub_genre, theme)` pairs and writes JSONL to `data/synthetic/`.
+- [ ] Stratify themes across raiz / universitário / sofrência / feminejo
+      so each sub-genre gets ~1.25k lyrics.
+- [ ] Persist per-row metadata: `{id, sub_genre, theme, structure,
+      rhyme_scheme, lyrics, claude_self_score}`.
+
+## Phase H2 — Quality filter (½ day)
+
+- [ ] Jury Claude pass over every row: score on `{rhyme accuracy,
+      syllable compliance, sub-genre fit, coherence, originality}` 1-5.
+- [ ] Drop the bottom 20%. Document the cutoff in `docs/H2-filter.md`.
+
+## Phase H3 — SFT on Tucano (= Track A Phase 4 with synthetic data)
+
+Same QLoRA recipe as Track A Phase 4, just pointing at
+`data/synthetic/train.parquet` instead of `data/processed/train.parquet`.
+Licensing posture is clean: Apache-2.0 training data, Apache-2.0 base.
+
+## Phase H4 — Comparative eval (1 day)
+
+- [ ] Run the Phase 5 harness against three checkpoints side by side:
+      zero-shot Tucano, Hybrid-fine-tune, Track B direct (Claude).
+- [ ] If Hybrid local-inference beats Track B direct on enough samples,
+      the project ships locally without ongoing API cost.
+
+---
+
 ## Risk register (post scope-lock)
 
-| Risk | Likelihood | Mitigation |
-|---|---|---|
-| Vagalume API rate-limits or revokes key | Medium | Polite scraping, cache aggressively, fall back to 4MuLA Tiny. |
-| Free-tier session timeouts kill long runs | High | Checkpoint every N steps; resumable training; keep epochs short on 630m. |
-| Kaggle 2×T4 OOM on 1b1 QLoRA | Medium | Use `max_seq_len=1024`, gradient checkpointing, paged AdamW; if still OOM, stay on 630m. |
-| Memorization of training lyrics | Medium | Dedup, test for verbatim regurgitation in eval; personal-use scope contains downstream impact. |
-| Sertanejo sub-genre imbalance (e.g., feminejo under-represented) | Medium | Stratified eval; oversample weak sub-genres if v0 shows skew. |
-| Evaluation drift (no pt lyric benchmark) | High | Roll our own metric stack, version it; reuse across all checkpoints. |
-| Lyrics copyright (training data) | Low (personal scope) | Keep raw corpus out of git; do not publish model weights publicly. |
+| Risk | Track | Likelihood | Mitigation |
+|---|---|---|---|
+| Vagalume API rate-limits or revokes key | A | Medium | Polite scraping, cache aggressively, fall back to 4MuLA Tiny; or pivot to Hybrid. |
+| Free-tier session timeouts kill long runs | A, Hybrid | High | Checkpoint every N steps; resumable training; keep epochs short on 630m. |
+| Kaggle 2×T4 OOM on 1b1 QLoRA | A, Hybrid | Medium | Use `max_seq_len=1024`, gradient checkpointing, paged AdamW; if still OOM, stay on 630m. |
+| Memorization of training lyrics | A | Medium | Dedup, test for verbatim regurgitation; personal-use scope contains downstream impact. |
+| Sertanejo sub-genre imbalance | A, Hybrid | Medium | Stratified eval; oversample weak sub-genres if v0 shows skew. |
+| Evaluation drift (no pt lyric benchmark) | All | High | Roll our own metric stack, version it; reuse across all checkpoints. |
+| Lyrics copyright (training data) | A | Low (personal scope) | Keep raw corpus out of git; do not publish model weights publicly. |
+| Claude API spend overruns | B, Hybrid | Low | Set a hard budget cap in `compose.py`; default to Sonnet 4.6 for bulk generation. |
+| Claude rate limits during synthetic generation | Hybrid | Low | Stream incrementally to JSONL; resumable; can run overnight. |
+| Track B has external dependency at inference | B | High | If independence matters, fall back to Hybrid (local at inference). |

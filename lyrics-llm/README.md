@@ -12,9 +12,11 @@ and the AABB-heavy rhyme schemes the genre uses.
 ## Status
 
 **Phase 0 — Feasibility check.** Scope is locked; no training code yet.
+Three viable approach tracks are scoped — pick one before writing more code.
 
 - Locked decisions: [`docs/00-scope.md`](./docs/00-scope.md).
 - Field notes (state of AI lyric/poetry generation, May 2026): [`docs/01-field-notes.md`](./docs/01-field-notes.md).
+- Frontier-LLM alternative path (Tracks A / B / Hybrid): [`docs/02-frontier-llm-alt-path.md`](./docs/02-frontier-llm-alt-path.md).
 - Phased plan: [`ROADMAP.md`](./ROADMAP.md).
 - Resource index: [`REFERENCES.md`](./REFERENCES.md).
 
@@ -50,6 +52,7 @@ lyrics-llm/
 └── docs/
     ├── 00-scope.md                    locked v0 scope decisions
     ├── 01-field-notes.md              field survey (issues + author approaches)
+    ├── 02-frontier-llm-alt-path.md    Track A / B / Hybrid approach options
     └── 00-zero-shot-samples.md        template — filled in after Colab run
 ```
 
