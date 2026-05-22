@@ -1,0 +1,35 @@
+# Raw and processed data — never commit copyrighted lyrics
+data/raw/
+data/processed/
+data/interim/
+data/adapters/
+data/checkpoints/
+data/*.parquet
+data/*.jsonl
+data/*.csv
+
+# Model weights / quantized artifacts
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+
+# Training logs
+wandb/
+runs/
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Notebook scratch
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
