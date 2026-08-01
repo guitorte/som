@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vocal Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#171B21;
+    --panel:#1E242C;
+    --raised:#28313A;
+    --line:#333E49;
+    --bone:#E8E3D9;
+    --muted:#8A939E;
+    --dim:#5A636D;
+    --lamp:#E8A33D;
+    --lamp-dim:#7A5A25;
+    --over:#D9503F;
+    --ok:#7FA97A;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--ground);
+    color:var(--bone);
+    font-family:'Archivo',system-ui,sans-serif;
+    font-size:15px;
+    line-height:1.45;
+    padding-bottom:190px;
+  }
+  .wrap{max-width:520px;margin:0 auto;padding:0 14px}
+
+  /* ---- header ---- */
+  header{padding:20px 0 12px}
+  h1{
+    font-size:19px;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;margin:0;
+  }
+  .sub{color:var(--muted);font-size:12.5px;margin:5px 0 0;max-width:34em}
+  .presets{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}
+  .preset{
+    font-family:'Archivo';font-size:11.5px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--bone);
+    background:transparent;border:1px solid var(--line);
+    border-radius:2px;padding:7px 11px;cursor:pointer;
+  }
+  .preset:hover{border-color:var(--lamp);color:var(--lamp)}
+  .preset.clear{color:var(--dim);border-color:#2A323B}
+
+  /* ---- groups ---- */
+  .group{border-top:1px solid var(--line)}
+  .group:last-of-type{border-bottom:1px solid var(--line)}
+  .ghead{
+    width:100%;display:flex;align-items:center;gap:10px;
+    background:none;border:0;padding:15px 2px;cursor:pointer;
+    color:var(--bone);text-align:left;font-family:'Archivo';
+  }
+  .gnum{
+    font-family:'IBM Plex Mono';font-size:11px;color:var(--dim);
+    min-width:20px;
+  }
+  .gname{
+    flex:1;font-size:12.5px;font-weight:600;letter-spacing:.13em;
+    text-transform:uppercase;
+  }
+  .gcount{
+    font-family:'IBM Plex Mono';font-size:11px;color:var(--lamp);
+    min-width:16px;text-align:right;
+  }
+  .gcount.empty{color:var(--dim)}
+  .caret{color:var(--dim);font-size:11px;transition:transform .18s}
+  .group.open .caret{transform:rotate(90deg)}
+  .gbody{display:none;padding:0 0 18px}
+  .group.open .gbody{display:block}
+
+  .axis{margin-bottom:14px}
+  .axis:last-child{margin-bottom:0}
+  .alabel{
+    font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:8px;display:flex;gap:7px;align-items:baseline;
+  }
+  .arule{font-family:'IBM Plex Mono';font-size:9.5px;color:var(--dim);text-transform:none;letter-spacing:0}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{
+    font-family:'Archivo';font-size:13.5px;font-weight:500;
+    color:var(--bone);background:var(--panel);
+    border:1px solid transparent;border-radius:3px;
+    padding:9px 12px;cursor:pointer;line-height:1;
+    min-height:36px;
+  }
+  .chip:hover{background:var(--raised)}
+  .chip[aria-pressed="true"]{
+    background:var(--lamp);color:#1A1408;font-weight:600;
+  }
+  .chip[disabled]{
+    color:var(--dim);background:transparent;border-color:#252D35;
+    text-decoration:line-through;cursor:not-allowed;
+  }
+  .chip:focus-visible{outline:2px solid var(--lamp);outline-offset:2px}
+
+  .note{
+    font-size:11.5px;color:var(--lamp);margin-top:9px;
+    padding-left:9px;border-left:2px solid var(--lamp-dim);
+  }
+  .note.warn{color:var(--over);border-left-color:var(--over)}
+
+  button.alabel{
+    background:none;border:0;padding:0;cursor:pointer;font-family:'Archivo';
+    width:100%;text-align:left;
+  }
+  .alabel .lt{border-bottom:1px dotted var(--dim);padding-bottom:2px}
+  button.alabel:hover .lt{border-bottom-color:var(--lamp);color:var(--lamp)}
+  button.alabel:focus-visible{outline:2px solid var(--lamp);outline-offset:3px}
+
+  .defslot{
+    border-left:2px solid var(--lamp-dim);padding:1px 0 1px 9px;margin-bottom:9px;
+    min-height:30px;display:flex;flex-direction:column;justify-content:center;
+  }
+  .defterm{
+    font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--lamp);
+  }
+  .deftext{font-size:12px;line-height:1.35;color:var(--muted)}
+  .defslot.idle{border-left-color:#2C353E}
+  .defslot.idle .deftext{color:var(--dim)}
+
+  input[type=text]{
+    width:100%;background:var(--panel);border:1px solid var(--line);
+    border-radius:3px;color:var(--bone);font-family:'Archivo';font-size:14px;
+    padding:10px 12px;
+  }
+  input[type=text]:focus{outline:none;border-color:var(--lamp)}
+  input::placeholder{color:var(--dim)}
+
+  /* ---- sticky output ---- */
+  .strip{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    background:var(--panel);border-top:1px solid var(--line);
+    padding:11px 14px calc(13px + env(safe-area-inset-bottom));
+    box-shadow:0 -14px 30px rgba(10,12,15,.55);
+  }
+  .strip .inner{max-width:520px;margin:0 auto}
+  .meterrow{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+  .meter{flex:1;display:flex;gap:2px;height:7px}
+  .seg{flex:1;background:#2C353E;border-radius:1px;transition:background .12s}
+  .seg.on{background:var(--ok)}
+  .seg.on.full{background:var(--lamp)}
+  .seg.on.over{background:var(--over)}
+  .mstat{
+    font-family:'IBM Plex Mono';font-size:10.5px;color:var(--muted);
+    letter-spacing:.04em;white-space:nowrap;
+  }
+  .out{
+    font-family:'IBM Plex Mono';font-size:11.5px;line-height:1.5;
+    color:var(--bone);background:var(--ground);border:1px solid var(--line);
+    border-radius:3px;padding:9px 10px;max-height:74px;overflow-y:auto;
+    margin-bottom:9px;white-space:pre-wrap;word-break:break-word;
+  }
+  .out.empty{color:var(--dim)}
+  .actions{display:flex;gap:7px}
+  .copy{
+    flex:1;font-family:'Archivo';font-size:12.5px;font-weight:700;
+    letter-spacing:.13em;text-transform:uppercase;
+    background:var(--lamp);color:#1A1408;border:0;border-radius:3px;
+    padding:13px;cursor:pointer;
+  }
+  .copy:active{transform:translateY(1px)}
+  .copy.done{background:var(--ok);color:#101610}
+  .expand{
+    font-family:'IBM Plex Mono';font-size:11px;color:var(--muted);
+    background:transparent;border:1px solid var(--line);border-radius:3px;
+    padding:0 13px;cursor:pointer;
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>Vocal Builder</h1>
+    <p class="sub">Suno vocal prompts. Coupled axes lock each other out, and the meter tracks descriptor load — past fourteen terms the model averages instead of sharpening.</p>
+    <div class="presets">
+      <button class="preset" data-preset="bezerra">Bezerra da Silva</button>
+      <button class="preset" data-preset="valesca">Valesca</button>
+      <button class="preset clear" data-preset="clear">Clear</button>
+    </div>
+  </header>
+  <div id="groups"></div>
+  <p class="sub" style="margin:16px 0 8px">Rebuilt from the source table: gender, voice type, and age split apart; timbre merged with resonance; phonation, twang, vibrato, ornament, and accent added; “chest resonance” dropped as a sensation rather than an acoustic.</p>
+</div>
+
+<div class="strip">
+  <div class="inner">
+    <div class="meterrow">
+      <div class="meter" id="meter"></div>
+      <span class="mstat" id="mstat">0 terms</span>
+    </div>
+    <div class="defslot idle" id="defslot"><span class="deftext">Tap any term for what it means. Tap a category label for what the axis controls.</span></div>
+    <div class="out empty" id="out">Pick descriptors to build a prompt.</div>
+    <div class="actions">
+      <button class="copy" id="copy">Copy prompt</button>
+      <button class="expand" id="expand" title="Expand or collapse the prompt view">⤢</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const SCHEMA = [
+  { name:"Identity", axes:[
+    { k:"age",    l:"Age",        mode:"one", opts:["youthful","mature","older"] },
+    { k:"gender", l:"Voice identity", mode:"one", opts:["male","female","androgynous"] },
+    { k:"type",   l:"Voice type",  mode:"one", opts:["bass","bass-baritone","baritone","tenor","countertenor","contralto","mezzo-soprano","soprano"] }
+  ]},
+  { name:"Register & phonation", axes:[
+    { k:"reg",   l:"Register", mode:"one", opts:["vocal fry","low chest","full chest","light chest","mixed voice","head voice","falsetto"] },
+    { k:"phon",  l:"Phonation", mode:"one", rule:"how the folds close", opts:["breathy","balanced","pressed","creaky"] },
+    { k:"twang", l:"Twang", mode:"one", rule:"what cuts through a mix", opts:["no twang","light twang","pronounced twang"] }
+  ]},
+  { name:"Timbre & placement", axes:[
+    { k:"core",  l:"Core color", mode:"one", opts:["bright","neutral","dark"] },
+    { k:"place", l:"Resonance placement", mode:"one", opts:["forward / mask","nasal","oral","pharyngeal"] },
+    { k:"detail",l:"Color detail", mode:"many", cap:3, opts:["reedy","woody","smoky","metallic","velvety","hollow","dry","airy","rich","piercing","silky","dusty","weathered"] }
+  ]},
+  { name:"Texture", axes:[
+    { k:"tex", l:"Distortion", mode:"many", cap:2, opts:["clean","rasp","grit","growl","fry ornament","crackle","edge","saturation","sandpaper"] }
+  ]},
+  { name:"Weight", axes:[
+    { k:"wt", l:"Density", mode:"one", opts:["light","medium-light","medium","heavy","massive"] }
+  ]},
+  { name:"Articulation", axes:[
+    { k:"art", l:"Consonants & vowels", mode:"many", cap:2, opts:["crisp","clipped","percussive","explosive consonants","legato","lazy","exaggerated","biting","drawled vowels"] }
+  ]},
+  { name:"Cadence", axes:[
+    { k:"cad",  l:"Phrasing", mode:"one", opts:["conversational","syncopated","driving","staccato","flowing","irregular"] },
+    { k:"time", l:"Timing", mode:"one", opts:["behind the beat","on the grid","ahead of the beat"] }
+  ]},
+  { name:"Pitch & ornament", axes:[
+    { k:"cont", l:"Melodic contour", mode:"one", opts:["monotone","speech-level","restrained melodic","highly melodic","dramatic pitch swings"] },
+    { k:"vib",  l:"Vibrato", mode:"one", opts:["straight tone","light vibrato","fast vibrato","wide vibrato","terminal vibrato"] },
+    { k:"orn",  l:"Ornament", mode:"many", cap:2, opts:["scoops","slides","bends","melisma"] }
+  ]},
+  { name:"Emotional tone", axes:[
+    { k:"emo", l:"Attitude", mode:"many", cap:3, opts:["confident","cocky","rebellious","sarcastic","ironic","playful","mischievous","teasing","smug","charismatic","relaxed","intimate","seductive","mysterious","determined","cynical","humorous","nonchalant","confrontational","deadpan"] }
+  ]},
+  { name:"Energy & delivery", axes:[
+    { k:"nrg", l:"Energy", mode:"one", opts:["restrained","moderate","energetic","explosive","relentless","laid-back","controlled intensity"] },
+    { k:"del", l:"Delivery", mode:"one", opts:["polished","raw","intimate","theatrical","spontaneous","naturalistic","understated","vulnerable"] }
+  ]},
+  { name:"Layering", axes:[
+    { k:"lay", l:"Vocal arrangement", mode:"one", opts:["single-tracked","double-tracked","stacked harmonies","octave doubles","gang vocal","call-and-response chorus"] }
+  ]},
+  { name:"Recording character", axes:[
+    { k:"rec", l:"Signal chain", mode:"many", cap:2, opts:["dry","close-mic","room ambience","tape saturation","tube warmth","vintage microphone","lo-fi","studio-clean","broadcast"] }
+  ]},
+  { name:"Accent & dialect", axes:[
+    { k:"acc", l:"Free text", mode:"text", rule:"often the highest-information term", ph:"e.g. Rio carioca with Pernambucano vowels" }
+  ]}
+];
+
+// Coupling rules: falsetto/head voice/fry cannot carry heavy mass.
+const BLOCK = {
+  wt:  { "falsetto":["heavy","massive","medium"], "head voice":["heavy","massive"], "vocal fry":["heavy","massive"] },
+  tex: { "falsetto":["growl"] }
+};
+
+const AXISDEF = {
+  age:"Perceived age of the instrument. Varies independently of gender and range.",
+  gender:"Identity of the voice, kept separate from its range.",
+  type:"Range and tessitura. Separate from gender — a contralto and a tenor overlap.",
+  reg:"Which laryngeal mechanism makes the sound. This is what constrains weight.",
+  phon:"How firmly the folds close each cycle. Sets tension and how much air escapes.",
+  twang:"Narrowing above the folds adding a 2–3 kHz peak. How a voice cuts without volume.",
+  core:"Where harmonic energy sits. The single biggest timbral decision.",
+  place:"Which cavity above the folds resonates. Placement is the cause, timbre the effect.",
+  detail:"Secondary color words. Past three they start cancelling each other.",
+  tex:"Noise riding on top of the pitch. Independent of how dark the voice is.",
+  wt:"Perceived mass. Coupled to register — thin mechanisms cannot be heavy.",
+  art:"How consonants and vowels are shaped. Where rhythm actually lives in a vocal.",
+  cad:"The rhythmic shape of phrases.",
+  time:"Micro-placement against the grid. Tiny shifts, large change in character.",
+  cont:"How far and how often the pitch moves.",
+  vib:"Speed and depth of pitch oscillation, or its absence. Immediately audible either way.",
+  orn:"Pitch decoration between and around notes.",
+  emo:"Attitude carried by tone rather than lyrics. Three max — they blur past that.",
+  nrg:"Output relative to capacity, not absolute loudness.",
+  del:"The performance frame — how produced it is meant to sound.",
+  lay:"How many voices, and in what relationship to each other.",
+  rec:"The signal chain, from microphone to tape.",
+  acc:"Regional speech coloring. Usually the highest-information term in the whole prompt."
+};
+
+const DEFS = {
+  "youthful":"Lighter and less resonant, with little tissue wear on the folds.",
+  "mature":"Fully settled adult voice — maximum resonance, minimum wobble.",
+  "older":"Thinner tone, slower onsets, natural tremor creeping into sustained notes.",
+  "male":"Longer, thicker folds. Speaking fundamental roughly 85–180 Hz.",
+  "female":"Shorter, thinner folds. Speaking fundamental roughly 165–255 Hz.",
+  "androgynous":"Pitch and timbre deliberately ambiguous between the two.",
+  "bass":"Lowest male range, roughly E2–E4. Heavy, dark, slow to move.",
+  "bass-baritone":"Bass depth with baritone flexibility on top, roughly F2–F4.",
+  "baritone":"The common male range, roughly G2–G4. Most male speech sits here.",
+  "tenor":"High male range, roughly C3–C5. Brighter and more forward.",
+  "countertenor":"Male voice operating in the female range, usually via trained falsetto.",
+  "contralto":"Lowest female range, roughly F3–F5. Dark and chest-dominant.",
+  "mezzo-soprano":"Middle female range, roughly A3–A5. Warmer than soprano.",
+  "soprano":"Highest female range, roughly C4–C6.",
+
+  "vocal fry":"Lowest mechanism. Folds flap loosely, producing a popping rattle.",
+  "low chest":"Bottom of the modal range. Thick, heavy, limited agility.",
+  "full chest":"Thick fold vibration at full engagement. Loud, dense, speech-like.",
+  "light chest":"Modal register with thinner closure. Speech-weight, agile, not heavy.",
+  "mixed voice":"Blend of chest and head mechanisms across the passaggio.",
+  "head voice":"Thin fold vibration in the upper range, still fully connected.",
+  "falsetto":"Only the fold edges vibrate. Airy and light — incapable of mass.",
+  "breathy":"Folds never fully close; air escapes audibly alongside the tone.",
+  "balanced":"Efficient closure. Full tone, no wasted air, no squeeze.",
+  "pressed":"Folds slam together hard. Tense, loud, edgy, tiring to sustain.",
+  "creaky":"Irregular low-frequency flapping bleeding into the sustained tone.",
+  "no twang":"No sphincter narrowing. Rounder and softer, easily buried in a mix.",
+  "light twang":"Mild narrowing. Adds presence without changing the character.",
+  "pronounced twang":"Strong 2–3 kHz peak. Cuts through dense arrangements without extra volume.",
+
+  "bright":"Harmonic energy weighted upward. Forward, present, cutting.",
+  "neutral":"Balanced harmonic spread with no obvious tilt either way.",
+  "dark":"Harmonic energy weighted downward. Warm, covered, heavy.",
+  "forward / mask":"Resonance felt around nose and cheekbones. Present and ringing.",
+  "nasal":"Sound routed through the nose. Thin, pinched, penetrating.",
+  "oral":"Resonance held in the mouth. Neutral and conversational.",
+  "pharyngeal":"Resonance deep in the throat. Thick, dark, covered.",
+  "reedy":"Thin and buzzing, like a double-reed instrument.",
+  "woody":"Dry and hollow — resonance without shine.",
+  "smoky":"Warm and slightly veiled, a soft haze over the tone.",
+  "metallic":"Hard ringing overtones with a clanging edge.",
+  "velvety":"Smooth and rounded, no audible roughness anywhere.",
+  "hollow":"Missing midrange, as if the tone had been cored out.",
+  "dry":"No air, no shimmer, minimal resonant tail.",
+  "airy":"Audible breath mixed into the tone as a feature.",
+  "rich":"Dense, complex harmonic content across the spectrum.",
+  "piercing":"Aggressive upper-mid concentration that fatigues the ear.",
+  "silky":"Even and frictionless from note to note.",
+  "dusty":"Faint granularity, like a worn recording.",
+  "weathered":"Age and wear audible in the tissue itself.",
+
+  "clean":"No distortion. Pure fold vibration.",
+  "rasp":"Broadband roughness riding on top of the pitch.",
+  "grit":"Coarser than rasp and closer to the fundamental.",
+  "growl":"False folds vibrating alongside the true ones. Low and animal.",
+  "fry ornament":"Fry used decoratively at note onsets or endings only.",
+  "crackle":"Intermittent breakup rather than continuous roughness.",
+  "edge":"Hardness at the leading edge of notes, nowhere else.",
+  "saturation":"Compressed, overdriven density across the whole tone.",
+  "sandpaper":"Fine, even, dry abrasion.",
+
+  "light":"Minimal mass. Floats over the track.",
+  "medium-light":"Speech-weight. Present without dominating.",
+  "medium":"Balanced mass — the default for most lead vocals.",
+  "heavy":"Thick and dense. Sits in front of the arrangement.",
+  "massive":"Maximum fold mass. Slow, monumental, inflexible.",
+
+  "crisp":"Clean, fully formed consonants without exaggeration.",
+  "clipped":"Consonants cut short; words end before they finish.",
+  "percussive":"Consonants function as rhythm, landing like drum hits.",
+  "explosive consonants":"Hard plosives with an audible burst of air.",
+  "legato":"Words flow together; consonants minimized between vowels.",
+  "lazy":"Under-formed consonants, relaxed and slurred.",
+  "exaggerated":"Over-enunciated to the point of theatricality.",
+  "biting":"Sharp and aggressive — consonants attacked rather than placed.",
+  "drawled vowels":"Vowels stretched past their metrical value.",
+
+  "conversational":"The timing of ordinary speech, irregular by design.",
+  "syncopated":"Accents land on weak beats and off-beats.",
+  "driving":"Relentless forward push, evenly subdivided.",
+  "staccato":"Every syllable detached and short.",
+  "flowing":"Long unbroken phrases running across bar lines.",
+  "irregular":"Deliberately unpredictable phrase lengths.",
+  "behind the beat":"Notes land fractionally late. Relaxed, heavy, authoritative.",
+  "on the grid":"Locked to the click. Tight and mechanical.",
+  "ahead of the beat":"Notes land fractionally early. Urgent and propulsive.",
+
+  "monotone":"Almost no pitch movement — near single-note delivery.",
+  "speech-level":"Contour follows natural spoken intonation, with terminal falls.",
+  "restrained melodic":"Real melody, narrow range, very few leaps.",
+  "highly melodic":"Wide range with deliberate melodic shape.",
+  "dramatic pitch swings":"Large sudden intervals used for effect.",
+  "straight tone":"No pitch oscillation at all. Reads as speech, or as modern pop.",
+  "light vibrato":"Shallow, subtle oscillation.",
+  "fast vibrato":"Rapid oscillation around 6–8 Hz. Nervous and intense.",
+  "wide vibrato":"Large pitch excursion. Operatic, or simply aged.",
+  "terminal vibrato":"Straight tone that blooms into vibrato only at note endings.",
+  "scoops":"Sliding up into the target pitch from below.",
+  "slides":"Continuous glide between two pitches.",
+  "bends":"Pitch pushed sharp or flat and then released.",
+  "melisma":"Many notes sung across a single syllable.",
+
+  "confident":"Assured without any need to prove it.",
+  "cocky":"Confidence performed outward, aimed at somebody.",
+  "rebellious":"Positioned explicitly against an authority.",
+  "sarcastic":"Says one thing, means the opposite, wants you to notice.",
+  "ironic":"Holds distance from the words without mocking them.",
+  "playful":"Light and game-like, with nothing at stake.",
+  "mischievous":"Playful, but with intent to provoke.",
+  "teasing":"Provocation aimed at one specific listener.",
+  "smug":"Satisfaction taken at someone else's expense.",
+  "charismatic":"Draws attention without demanding it.",
+  "relaxed":"No urgency and no tension anywhere in the delivery.",
+  "intimate":"Addressed to one person at close range.",
+  "seductive":"Intimate, with intent.",
+  "mysterious":"Withholds more than it reveals.",
+  "determined":"Effort audible and pointed at a goal.",
+  "cynical":"Assumes bad faith in everyone, the singer included.",
+  "humorous":"Aiming for outright laughter.",
+  "nonchalant":"Deliberate indifference toward something that matters.",
+  "confrontational":"Directed at an opponent, and escalating.",
+  "deadpan":"Emotional content withheld entirely. The flatness is the point.",
+
+  "restrained":"Deliberately held below capacity.",
+  "moderate":"Neither pushing nor holding back.",
+  "energetic":"Committed and forward, and sustained there.",
+  "explosive":"Sudden bursts well above the baseline.",
+  "relentless":"High output with no let-up anywhere.",
+  "laid-back":"Low output by choice, unhurried.",
+  "controlled intensity":"High internal pressure, tightly governed output.",
+  "polished":"Every detail smoothed and intentional.",
+  "raw":"Imperfections left in as evidence of the take.",
+  "theatrical":"Projected to the back of a room.",
+  "spontaneous":"Sounds unplanned — a first take.",
+  "naturalistic":"Sounds like ordinary behavior rather than performance.",
+  "understated":"Does less than the material invites.",
+  "vulnerable":"Exposes strain or uncertainty on purpose.",
+
+  "single-tracked":"One take, one voice. Maximum immediacy.",
+  "double-tracked":"Two takes stacked. Wider and thicker, slightly less human.",
+  "stacked harmonies":"Multiple pitches layered into a chord.",
+  "octave doubles":"The same line doubled an octave up or down.",
+  "gang vocal":"Many voices shouting the same line in unison.",
+  "call-and-response chorus":"Lead alternates with a separate answering group.",
+
+  "close-mic":"Microphone inches away. Proximity bass boost, breath audible.",
+  "room ambience":"Natural space audible around the voice.",
+  "tape saturation":"Analog compression and harmonic warmth from tape.",
+  "tube warmth":"Even-order harmonic coloration from valve gear.",
+  "vintage microphone":"Colored, midrange-forward capture with rolled-off extremes.",
+  "lo-fi":"Degraded bandwidth and added noise as a stylistic choice.",
+  "studio-clean":"Modern, transparent, high-fidelity capture.",
+  "broadcast":"Heavily compressed and EQ'd — radio-announcer forward."
+};
+// "dry" and "intimate" appear on two axes; the timbre and emotion readings are listed above.
+
+let S = {};
+const $ = id => document.getElementById(id);
+
+function showDef(term, text){
+  const slot = $("defslot");
+  slot.classList.remove("idle");
+  slot.innerHTML = `<span class="defterm">${term}</span><span class="deftext">${text}</span>`;
+}
+
+function blocked(axisKey, opt){
+  const map = BLOCK[axisKey];
+  if(!map) return false;
+  return Object.keys(map).some(trig => S.reg === trig && map[trig].includes(opt));
+}
+
+function render(){
+  const host = $("groups");
+  const openState = {};
+  host.querySelectorAll(".group").forEach((g,i) => openState[i] = g.classList.contains("open"));
+
+  host.innerHTML = SCHEMA.map((g,gi) => {
+    let count = 0;
+    g.axes.forEach(a => {
+      const v = S[a.k];
+      if(Array.isArray(v)) count += v.length;
+      else if(v) count += 1;
+    });
+    const body = g.axes.map(a => {
+      if(a.mode === "text"){
+        return `<div class="axis"><button class="alabel" data-def="${a.k}"><span class="lt">${a.l}</span>${a.rule?`<span class="arule">${a.rule}</span>`:""}</button>
+          <input type="text" data-text="${a.k}" value="${(S[a.k]||"").replace(/"/g,"&quot;")}" placeholder="${a.ph}"></div>`;
+      }
+      const cap = a.mode === "many" ? `<span class="arule">pick up to ${a.cap}</span>` : "";
+      const chips = a.opts.map(o => {
+        const off = blocked(a.k, o);
+        const on = a.mode === "many" ? (S[a.k]||[]).includes(o) : S[a.k] === o;
+        return `<button class="chip" data-axis="${a.k}" data-mode="${a.mode}" data-cap="${a.cap||0}" data-opt="${o}" aria-pressed="${on}" ${off?"disabled":""}>${o}</button>`;
+      }).join("");
+      let note = "";
+      if(a.k === "wt" && ["falsetto","head voice","vocal fry"].includes(S.reg))
+        note = `<div class="note">${S.reg} uses thin fold vibration — the heavy options are physically unavailable.</div>`;
+      if(a.k === "core" && S.place === "nasal" && S.core === "dark")
+        note = `<div class="note warn">Nasal resonance boosts 2–3 kHz. A dark nasal voice is close to a contradiction.</div>`;
+      return `<div class="axis"><button class="alabel" data-def="${a.k}"><span class="lt">${a.l}</span>${cap}${a.rule&&a.mode!=="many"?`<span class="arule">${a.rule}</span>`:""}</button>
+        <div class="chips">${chips}</div>${note}</div>`;
+    }).join("");
+    return `<section class="group ${openState[gi]?"open":""}">
+      <button class="ghead"><span class="gnum">${String(gi+1).padStart(2,"0")}</span>
+      <span class="gname">${g.name}</span>
+      <span class="gcount ${count?"":"empty"}">${count||"—"}</span>
+      <span class="caret">▸</span></button>
+      <div class="gbody">${body}</div></section>`;
+  }).join("");
+  build();
+}
+
+function build(){
+  const g = k => S[k];
+  const arr = k => S[k] || [];
+  const seg = [];
+
+  const id = [g("age"), g("gender"), g("type")].filter(Boolean).join(" ");
+  if(id) seg.push(id + " lead vocal");
+
+  const rp = [];
+  if(g("reg")) rp.push(g("reg") + " voice");
+  if(g("phon") && g("phon") !== "balanced") rp.push(g("phon") + " phonation");
+  if(g("twang") && g("twang") !== "no twang") rp.push(g("twang"));
+  if(rp.length) seg.push(rp.join(", "));
+
+  const t = [];
+  const col = [g("core"), ...arr("detail")].filter(Boolean);
+  if(col.length) t.push(col.join(", ") + " timbre");
+  if(g("place")) t.push(g("place").replace(" / ","/") + " resonance");
+  if(t.length) seg.push(t.join(" with "));
+
+  if(arr("tex").length) seg.push(arr("tex").join(" and ") + " texture");
+  if(g("wt")) seg.push(g("wt") + " vocal weight");
+  if(arr("art").length) seg.push(arr("art").join(", ") + " articulation");
+
+  const c = [g("cad"), g("time")].filter(Boolean);
+  if(c.length) seg.push(c.join(" cadence, ") + (g("time") ? "" : " cadence"));
+
+  const p = [g("cont") + (g("cont") ? " intonation" : ""), g("vib"), arr("orn").join(" and ")].filter(x => x && x.trim());
+  if(p.length) seg.push(p.join(", "));
+
+  if(arr("emo").length) seg.push(arr("emo").join(", "));
+  const e = [g("nrg"), g("del")].filter(Boolean);
+  if(e.length) seg.push(e.join(", ") + " delivery");
+  if(g("lay")) seg.push(g("lay"));
+  if(arr("rec").length) seg.push(arr("rec").join(", ") + " recording");
+  if(g("acc")) seg.push("sung in " + g("acc"));
+
+  let txt = seg.join(". ");
+  if(txt) txt = txt.charAt(0).toUpperCase() + txt.slice(1) + ".";
+
+  const out = $("out");
+  out.textContent = txt || "Pick descriptors to build a prompt.";
+  out.classList.toggle("empty", !txt);
+
+  let n = 0;
+  Object.keys(S).forEach(k => {
+    const v = S[k];
+    if(k === "acc") return;
+    if(Array.isArray(v)) n += v.length;
+    else if(v) n += 1;
+  });
+  const cls = n > 14 ? "over" : n > 8 ? "full" : "";
+  const label = n === 0 ? "empty" : n > 14 ? "diluted" : n > 8 ? "full" : "focused";
+  $("meter").innerHTML = Array.from({length:18}, (_,i) =>
+    `<span class="seg ${i < n ? "on " + cls : ""}"></span>`).join("");
+  $("mstat").textContent = n + " terms · " + label;
+  $("mstat").style.color = n > 14 ? "var(--over)" : "var(--muted)";
+}
+
+document.addEventListener("click", e => {
+  const head = e.target.closest(".ghead");
+  if(head){ head.parentElement.classList.toggle("open"); return; }
+
+  const lab = e.target.closest(".alabel");
+  if(lab){
+    const nm = lab.querySelector(".lt");
+    showDef(nm ? nm.textContent : "axis", AXISDEF[lab.dataset.def] || "");
+    return;
+  }
+
+  const chip = e.target.closest(".chip");
+  if(chip && !chip.disabled){
+    const {axis, mode, opt} = chip.dataset;
+    const cap = +chip.dataset.cap;
+    if(DEFS[opt]) showDef(opt, DEFS[opt]);
+    if(mode === "one"){
+      S[axis] = S[axis] === opt ? null : opt;
+      if(axis === "reg"){
+        ["wt","tex"].forEach(k => {
+          if(Array.isArray(S[k])) S[k] = S[k].filter(o => !blocked(k, o));
+          else if(S[k] && blocked(k, S[k])) S[k] = null;
+        });
+      }
+    } else {
+      const cur = S[axis] || [];
+      if(cur.includes(opt)) S[axis] = cur.filter(x => x !== opt);
+      else if(cur.length < cap) S[axis] = [...cur, opt];
+      else S[axis] = [...cur.slice(1), opt];
+    }
+    render(); return;
+  }
+
+  const pre = e.target.closest(".preset");
+  if(pre){ applyPreset(pre.dataset.preset); return; }
+});
+
+document.addEventListener("input", e => {
+  if(e.target.dataset.text){ S[e.target.dataset.text] = e.target.value.trim(); build(); }
+});
+
+$("copy").addEventListener("click", () => {
+  const t = $("out").classList.contains("empty") ? "" : $("out").textContent;
+  if(!t) return;
+  navigator.clipboard.writeText(t).then(() => {
+    const b = $("copy");
+    b.textContent = "Copied"; b.classList.add("done");
+    setTimeout(() => { b.textContent = "Copy prompt"; b.classList.remove("done"); }, 1400);
+  });
+});
+
+$("expand").addEventListener("click", () => {
+  const o = $("out");
+  o.style.maxHeight = o.style.maxHeight === "none" ? "74px" : "none";
+});
+
+const PRESETS = {
+  bezerra:{ age:"mature", gender:"male", type:"tenor", reg:"light chest", phon:"pressed",
+    twang:"pronounced twang", core:"bright", place:"nasal", detail:["reedy","dry"],
+    tex:["rasp"], wt:"medium-light", art:["percussive","drawled vowels"],
+    cad:"syncopated", time:"behind the beat", cont:"speech-level", vib:"straight tone", orn:[],
+    emo:["ironic","mischievous","deadpan"], nrg:"controlled intensity", del:"raw",
+    lay:"call-and-response chorus", rec:["dry","close-mic"],
+    acc:"Rio carioca with residual Pernambucano vowels" },
+  valesca:{ age:"mature", gender:"female", type:"contralto", reg:"full chest", phon:"pressed",
+    twang:"light twang", core:"dark", place:"pharyngeal", detail:["smoky","rich"],
+    tex:["rasp","grit"], wt:"heavy", art:["clipped","percussive"],
+    cad:"driving", time:"on the grid", cont:"speech-level", vib:"straight tone", orn:[],
+    emo:["confrontational","cocky","seductive"], nrg:"energetic", del:"raw",
+    lay:"double-tracked", rec:["close-mic","studio-clean"], acc:"Rio carioca" }
+};
+
+function applyPreset(name){
+  S = name === "clear" ? {} : JSON.parse(JSON.stringify(PRESETS[name]));
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+render();
+</script>
+</body>
+</html>
